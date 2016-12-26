@@ -174,7 +174,8 @@ function require(identifier, callback, compiler) {
 	//      seems to have an issue where onreadystatechange is called twice for
 	//      readyState 4.
 	callback && (request[request.onload===null?'onload':'onreadystatechange'] = onLoad);
-	descriptor.uri = descriptor.uri.replace('#/./', ''); 
+	descriptor.uri = descriptor.uri.replace('#/./', '');
+	console.log(descriptor.uri);
 	request.open('GET', descriptor.uri, !!callback);
 	lock[cacheid] = lock[cacheid]++||1;
 	request.send();
