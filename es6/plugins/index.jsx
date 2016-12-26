@@ -1,4 +1,4 @@
-export default class Layout extends React.Component {
+export default class PluginsPage extends React.Component {
   render() {
     return (
       <div>

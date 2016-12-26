@@ -1,10 +1,10 @@
 'use strict';
 
-var _home = require('/js/home/');
+var _home = require('./home/');
 
 var _home2 = _interopRequireDefault(_home);
 
-var _plugins = require('/js/plugins/');
+var _plugins = require('./plugins/');
 
 var _plugins2 = _interopRequireDefault(_plugins);
 

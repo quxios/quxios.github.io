@@ -1,6 +1,6 @@
-const { Link } = ReactRouter
+const { Link } = ReactRouter;
 
-export default class HomeLayout extends React.Component {
+export default class HomePage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -27,10 +27,12 @@ export default class HomeLayout extends React.Component {
             </Link>
           </div>
           <div className='block projects'>
-            <img src='/imgs/projects.png'
-              onMouseEnter={::this.showUnavailable}
-              onMouseLeave={::this.hideUnavailable}
-            />
+            {/*<Link to="/projects">*/}
+              <img src='/imgs/projects.png'
+                onMouseEnter={::this.showUnavailable}
+                onMouseLeave={::this.hideUnavailable}
+              />
+            {/*</Link>*/}
             <div className='unavailable' style={unavailable}
               onMouseEnter={::this.showUnavailable}
               onMouseLeave={::this.hideUnavailable} >

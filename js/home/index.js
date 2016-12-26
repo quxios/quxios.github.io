@@ -15,13 +15,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var _ReactRouter = ReactRouter,
     Link = _ReactRouter.Link;
 
-var HomeLayout = function (_React$Component) {
-  _inherits(HomeLayout, _React$Component);
+var HomePage = function (_React$Component) {
+  _inherits(HomePage, _React$Component);
 
-  function HomeLayout(props) {
-    _classCallCheck(this, HomeLayout);
+  function HomePage(props) {
+    _classCallCheck(this, HomePage);
 
-    var _this = _possibleConstructorReturn(this, (HomeLayout.__proto__ || Object.getPrototypeOf(HomeLayout)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (HomePage.__proto__ || Object.getPrototypeOf(HomePage)).call(this, props));
 
     _this.state = {
       unavailable: 0
@@ -29,7 +29,7 @@ var HomeLayout = function (_React$Component) {
     return _this;
   }
 
-  _createClass(HomeLayout, [{
+  _createClass(HomePage, [{
     key: 'showUnavailable',
     value: function showUnavailable() {
       this.setState({ unavailable: 1 });
@@ -108,7 +108,7 @@ var HomeLayout = function (_React$Component) {
     }
   }]);
 
-  return HomeLayout;
+  return HomePage;
 }(React.Component);
 
-exports.default = HomeLayout;
+exports.default = HomePage;
