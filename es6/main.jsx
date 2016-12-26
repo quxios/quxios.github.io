@@ -1,10 +1,10 @@
-const { Router, Route, browserHistory } = ReactRouter;
+const { Router, Route, hashHistory } = ReactRouter;
 
 import HomePage from '/js/home/'
 import PluginsPage from '/js/plugins/'
 
 ReactDOM.render(
-  <Router history={browserHistory}>
+  <Router history={hashHistory}>
     <Route path="/" component={HomePage}/>
     <Route path="/plugins" component={PluginsPage}/>
   </Router>,

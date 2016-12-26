@@ -13,12 +13,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var _ReactRouter = ReactRouter,
     Router = _ReactRouter.Router,
     Route = _ReactRouter.Route,
-    browserHistory = _ReactRouter.browserHistory;
+    hashHistory = _ReactRouter.hashHistory;
 
 
 ReactDOM.render(React.createElement(
   Router,
-  { history: browserHistory },
+  { history: hashHistory },
   React.createElement(Route, { path: '/', component: _home2.default }),
   React.createElement(Route, { path: '/plugins', component: _plugins2.default })
 ), document.getElementById('site'));
