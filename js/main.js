@@ -1,6 +1,6 @@
 'use strict';
 
-var _layout = require('js/components/layout');
+var _layout = require('js/home/layout');
 
 var _layout2 = _interopRequireDefault(_layout);
 

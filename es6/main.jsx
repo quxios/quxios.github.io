@@ -1,3 +1,3 @@
-import Layout from 'js/components/layout'
+import HomeLayout from 'js/home/layout'
 
-ReactDOM.render(<Layout />, document.getElementById('site'));
+ReactDOM.render(<HomeLayout />, document.getElementById('site'));

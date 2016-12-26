@@ -1,0 +1,89 @@
+// out: style.css
+
+@dark: #1F1F1F;
+@light: #FFFFFF;
+@yellow: #FFF176;
+@hightlight: @yellow;
+@hightlight-hover: @light;
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: @dark;
+}
+
+a {
+  text-decoration: none;
+  color: @hightlight;
+  transition: color 150ms ease-in;
+  &:hover, &:active {
+    color: @hightlight-hover;
+  }
+}
+
+.qBg {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url('/imgs/QYellow.png');
+  background-repeat: no-repeat;
+  min-height: 500px;
+  min-width: 500px;
+}
+
+.container {
+  width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.home {
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  .block {
+    box-sizing: border-box;
+    width: 430px;
+    padding: 5px;
+    opacity: 0.9;
+    transition: opacity 250ms ease-in;
+    &.plugins, &.projects {
+      padding: 0;
+      overflow: hidden;
+      height: 200px;
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+      }
+      cursor: pointer;
+      .unavailable {
+        transition: opacity 250ms ease-in;
+        width: 430px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        background-color: @dark;
+        color: @light;
+        position: absolute;
+        top: 100px;
+      }
+    }
+
+    &.footer {
+      width: 100%;
+      text-align: center;
+      background-color: @dark;
+      color: @light;
+      font-size: 1.2em;
+    }
+  }
+}
+
+.block {
+  background-color: @light;
+  border-radius: 3px;
+  margin: 10px;
+}
