@@ -1,3 +1,12 @@
-import HomeLayout from 'js/home/layout'
+const { Router, Route, browserHistory } = ReactRouter;
 
-ReactDOM.render(<HomeLayout />, document.getElementById('site'));
+import HomePage from '/js/home/'
+import PluginsPage from '/js/plugins/'
+
+ReactDOM.render(
+  <Router history={browserHistory}>
+    <Route path="/" component={HomePage}/>
+    <Route path="/plugins" component={PluginsPage}/>
+  </Router>,
+  document.getElementById('site')
+);

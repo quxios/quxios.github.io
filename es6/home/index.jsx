@@ -1,15 +1,11 @@
+const { Link } = ReactRouter
+
 export default class HomeLayout extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       unavailable: 0
     }
-  }
-  onPlugins() {
-
-  }
-  onProjects() {
-
   }
   showUnavailable() {
     this.setState({ unavailable: 1 });
@@ -26,11 +22,12 @@ export default class HomeLayout extends React.Component {
         <div className='qBg' />
         <div className='home container'>
           <div className='block plugins'>
-            <img onClick={::this.onPlugins} src='/imgs/plugins.png' />
+            <Link to="/plugins">
+              <img src='/imgs/plugins.png' />
+            </Link>
           </div>
           <div className='block projects'>
             <img src='/imgs/projects.png'
-              onClick={::this.onProjects}
               onMouseEnter={::this.showUnavailable}
               onMouseLeave={::this.hideUnavailable}
             />
