@@ -22,14 +22,16 @@ a {
 }
 
 .qBg {
-  position: absolute;
-  top: 50px;
+  position: fixed;
+  top: 100px;
   left: 50%;
+  bottom: 0;
   transform: translateX(-50%);
   background-image: url('/imgs/QYellow.png');
   background-repeat: no-repeat;
-  min-height: 500px;
+  //background-position: 50% 100px;
   min-width: 500px;
+  min-height: 500px;
 }
 
 .container {
@@ -37,17 +39,23 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.home {
   position: absolute;
   top: 150px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.block {
+  box-sizing: border-box;
+  background-color: @light;
+  border-radius: 3px;
+  margin: 10px;
+  padding: 5px;
+}
+
+.home {
   .block {
-    box-sizing: border-box;
     width: 430px;
-    padding: 5px;
     opacity: 0.9;
     transition: opacity 250ms ease-in;
     &.plugins, &.projects {
@@ -71,7 +79,6 @@ a {
         top: 100px;
       }
     }
-
     &.footer {
       width: 100%;
       text-align: center;
@@ -82,8 +89,72 @@ a {
   }
 }
 
-.block {
-  background-color: @light;
-  border-radius: 3px;
-  margin: 10px;
+.plugins {
+  top: 50px;
+  .title {
+    width: 100%;
+    height: 100px;
+    color: @light;
+    text-align: center;
+    font-size: 5em;
+    font-weight: bold;
+  }
+  .content {
+    width: 675px;
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      align-content: flex-start;
+    }
+    .block {
+      width: 655px;
+    }
+  }
+  .sidebar {
+    max-width: 225px;
+    .block {
+      width: 205px;
+      background-color: transparent;
+      color: @light;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .tag {
+      margin: 2px;
+      padding: 2px;
+      transition: none;
+      cursor: pointer;
+      color: @hightlight !important;
+      font-weight: bold;
+      transition: background-color 150ms ease-in;
+      &:hover {
+        border-radius: 2px;
+        background-color: @light;
+        color: @dark !important;
+      }
+    }
+  }
+  .block {
+    padding: 0 5px;
+    //transition: all 250ms linear;
+    .header {
+      height: 45px;
+      line-height: 45px;
+      font-size: 1.2em;
+    }
+    .desc {
+      max-height: 121px;
+      overflow: hidden;
+    }
+    .footer {
+      height: 30px;
+      line-height: 30px;
+      border-top: 1px solid @dark;
+      margin-top: 5px;
+    }
+  }
 }

@@ -6,73 +6,89 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _tags = require('./tags');
-
-var _tags2 = _interopRequireDefault(_tags);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var PluginsPage = function (_React$Component) {
-  _inherits(PluginsPage, _React$Component);
+var _ReactRouter = ReactRouter,
+    Link = _ReactRouter.Link;
 
-  function PluginsPage(props) {
-    _classCallCheck(this, PluginsPage);
+var PluginBlock = function (_React$Component) {
+  _inherits(PluginBlock, _React$Component);
 
-    var _this = _possibleConstructorReturn(this, (PluginsPage.__proto__ || Object.getPrototypeOf(PluginsPage)).call(this, props));
+  function PluginBlock() {
+    _classCallCheck(this, PluginBlock);
 
-    _this.state = {
-      tag: '',
-      tags: [{ name: 'Map', val: 4 }, { name: 'Audio', val: 1 }, { name: 'Movement', val: 4 }, { name: 'Stealth', val: 3 }, { name: 'UI', val: 8 }, { name: 'Input', val: 2 }]
-    };
-    return _this;
+    return _possibleConstructorReturn(this, (PluginBlock.__proto__ || Object.getPrototypeOf(PluginBlock)).apply(this, arguments));
   }
 
-  _createClass(PluginsPage, [{
-    key: 'setTag',
-    value: function setTag(tag) {
-      this.setState({ tag: tag });
-    }
-  }, {
+  _createClass(PluginBlock, [{
     key: 'render',
     value: function render() {
-      var title = 'RPG Maker MV Plugins';
-      var pluginName = this.props.params.pluginName;
+      var rand = Math.floor(Math.random() * 10) + 1;
+      var arr = [];
+      for (var i = 0; i < rand; i++) {
+        arr.push(React.createElement(
+          'div',
+          { key: i },
+          'testing'
+        ));
+      }
       return React.createElement(
         'div',
-        null,
-        React.createElement('div', { className: 'qBg' }),
+        { className: 'block' },
         React.createElement(
           'div',
-          { className: 'plugins container' },
+          { className: 'header' },
           React.createElement(
-            'div',
-            { className: 'title' },
-            pluginName || title
-          ),
-          React.createElement(
-            'div',
-            { className: 'content' },
-            this.props.children && React.cloneElement(this.props.children, {
-              tag: this.state.tag
-            })
-          ),
-          React.createElement(
-            'div',
-            { className: 'sidebar' },
-            React.createElement(_tags2.default, { tags: this.state.tags, setTag: this.setTag.bind(this) })
+            Link,
+            { to: '/plugins/testPlugin' },
+            'Plugin Name'
           )
+        ),
+        React.createElement(
+          'div',
+          { className: 'desc' },
+          arr
+        ),
+        React.createElement(
+          'div',
+          { className: 'footer' },
+          'footer'
         )
       );
     }
   }]);
 
-  return PluginsPage;
+  return PluginBlock;
 }(React.Component);
 
-exports.default = PluginsPage;
+var PluginList = function (_React$Component2) {
+  _inherits(PluginList, _React$Component2);
+
+  function PluginList() {
+    _classCallCheck(this, PluginList);
+
+    return _possibleConstructorReturn(this, (PluginList.__proto__ || Object.getPrototypeOf(PluginList)).apply(this, arguments));
+  }
+
+  _createClass(PluginList, [{
+    key: 'render',
+    value: function render() {
+      return React.createElement(
+        'div',
+        { className: 'list' },
+        React.createElement(PluginBlock, null),
+        React.createElement(PluginBlock, null),
+        React.createElement(PluginBlock, null),
+        React.createElement(PluginBlock, null)
+      );
+    }
+  }]);
+
+  return PluginList;
+}(React.Component);
+
+exports.default = PluginList;

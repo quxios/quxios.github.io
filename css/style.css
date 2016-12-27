@@ -13,31 +13,35 @@ a:active {
   color: #FFFFFF;
 }
 .qBg {
-  position: absolute;
-  top: 50px;
+  position: fixed;
+  top: 100px;
   left: 50%;
+  bottom: 0;
   transform: translateX(-50%);
   background-image: url('/imgs/QYellow.png');
   background-repeat: no-repeat;
-  min-height: 500px;
   min-width: 500px;
+  min-height: 500px;
 }
 .container {
   width: 900px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-.home {
   position: absolute;
   top: 150px;
   left: 50%;
   transform: translateX(-50%);
 }
-.home .block {
+.block {
   box-sizing: border-box;
-  width: 430px;
+  background-color: #FFFFFF;
+  border-radius: 3px;
+  margin: 10px;
   padding: 5px;
+}
+.home .block {
+  width: 430px;
   opacity: 0.9;
   transition: opacity 250ms ease-in;
 }
@@ -72,8 +76,71 @@ a:active {
   color: #FFFFFF;
   font-size: 1.2em;
 }
-.block {
+.plugins {
+  top: 50px;
+}
+.plugins .title {
+  width: 100%;
+  height: 100px;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 5em;
+  font-weight: bold;
+}
+.plugins .content {
+  width: 675px;
+}
+.plugins .content .list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+.plugins .content .block {
+  width: 655px;
+}
+.plugins .sidebar {
+  max-width: 225px;
+}
+.plugins .sidebar .block {
+  width: 205px;
+  background-color: transparent;
+  color: #FFFFFF;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.plugins .sidebar .tag {
+  margin: 2px;
+  padding: 2px;
+  transition: none;
+  cursor: pointer;
+  color: #FFF176 !important;
+  font-weight: bold;
+  transition: background-color 150ms ease-in;
+}
+.plugins .sidebar .tag:hover {
+  border-radius: 2px;
   background-color: #FFFFFF;
-  border-radius: 3px;
-  margin: 10px;
+  color: #1F1F1F !important;
+}
+.plugins .block {
+  padding: 0 5px;
+}
+.plugins .block .header {
+  height: 45px;
+  line-height: 45px;
+  font-size: 1.2em;
+}
+.plugins .block .desc {
+  max-height: 121px;
+  overflow: hidden;
+}
+.plugins .block .footer {
+  height: 30px;
+  line-height: 30px;
+  border-top: 1px solid #1F1F1F;
+  margin-top: 5px;
 }
