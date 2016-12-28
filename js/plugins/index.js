@@ -10,6 +10,10 @@ var _tags = require('./tags');
 
 var _tags2 = _interopRequireDefault(_tags);
 
+var _pluginManager = require('./../pluginManager');
+
+var _pluginManager2 = _interopRequireDefault(_pluginManager);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -27,15 +31,53 @@ var PluginsPage = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (PluginsPage.__proto__ || Object.getPrototypeOf(PluginsPage)).call(this, props));
 
     _this.state = {
+      plugins: [],
       tag: '',
-      tags: [{ name: 'Map', val: 4 }, { name: 'Audio', val: 1 }, { name: 'Movement', val: 4 }, { name: 'Stealth', val: 3 }, { name: 'UI', val: 8 }, { name: 'Input', val: 2 }]
+      tags: []
     };
     return _this;
   }
 
   _createClass(PluginsPage, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      _pluginManager2.default.load('plugins', this.setPlugins.bind(this));
+      _pluginManager2.default.load('tags', this.setTags.bind(this));
+    }
+  }, {
+    key: 'setPlugins',
+    value: function setPlugins(plugins) {
+      this.setState({ plugins: plugins });
+    }
+  }, {
+    key: 'getPlugin',
+    value: function getPlugin(name) {
+      var plugin = null;
+      for (var i = 0; i < this.state.plugins.length; i++) {
+        if (this.state.plugins[i].name === name) {
+          plugin = this.state.plugins[i];
+          break;
+        }
+      }
+      return plugin;
+    }
+  }, {
+    key: 'setTags',
+    value: function setTags(newTags) {
+      var names = Object.keys(newTags);
+      var tags = [];
+      names.forEach(function (name) {
+        tags.push({
+          name: name,
+          val: newTags[name]
+        });
+      });
+      this.setState({ tags: tags });
+    }
+  }, {
     key: 'setTag',
     value: function setTag(tag) {
+      console.log('set tag to', tag);
       this.setState({ tag: tag });
     }
   }, {
@@ -43,6 +85,7 @@ var PluginsPage = function (_React$Component) {
     value: function render() {
       var title = 'RPG Maker MV Plugins';
       var pluginName = this.props.params.pluginName;
+      var plugin = this.getPlugin(pluginName);
       return React.createElement(
         'div',
         null,
@@ -59,7 +102,10 @@ var PluginsPage = function (_React$Component) {
             'div',
             { className: 'content' },
             this.props.children && React.cloneElement(this.props.children, {
-              tag: this.state.tag
+              tag: this.state.tag,
+              setTag: this.setTag.bind(this),
+              plugins: this.state.plugins,
+              plugin: plugin
             })
           ),
           React.createElement(

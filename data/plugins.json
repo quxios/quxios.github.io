@@ -1,0 +1,44 @@
+[
+  {
+    "name": "QAudio",
+    "version": "2.0.0",
+    "tags": "",
+    "about": "",
+    "help": ""
+  },
+  {
+    "name": "QInput",
+    "version": "2.0.0",
+    "tags": "",
+    "about": "",
+    "help": ""
+  },
+  {
+    "name": "QInputRemap",
+    "version": "1.0.0",
+    "tags": "",
+    "about": "",
+    "help": ""
+  },
+  {
+    "name": "QNameInput",
+    "version": "2.0.0",
+    "tags": "",
+    "about": "",
+    "help": ""
+  },
+  {
+    "name": "QPlus",
+    "version": "1.0.0",
+    "tags": "",
+    "about": "",
+    "help": ""
+  },
+  {
+    "name": "QSprite",
+    "version": "2.0.0",
+    "tags": " character, sprite, animation",
+    "about": "\n## About\n\nThis plugin lets you use sprites that are set up with Quasi Sprite Animator\n\nhttps://github.com/quxios/SpriteAnimator\n\n",
+    "help": "\n## How to use\n\nFirst configure your sprite with the Sprite Animator. Then you can use your\nsprites by identifying it as a QSprite. To do so, just name your sprite file\nby using the File Name Identifier format. By default this is:\n```\n  %{config}-\n```\nYou would replace {config} with the config you made inside the Sprite\nAnimator. For example, if I made a config named: `Hero` then I would name\nthe file something like: `%Hero-Example.png`\n\n\n## Links\n\nFor a guide on how to use this plugin go to:\n\n  http://forums.rpgmakerweb.com/index.php?/topic/57648-quasi-sprite/\n\nSprite App:\n\n  https://github.com/quxios/SpriteAnimator\n\nTerms of use:\n\n  https://github.com/quxios/QMV-Master-Demo/blob/master/readme.md\n\n"
+  }
+]

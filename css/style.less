@@ -2,11 +2,13 @@
 
 @dark: #1F1F1F;
 @light: #FFFFFF;
+@light-link: #2196F3;
 @yellow: #FFF176;
 @hightlight: @yellow;
 @hightlight-hover: @light;
 
 body {
+  font-family: 'Lato', sans-serif;
   margin: 0;
   padding: 0;
   background-color: @dark;
@@ -51,6 +53,12 @@ a {
   border-radius: 3px;
   margin: 10px;
   padding: 5px;
+  a {
+    color: @light-link;
+    &:hover, &:active {
+      text-decoration: underline;
+    }
+  }
 }
 
 .home {
@@ -111,6 +119,13 @@ a {
     .block {
       width: 655px;
     }
+    .tag {
+      color: @light-link !important;
+      &:hover {
+        background-color: @light-link;
+        color: @light !important;
+      }
+    }
   }
   .sidebar {
     max-width: 225px;
@@ -123,20 +138,6 @@ a {
       justify-content: center;
       align-items: center;
     }
-    .tag {
-      margin: 2px;
-      padding: 2px;
-      transition: none;
-      cursor: pointer;
-      color: @hightlight !important;
-      font-weight: bold;
-      transition: background-color 150ms ease-in;
-      &:hover {
-        border-radius: 2px;
-        background-color: @light;
-        color: @dark !important;
-      }
-    }
   }
   .block {
     padding: 0 5px;
@@ -144,11 +145,15 @@ a {
     .header {
       height: 45px;
       line-height: 45px;
-      font-size: 1.2em;
+      font-size: 1.7em;
+      font-weight: bold;
+      .sub {
+        font-size: 0.8em;
+      }
     }
     .desc {
-      max-height: 121px;
-      overflow: hidden;
+      //max-height: 121px;
+      //overflow: hidden;
     }
     .footer {
       height: 30px;
@@ -156,5 +161,21 @@ a {
       border-top: 1px solid @dark;
       margin-top: 5px;
     }
+  }
+}
+
+.tag {
+  margin: 2px;
+  padding: 2px;
+  transition: none;
+  cursor: pointer;
+  color: @hightlight !important;
+  font-weight: bold;
+  transition: background-color 150ms ease-in;
+  &:hover {
+    border-radius: 2px;
+    background-color: @light;
+    color: @dark !important;
+    text-decoration: none !important;
   }
 }

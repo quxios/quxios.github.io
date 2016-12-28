@@ -1,4 +1,5 @@
 body {
+  font-family: 'Lato', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #1F1F1F;
@@ -39,6 +40,13 @@ a:active {
   border-radius: 3px;
   margin: 10px;
   padding: 5px;
+}
+.block a {
+  color: #2196F3;
+}
+.block a:hover,
+.block a:active {
+  text-decoration: underline;
 }
 .home .block {
   width: 430px;
@@ -100,6 +108,13 @@ a:active {
 .plugins .content .block {
   width: 655px;
 }
+.plugins .content .tag {
+  color: #2196F3 !important;
+}
+.plugins .content .tag:hover {
+  background-color: #2196F3;
+  color: #FFFFFF !important;
+}
 .plugins .sidebar {
   max-width: 225px;
 }
@@ -112,7 +127,25 @@ a:active {
   justify-content: center;
   align-items: center;
 }
-.plugins .sidebar .tag {
+.plugins .block {
+  padding: 0 5px;
+}
+.plugins .block .header {
+  height: 45px;
+  line-height: 45px;
+  font-size: 1.7em;
+  font-weight: bold;
+}
+.plugins .block .header .sub {
+  font-size: 0.8em;
+}
+.plugins .block .footer {
+  height: 30px;
+  line-height: 30px;
+  border-top: 1px solid #1F1F1F;
+  margin-top: 5px;
+}
+.tag {
   margin: 2px;
   padding: 2px;
   transition: none;
@@ -121,26 +154,9 @@ a:active {
   font-weight: bold;
   transition: background-color 150ms ease-in;
 }
-.plugins .sidebar .tag:hover {
+.tag:hover {
   border-radius: 2px;
   background-color: #FFFFFF;
   color: #1F1F1F !important;
-}
-.plugins .block {
-  padding: 0 5px;
-}
-.plugins .block .header {
-  height: 45px;
-  line-height: 45px;
-  font-size: 1.2em;
-}
-.plugins .block .desc {
-  max-height: 121px;
-  overflow: hidden;
-}
-.plugins .block .footer {
-  height: 30px;
-  line-height: 30px;
-  border-top: 1px solid #1F1F1F;
-  margin-top: 5px;
+  text-decoration: none !important;
 }
