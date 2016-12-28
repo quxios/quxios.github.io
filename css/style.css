@@ -133,6 +133,9 @@ a:active {
 .plugins .sidebar .tag {
   text-shadow: -1px -1px 1px #1F1F1F, 1px -1px 1px #1F1F1F, -1px 1px 1px #1F1F1F, 1px 1px 1px #1F1F1F;
 }
+.plugins .sidebar .tag:hover {
+  text-shadow: none;
+}
 .plugins .block {
   padding: 0 5px;
 }
