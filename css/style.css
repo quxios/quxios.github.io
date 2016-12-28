@@ -35,6 +35,7 @@ a:active {
   transform: translateX(-50%);
 }
 .block {
+  box-shadow: 0 2px 2px 0 rgba(31, 31, 31, 0.14), 0 3px 1px -2px rgba(31, 31, 31, 0.02), 0 1px 5px 0 rgba(31, 31, 31, 0.12);
   box-sizing: border-box;
   background-color: #FFFFFF;
   border-radius: 3px;
@@ -94,6 +95,7 @@ a:active {
   text-align: center;
   font-size: 5em;
   font-weight: bold;
+  text-shadow: -1px -1px 1px #1F1F1F, 1px -1px 1px #1F1F1F, -1px 1px 1px #1F1F1F, 1px 1px 1px #1F1F1F;
 }
 .plugins .content {
   width: 675px;
@@ -119,6 +121,7 @@ a:active {
   max-width: 225px;
 }
 .plugins .sidebar .block {
+  box-shadow: none;
   width: 205px;
   background-color: transparent;
   color: #FFFFFF;
@@ -126,6 +129,9 @@ a:active {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+.plugins .sidebar .tag {
+  text-shadow: -1px -1px 1px #1F1F1F, 1px -1px 1px #1F1F1F, -1px 1px 1px #1F1F1F, 1px 1px 1px #1F1F1F;
 }
 .plugins .block {
   padding: 0 5px;

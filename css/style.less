@@ -48,6 +48,10 @@ a {
 }
 
 .block {
+  box-shadow:
+    0 2px 2px 0 fade(@dark, 14%),
+    0 3px 1px -2px fade(@dark, 2%),
+    0 1px 5px 0 fade(@dark, 12%);
   box-sizing: border-box;
   background-color: @light;
   border-radius: 3px;
@@ -106,6 +110,11 @@ a {
     text-align: center;
     font-size: 5em;
     font-weight: bold;
+    text-shadow:
+     -1px -1px 1px @dark,
+      1px -1px 1px @dark,
+      -1px 1px 1px @dark,
+       1px 1px 1px @dark;
   }
   .content {
     width: 675px;
@@ -130,6 +139,7 @@ a {
   .sidebar {
     max-width: 225px;
     .block {
+      box-shadow: none;
       width: 205px;
       background-color: transparent;
       color: @light;
@@ -137,6 +147,13 @@ a {
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
+    }
+    .tag {
+      text-shadow:
+       -1px -1px 1px @dark,
+        1px -1px 1px @dark,
+        -1px 1px 1px @dark,
+         1px 1px 1px @dark;
     }
   }
   .block {
