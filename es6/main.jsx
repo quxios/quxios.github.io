@@ -1,7 +1,7 @@
 const { Router, Route, IndexRoute, hashHistory } = ReactRouter;
 
-import HomePage from './home/'
-import PluginsLayout from './plugins/'
+import HomePage from './home'
+import PluginsLayout from './plugins'
 import PluginList from './plugins/list'
 import PluginPage from './plugins/page'
 

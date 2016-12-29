@@ -16,13 +16,13 @@ export default class PluginManager {
     } else {
       return;
     }
-    var xml = new XMLHttpRequest();
-    xml.overrideMimeType("application/json");
-    xml.open('GET', file, true);
-    xml.onreadystatechange = () => {
-      if (xml.readyState == 4 && xml.status == '200') {
+    let xhr = new XMLHttpRequest();
+    xhr.overrideMimeType("application/json");
+    xhr.open('GET', file, true);
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState == 4 && xhr.status == '200') {
         if (callback) {
-          let obj = JSON.parse(xml.responseText);
+          let obj = JSON.parse(xhr.responseText);
           if (type === 'plugins') {
             callback(this.filterPlugins(obj));
           } else {
@@ -31,7 +31,7 @@ export default class PluginManager {
         }
       }
     }
-    xml.send(null);
+    xhr.send(null);
   }
   static filterPlugins(plugins) {
     let final = [];
