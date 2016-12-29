@@ -49,6 +49,13 @@ a:active {
 .block a:active {
   text-decoration: underline;
 }
+.block.footer {
+  width: 100%;
+  text-align: center;
+  background-color: #1F1F1F;
+  color: #FFFFFF;
+  font-size: 1.2em;
+}
 .home .block {
   width: 430px;
   opacity: 0.9;
@@ -78,13 +85,6 @@ a:active {
   position: absolute;
   top: 100px;
 }
-.home .block.footer {
-  width: 100%;
-  text-align: center;
-  background-color: #1F1F1F;
-  color: #FFFFFF;
-  font-size: 1.2em;
-}
 .plugins {
   top: 50px;
 }
@@ -95,7 +95,7 @@ a:active {
   text-align: center;
   font-size: 5em;
   font-weight: bold;
-  text-shadow: -1px -1px 1px #1F1F1F, 1px -1px 1px #1F1F1F, -1px 1px 1px #1F1F1F, 1px 1px 1px #1F1F1F;
+  text-shadow: -1px -1px 2px #1F1F1F, 1px -1px 2px #1F1F1F, -1px 1px 2px #1F1F1F, 1px 1px 2px #1F1F1F;
 }
 .plugins .content {
   width: 675px;
@@ -161,7 +161,7 @@ a:active {
   cursor: pointer;
   color: #FFF176 !important;
   font-weight: bold;
-  transition: background-color 150ms ease-in;
+  transition: background-color 150ms ease-in, text-shadow 0 linear;
 }
 .tag:hover {
   border-radius: 2px;

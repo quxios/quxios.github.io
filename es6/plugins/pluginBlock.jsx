@@ -63,8 +63,9 @@ export default class PluginBlock extends React.Component {
           <Link to={`/plugins/${name}`}>
             {name}
           </Link> | <span className='sub'>
-          Version: {version} {this.makeRequires()}
-        </span>
+            Version: {version} {this.makeRequires()}
+          </span>
+
         </div>
         <div className='help' dangerouslySetInnerHTML={{ __html: body}}>
         </div>

@@ -6,13 +6,17 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _tags = require('./tags');
-
-var _tags2 = _interopRequireDefault(_tags);
-
 var _pluginManager = require('./../pluginManager');
 
 var _pluginManager2 = _interopRequireDefault(_pluginManager);
+
+var _sidebar = require('./sidebar');
+
+var _sidebar2 = _interopRequireDefault(_sidebar);
+
+var _footer = require('./../components/footer');
+
+var _footer2 = _interopRequireDefault(_footer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -107,11 +111,8 @@ var PluginsPage = function (_React$Component) {
               plugin: plugin
             })
           ),
-          React.createElement(
-            'div',
-            { className: 'sidebar' },
-            React.createElement(_tags2.default, { tags: this.state.tags, setTag: this.setTag.bind(this) })
-          )
+          React.createElement(_sidebar2.default, { tags: this.state.tags, setTag: this.setTag.bind(this) }),
+          React.createElement(_footer2.default, null)
         )
       );
     }

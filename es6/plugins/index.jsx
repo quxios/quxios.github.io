@@ -1,5 +1,7 @@
-import Tags from './tags'
 import PluginManager from './../pluginManager'
+
+import Sidebar from './sidebar'
+import Footer from './../components/footer'
 
 export default class PluginsPage extends React.Component {
   constructor(props) {
@@ -60,9 +62,8 @@ export default class PluginsPage extends React.Component {
               plugin
             })}
           </div>
-          <div className='sidebar'>
-            <Tags tags={this.state.tags} setTag={::this.setTag}/>
-          </div>
+          <Sidebar tags={this.state.tags} setTag={::this.setTag} />
+          <Footer />
         </div>
       </div>
     )
