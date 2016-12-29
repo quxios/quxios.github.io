@@ -30,7 +30,7 @@ var PluginManager = function () {
       xml.overrideMimeType("application/json");
       xml.open('GET', file, true);
       xml.onreadystatechange = function () {
-        if (xml.readyState == 4 && xml.status == "200") {
+        if (xml.readyState == 4 && xml.status == '200') {
           if (callback) {
             var obj = JSON.parse(xml.responseText);
             if (type === 'plugins') {
@@ -62,7 +62,7 @@ var PluginManager = function () {
   return PluginManager;
 }();
 
-PluginManager.pluginList = ['QSprite'];
+PluginManager.pluginList = ['QPlus', 'QSprite', 'QAudio'];
 PluginManager.pluginsPath = '/data/plugins.json';
 PluginManager.tagsPath = '/data/tags.json';
 exports.default = PluginManager;

@@ -39,7 +39,6 @@ export default class PluginsPage extends React.Component {
     this.setState({ tags });
   }
   setTag(tag) {
-    console.log('set tag to', tag);
     this.setState({ tag });
   }
   render() {

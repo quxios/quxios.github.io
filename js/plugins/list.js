@@ -28,6 +28,19 @@ var PluginList = function (_React$Component) {
   }
 
   _createClass(PluginList, [{
+    key: 'filter',
+    value: function filter(plugin) {
+      var tag = this.props.tag;
+      if (tag === '') return true;
+      var tags = plugin.tags.split(',');
+      for (var i = 0; i < tags.length; i++) {
+        if (tags[i].trim() === tag) {
+          return true;
+        }
+      }
+      return false;
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _this2 = this;
@@ -36,7 +49,7 @@ var PluginList = function (_React$Component) {
       return React.createElement(
         'div',
         { className: 'list' },
-        plugins.map(function (plugin, i) {
+        plugins.filter(this.filter.bind(this)).map(function (plugin, i) {
           return React.createElement(_pluginBlock2.default, { key: i, plugin: plugin, setTag: _this2.props.setTag });
         })
       );

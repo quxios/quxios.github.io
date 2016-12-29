@@ -77,7 +77,6 @@ var PluginsPage = function (_React$Component) {
   }, {
     key: 'setTag',
     value: function setTag(tag) {
-      console.log('set tag to', tag);
       this.setState({ tag: tag });
     }
   }, {

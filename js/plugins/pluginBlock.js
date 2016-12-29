@@ -25,17 +25,54 @@ var PluginBlock = function (_React$Component) {
   }
 
   _createClass(PluginBlock, [{
-    key: 'onTag',
-    value: function onTag(tag) {
-      this.props.setTag(tag);
+    key: 'makeRequires',
+    value: function makeRequires() {
+      var _ref = this.props.plugin || {},
+          requires = _ref.requires;
+
+      if (requires) {
+        requires = requires.trim();
+        return React.createElement(
+          'span',
+          { className: 'sub' },
+          '| Requires: ',
+          React.createElement(
+            Link,
+            { to: '/plugins/' + requires },
+            requires
+          )
+        );
+      }
+      return null;
+    }
+  }, {
+    key: 'makeBody',
+    value: function makeBody() {
+      var _ref2 = this.props.plugin || {},
+          video = _ref2.video,
+          about = _ref2.about,
+          help = _ref2.help;
+
+      var body = void 0;
+      if (video) {
+        // embed video to top of body
+      }
+      if (this.props.max) {
+        body = about + '\n' + help;
+      } else {
+        body = '' + about;
+      }
+      return marked(body);
     }
   }, {
     key: 'makeTags',
     value: function makeTags() {
       var _this2 = this;
 
-      var tags = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+      var _ref3 = this.props.plugin || {},
+          tags = _ref3.tags;
 
+      if (!tags) return null;
       return tags.split(',').map(function (tag, i) {
         tag = tag.trim();
         return React.createElement(
@@ -50,22 +87,20 @@ var PluginBlock = function (_React$Component) {
       });
     }
   }, {
+    key: 'onTag',
+    value: function onTag(tag) {
+      this.props.setTag(tag);
+    }
+  }, {
     key: 'render',
     value: function render() {
-      var _ref = this.props.plugin || {},
-          name = _ref.name,
-          version = _ref.version,
-          about = _ref.about,
-          help = _ref.help,
-          tags = _ref.tags;
+      var _ref4 = this.props.plugin || {},
+          name = _ref4.name,
+          version = _ref4.version;
 
-      var body = void 0;
-      if (this.props.max) {
-        body = about + '\n' + help;
-      } else {
-        body = '' + about;
-      }
-      body = marked(body);
+      var requires = this.makeRequires();
+      var body = this.makeBody();
+      var tags = this.makeTags();
       return React.createElement(
         'div',
         { className: 'block' },
@@ -82,7 +117,9 @@ var PluginBlock = function (_React$Component) {
             'span',
             { className: 'sub' },
             'Version: ',
-            version
+            version,
+            ' ',
+            this.makeRequires()
           )
         ),
         React.createElement('div', { className: 'help', dangerouslySetInnerHTML: { __html: body } }),
@@ -90,7 +127,7 @@ var PluginBlock = function (_React$Component) {
           'div',
           { className: 'footer' },
           'Tags: ',
-          this.makeTags(tags)
+          tags
         )
       );
     }

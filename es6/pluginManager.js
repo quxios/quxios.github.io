@@ -1,6 +1,8 @@
 export default class PluginManager {
   static pluginList = [
-    'QSprite'
+    'QPlus',
+    'QSprite',
+    'QAudio'
   ]
   static pluginsPath = '/data/plugins.json';
   static tagsPath = '/data/tags.json';
@@ -18,7 +20,7 @@ export default class PluginManager {
     xml.overrideMimeType("application/json");
     xml.open('GET', file, true);
     xml.onreadystatechange = () => {
-      if (xml.readyState == 4 && xml.status == "200") {
+      if (xml.readyState == 4 && xml.status == '200') {
         if (callback) {
           let obj = JSON.parse(xml.responseText);
           if (type === 'plugins') {
