@@ -1,18 +1,35 @@
-var gulp = require('gulp');
+// from
+// https://github.com/gulpjs/gulp/blob/master/docs/recipes/fast-browserify-builds-with-watchify.md
+'use strict';
+
+var watchify = require('watchify');
 var browserify = require('browserify');
 var babelify = require('babelify');
+var gulp = require('gulp');
 var source = require('vinyl-source-stream');
+var gutil = require('gulp-util');
+var assign = require('lodash.assign');
 
-gulp.task('build', function () {
-    return browserify({entries: './es6/main.jsx', extensions: ['.jsx'], debug: true})
-        .transform('babelify')
-        .bundle()
-        .pipe(source('bundle.js'))
-        .pipe(gulp.dest('js'));
-});
+// add custom browserify options here
+var customOpts = {
+  entries: ['./es6/main.jsx'],
+  extensions: ['.jsx'],
+  debug: true
+};
+var opts = assign({}, watchify.args, customOpts);
+var b = watchify(browserify(opts));
 
-gulp.task('watch', ['build'], function () {
-    gulp.watch('*.jsx', ['build']);
-});
+// add transformations here
+b.transform('babelify');
 
-gulp.task('default', ['watch']);
+gulp.task('default', bundle);
+b.on('update', bundle);
+b.on('log', gutil.log);
+
+function bundle() {
+  return b.bundle()
+    // log errors if they happen
+    .on('error', gutil.log.bind(gutil, 'Browserify Error'))
+    .pipe(source('bundle.js'))
+    .pipe(gulp.dest('./js'));
+}

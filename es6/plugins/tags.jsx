@@ -11,11 +11,13 @@ export default class PluginTags extends React.Component {
           const { name, val } = tag;
           const size = ((Math.floor(val / 2) + 0.5) * 0.20) + 0.8;
           const style = { fontSize: `${size}em` };
+          let className = 'tag';
+          className += this.props.tag === name ? ' selected' : '';
           return (
             <Link
               to='/plugins'
               key={i}
-              className='tag'
+              className={className}
               style={style}
               onClick={this.onClick.bind(this, name)}>
               {name}

@@ -130,7 +130,7 @@ a {
     }
     .tag {
       color: @light-link !important;
-      &:hover {
+      &:hover, &.selected {
         background-color: @light-link;
         color: @light !important;
       }
@@ -154,7 +154,7 @@ a {
         1px -1px 1px @dark,
         -1px 1px 1px @dark,
          1px 1px 1px @dark;
-      &:hover {
+      &:hover, &.selected {
         text-shadow: none;
       }
     }
@@ -187,7 +187,7 @@ a {
   color: @hightlight !important;
   font-weight: bold;
   transition: background-color 150ms ease-in, text-shadow 0 linear;
-  &:hover {
+  &:hover, &.selected {
     border-radius: 2px;
     background-color: @light;
     color: @dark !important;

@@ -29,7 +29,7 @@ export default class Sidebar extends React.Component {
     }
     return (
       <div className='sidebar' style={style}>
-        <Tags tags={this.props.tags} setTag={this.props.setTag}/>
+        <Tags tag={this.props.tag} tags={this.props.tags} setTag={this.props.setTag}/>
       </div>
     )
   }

@@ -28,7 +28,9 @@ export default class PluginBlock extends React.Component {
     } else {
       body = `${about}`;
     }
-    return marked(body);
+    return marked(body, {
+      sanitize: true
+    });
   }
   makeTags() {
     const { tags } = this.props.plugin || {};

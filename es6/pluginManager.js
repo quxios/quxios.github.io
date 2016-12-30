@@ -2,7 +2,10 @@ export default class PluginManager {
   static pluginList = [
     'QPlus',
     'QSprite',
-    'QAudio'
+    'QAudio',
+    'QInput',
+    'QInputRemap',
+    'QNameInput'
   ]
   static pluginsPath = '/data/plugins.json';
   static tagsPath = '/data/tags.json';

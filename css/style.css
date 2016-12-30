@@ -113,7 +113,8 @@ a:active {
 .plugins .content .tag {
   color: #2196F3 !important;
 }
-.plugins .content .tag:hover {
+.plugins .content .tag:hover,
+.plugins .content .tag.selected {
   background-color: #2196F3;
   color: #FFFFFF !important;
 }
@@ -133,7 +134,8 @@ a:active {
 .plugins .sidebar .tag {
   text-shadow: -1px -1px 1px #1F1F1F, 1px -1px 1px #1F1F1F, -1px 1px 1px #1F1F1F, 1px 1px 1px #1F1F1F;
 }
-.plugins .sidebar .tag:hover {
+.plugins .sidebar .tag:hover,
+.plugins .sidebar .tag.selected {
   text-shadow: none;
 }
 .plugins .block {
@@ -163,7 +165,8 @@ a:active {
   font-weight: bold;
   transition: background-color 150ms ease-in, text-shadow 0 linear;
 }
-.tag:hover {
+.tag:hover,
+.tag.selected {
   border-radius: 2px;
   background-color: #FFFFFF;
   color: #1F1F1F !important;

@@ -41,6 +41,9 @@ export default class PluginsPage extends React.Component {
     this.setState({ tags });
   }
   setTag(tag) {
+    if (this.state.tag === tag) {
+      tag = '';
+    }
     this.setState({ tag });
   }
   render() {
@@ -62,7 +65,7 @@ export default class PluginsPage extends React.Component {
               plugin
             })}
           </div>
-          <Sidebar tags={this.state.tags} setTag={::this.setTag} />
+          <Sidebar tag={this.state.tag} tags={this.state.tags} setTag={::this.setTag} />
           <Footer />
         </div>
       </div>
