@@ -17,6 +17,7 @@ body {
 a {
   text-decoration: none;
   color: @hightlight;
+  -webkit-transition: color 150ms ease-in;
   transition: color 150ms ease-in;
   &:hover, &:active {
     color: @hightlight-hover;
@@ -28,23 +29,30 @@ a {
   top: 100px;
   left: 50%;
   bottom: 0;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   background-image: url('/imgs/QYellow.png');
   background-repeat: no-repeat;
-  //background-position: 50% 100px;
+  /*background-position: 50% 100px;*/
   min-width: 500px;
   min-height: 500px;
 }
 
 .container {
   width: 900px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
   top: 150px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .block {
@@ -76,6 +84,7 @@ a {
   .block {
     width: 430px;
     opacity: 0.9;
+    -webkit-transition: opacity 250ms ease-in;
     transition: opacity 250ms ease-in;
     &.plugins, &.projects {
       padding: 0;
@@ -87,6 +96,7 @@ a {
       }
       cursor: pointer;
       .unavailable {
+        -webkit-transition: opacity 250ms ease-in;
         transition: opacity 250ms ease-in;
         width: 430px;
         height: 30px;
@@ -119,11 +129,19 @@ a {
   .content {
     width: 675px;
     .list {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: flex-start;
-      align-content: flex-start;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
     }
     .block {
       width: 655px;
@@ -143,10 +161,17 @@ a {
       width: 205px;
       background-color: transparent;
       color: @light;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
     }
     .tag {
       text-shadow:
@@ -182,10 +207,12 @@ a {
 .tag {
   margin: 2px;
   padding: 2px;
+  -webkit-transition: none;
   transition: none;
   cursor: pointer;
   color: @hightlight !important;
   font-weight: bold;
+  -webkit-transition: background-color 150ms ease-in, text-shadow 0 linear;
   transition: background-color 150ms ease-in, text-shadow 0 linear;
   &:hover, &.selected {
     border-radius: 2px;

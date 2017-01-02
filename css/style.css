@@ -7,6 +7,7 @@ body {
 a {
   text-decoration: none;
   color: #FFF176;
+  -webkit-transition: color 150ms ease-in;
   transition: color 150ms ease-in;
 }
 a:hover,
@@ -18,20 +19,28 @@ a:active {
   top: 100px;
   left: 50%;
   bottom: 0;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   background-image: url('/imgs/QYellow.png');
   background-repeat: no-repeat;
+  /*background-position: 50% 100px;*/
   min-width: 500px;
   min-height: 500px;
 }
 .container {
   width: 900px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   position: absolute;
   top: 150px;
   left: 50%;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 .block {
@@ -59,6 +68,7 @@ a:active {
 .home .block {
   width: 430px;
   opacity: 0.9;
+  -webkit-transition: opacity 250ms ease-in;
   transition: opacity 250ms ease-in;
 }
 .home .block.plugins,
@@ -75,6 +85,7 @@ a:active {
 }
 .home .block.plugins .unavailable,
 .home .block.projects .unavailable {
+  -webkit-transition: opacity 250ms ease-in;
   transition: opacity 250ms ease-in;
   width: 430px;
   height: 30px;
@@ -101,10 +112,18 @@ a:active {
   width: 675px;
 }
 .plugins .content .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
 }
 .plugins .content .block {
@@ -126,9 +145,16 @@ a:active {
   width: 205px;
   background-color: transparent;
   color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .plugins .sidebar .tag {
@@ -159,10 +185,12 @@ a:active {
 .tag {
   margin: 2px;
   padding: 2px;
+  -webkit-transition: none;
   transition: none;
   cursor: pointer;
   color: #FFF176 !important;
   font-weight: bold;
+  -webkit-transition: background-color 150ms ease-in, text-shadow 0 linear;
   transition: background-color 150ms ease-in, text-shadow 0 linear;
 }
 .tag:hover,
