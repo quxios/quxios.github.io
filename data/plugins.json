@@ -28,7 +28,7 @@
   },
   {
     "name": "QInputRemap",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QInputRemap.js",
     "requires": " QInput",
     "tags": " input, options",
