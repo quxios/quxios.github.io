@@ -55,7 +55,7 @@
   },
   {
     "name": "QSprite",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QSprite.js",
     "requires": " QPlus",
     "tags": " character, sprite, animation",
