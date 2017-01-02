@@ -2,7 +2,7 @@
   {
     "name": "QAudio",
     "version": "2.0.1",
-    "download": "",
+    "download": "https://github.com/quxios/Quasi-MV-Master-Demo/tree/master/js/plugins/QAudio.js",
     "requires": " QPlus",
     "tags": " audio, character, proximity",
     "about": "\n## About\r\n\r\nThis plugin allows you to play an audio (bgm, bgs, me or se) at a fixed\r\nposition. The volume and panning will be dynamically updated based off of\r\nthe players distance from that audios location.\r\n\r\n",
@@ -11,7 +11,7 @@
   {
     "name": "QCamera",
     "version": "1.0.0",
-    "download": "",
+    "download": "https://github.com/quxios/Quasi-MV-Master-Demo/tree/master/js/plugins/QCamera.js",
     "requires": " QPlus",
     "tags": "",
     "about": "\n## About\r\n\r\n\r\n",
@@ -20,7 +20,7 @@
   {
     "name": "QInput",
     "version": "2.0.0",
-    "download": "",
+    "download": "https://github.com/quxios/Quasi-MV-Master-Demo/tree/master/js/plugins/QInput.js",
     "requires": "",
     "tags": " input, keyboard",
     "about": "\n## About\r\n\r\nThis plugin enables full keyboard support as well as letting you set the\r\ndefault keyboard keys for mv inputs.\r\n",
@@ -29,7 +29,7 @@
   {
     "name": "QInputRemap",
     "version": "1.0.0",
-    "download": "",
+    "download": "https://github.com/quxios/Quasi-MV-Master-Demo/tree/master/js/plugins/QInputRemap.js",
     "requires": " QInput",
     "tags": " input, options",
     "about": "\n## About\r\n\r\nThis plugin adds an input remapping window to the Scene_Options. This lets\r\nplayers change their keybinds ingame.\r\n",
@@ -38,7 +38,7 @@
   {
     "name": "QNameInput",
     "version": "2.0.0",
-    "download": "",
+    "download": "https://github.com/quxios/Quasi-MV-Master-Demo/tree/master/js/plugins/QNameInput.js",
     "requires": " QInput",
     "tags": " input",
     "about": "\n## About\r\n\r\nAdds Keyboard support to the Name Input Scene.\r\n",
@@ -47,7 +47,7 @@
   {
     "name": "QPlus",
     "version": "1.0.0",
-    "download": "",
+    "download": "https://github.com/quxios/Quasi-MV-Master-Demo/tree/master/js/plugins/QPlus.js",
     "requires": "",
     "tags": " core, character",
     "about": "\n## About\r\n\r\nThis plugin is the core for most of the QPlugins. It also adds a few new\r\nfunctionality to RPG Maker MV to improve it.\r\n\r\n",
@@ -56,7 +56,7 @@
   {
     "name": "QSprite",
     "version": "2.0.0",
-    "download": "",
+    "download": "https://github.com/quxios/Quasi-MV-Master-Demo/tree/master/js/plugins/QSprite.js",
     "requires": " QPlus",
     "tags": " character, sprite, animation",
     "about": "\n## About\r\n\r\nThis plugin lets you use sprites that are set up with Quasi Sprite Animator\r\n\r\nhttps://github.com/quxios/SpriteAnimator\r\n\r\n",
