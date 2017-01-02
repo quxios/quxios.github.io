@@ -1,17 +1,17 @@
 [
   {
     "name": "QAudio",
-    "version": "2.0.1",
-    "download": "https://github.com/quxios/Quasi-MV-Master-Demo/tree/master/js/plugins/QAudio.js",
+    "version": "2.0.2",
+    "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QAudio.js",
     "requires": " QPlus",
     "tags": " audio, character, proximity",
     "about": "\n## About\r\n\r\nThis plugin allows you to play an audio (bgm, bgs, me or se) at a fixed\r\nposition. The volume and panning will be dynamically updated based off of\r\nthe players distance from that audios location.\r\n\r\n",
-    "help": "\n## Plugin Commands\r\n\r\n**Playing / Looping**\r\n\r\n~~~\r\n  qAudio start [AUDIONAME] [list of options]\r\n~~~\r\nAUDIONAME - The name of the audio you want to play\r\n\r\nPossible options:\r\n\r\n - loop    - this audio will loop\r\n - pan     - this audio will update its pan\r\n - idX     - where X the ID for the audio (used for stopping)\r\n - type    - bgm, bgs, me, or se (Default: bgm)\r\n - maxV    - where V is the max volume for this audio, between 0-100\r\n - xX      - where X is the x position for the audio\r\n - xY      - where Y is the y position for the audio\r\n - radiusR - where R is the max radius for the audio\r\n - bindToCHARAID - where CHARAID is the character to bind to\r\n\r\nCHARAID - The character identifier.\r\n\r\n - For player: 0, p, or player\r\n - For events: EVENTID, eEVENTID or eventEVENTID\r\n (replace EVENTID with a number)\r\n\r\n(Note: If no x, y or bindTo are set, it will play at players position)\r\n\r\n**Examples**\r\n\r\n~~~\r\n  qAudio start Battle1\r\n~~~\r\nWill play bgm Battle1 at the players location. Recommended not to do it this\r\nway, best to set options.\r\n\r\n~~~\r\n  qAudio start City bgs max80 radius10 x5 y5\r\n~~~\r\nWill play bgs City at position (5, 5) with a radius of 10 and max volume of\r\n80\r\n\r\n~~~\r\n  qAudio start City bgs radius5 bindTo1 loop\r\n  qAudio start City bgs radius5 bindToE1 loop\r\n  qAudio start City bgs radius5 bindToEvent1 loop\r\n~~~\r\n(Note: All 3 are the same, just using a different character id method)\r\n\r\nWill play bgs City at event 1s position and move with that event. It also has\r\na radius of 5 and it will keep looping\r\n\r\n**Stoping a QAudio**\r\n\r\n~~~\r\n  qAudio stop ID\r\n~~~\r\nID - the ID you set for the audio\r\n\r\n\r\nTo stop all qAudios\r\n~~~\r\n  qAudio clear\r\n~~~\r\n\r\n**Examples**\r\n\r\nFirst make a qAudio with an Id like:\r\n~~~\r\n  qAudio start Battle1 idAb1\r\n~~~\r\nThen when you want to clear it:\r\n~~~\r\n  qAudio clear Ab1\r\n~~~\r\n\n\n## Links\r\n\r\nRPGMakerWebs:\r\n\r\n  http://forums.rpgmakerweb.com/index.php?/topic/73023-qplugins/\r\n\r\nTerms of use:\r\n\r\n  https://github.com/quxios/QMV-Master-Demo/blob/master/readme.md\r\n\r\n"
+    "help": "\n## Plugin Commands\r\n\r\n**Playing / Looping**\r\n\r\n~~~\r\n  qAudio start [AUDIONAME] [list of options]\r\n~~~\r\nAUDIONAME - The name of the audio you want to play\r\n\r\nPossible options:\r\n\r\n - loop    - this audio will loop\r\n - noPan   - this audio will not update its pan\r\n - idX     - where X the ID for the audio (used for stopping)\r\n - type    - bgm, bgs, me, or se (Default: bgm)\r\n - maxV    - where V is the max volume for this audio, between 0-100\r\n - xX      - where X is the x position for the audio\r\n - xY      - where Y is the y position for the audio\r\n - radiusR - where R is the max radius for the audio\r\n - bindToCHARAID - where CHARAID is the character to bind to\r\n\r\nCHARAID - The character identifier.\r\n\r\n - For player: 0, p, or player\r\n - For events: EVENTID, eEVENTID or eventEVENTID\r\n (replace EVENTID with a number)\r\n\r\n(Note: If no x, y or bindTo are set, it will play at players position)\r\n\r\n**Examples**\r\n\r\n~~~\r\n  qAudio start Battle1\r\n~~~\r\nWill play bgm Battle1 at the players location. Recommended not to do it this\r\nway, best to set options.\r\n\r\n~~~\r\n  qAudio start City bgs max80 radius10 x5 y5\r\n~~~\r\nWill play bgs City at position (5, 5) with a radius of 10 and max volume of\r\n80\r\n\r\n~~~\r\n  qAudio start City bgs radius5 bindTo1 loop\r\n  qAudio start City bgs radius5 bindToE1 loop\r\n  qAudio start City bgs radius5 bindToEvent1 loop\r\n~~~\r\n(Note: All 3 are the same, just using a different character id method)\r\n\r\nWill play bgs City at event 1s position and move with that event. It also has\r\na radius of 5 and it will keep looping\r\n\r\n**Stoping a QAudio**\r\n\r\n~~~\r\n  qAudio stop ID\r\n~~~\r\nID - the ID you set for the audio\r\n\r\n\r\nTo stop all qAudios\r\n~~~\r\n  qAudio clear\r\n~~~\r\n\r\n**Examples**\r\n\r\nFirst make a qAudio with an Id like:\r\n~~~\r\n  qAudio start Battle1 idAb1\r\n~~~\r\nThen when you want to clear it:\r\n~~~\r\n  qAudio clear Ab1\r\n~~~\r\n\n\n## Links\r\n\r\nRPGMakerWebs:\r\n\r\n  http://forums.rpgmakerweb.com/index.php?/topic/73023-qplugins/\r\n\r\nTerms of use:\r\n\r\n  https://github.com/quxios/QMV-Master-Demo/blob/master/readme.md\r\n\r\n"
   },
   {
-    "name": "QCamera",
+    "name": "QCamera-dev",
     "version": "1.0.0",
-    "download": "https://github.com/quxios/Quasi-MV-Master-Demo/tree/master/js/plugins/QCamera.js",
+    "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QCamera-dev.js",
     "requires": " QPlus",
     "tags": "",
     "about": "\n## About\r\n\r\n\r\n",
@@ -20,7 +20,7 @@
   {
     "name": "QInput",
     "version": "2.0.0",
-    "download": "https://github.com/quxios/Quasi-MV-Master-Demo/tree/master/js/plugins/QInput.js",
+    "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QInput.js",
     "requires": "",
     "tags": " input, keyboard",
     "about": "\n## About\r\n\r\nThis plugin enables full keyboard support as well as letting you set the\r\ndefault keyboard keys for mv inputs.\r\n",
@@ -29,7 +29,7 @@
   {
     "name": "QInputRemap",
     "version": "1.0.0",
-    "download": "https://github.com/quxios/Quasi-MV-Master-Demo/tree/master/js/plugins/QInputRemap.js",
+    "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QInputRemap.js",
     "requires": " QInput",
     "tags": " input, options",
     "about": "\n## About\r\n\r\nThis plugin adds an input remapping window to the Scene_Options. This lets\r\nplayers change their keybinds ingame.\r\n",
@@ -38,7 +38,7 @@
   {
     "name": "QNameInput",
     "version": "2.0.0",
-    "download": "https://github.com/quxios/Quasi-MV-Master-Demo/tree/master/js/plugins/QNameInput.js",
+    "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QNameInput.js",
     "requires": " QInput",
     "tags": " input",
     "about": "\n## About\r\n\r\nAdds Keyboard support to the Name Input Scene.\r\n",
@@ -47,7 +47,7 @@
   {
     "name": "QPlus",
     "version": "1.0.0",
-    "download": "https://github.com/quxios/Quasi-MV-Master-Demo/tree/master/js/plugins/QPlus.js",
+    "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QPlus.js",
     "requires": "",
     "tags": " core, character",
     "about": "\n## About\r\n\r\nThis plugin is the core for most of the QPlugins. It also adds a few new\r\nfunctionality to RPG Maker MV to improve it.\r\n\r\n",
@@ -56,7 +56,7 @@
   {
     "name": "QSprite",
     "version": "2.0.0",
-    "download": "https://github.com/quxios/Quasi-MV-Master-Demo/tree/master/js/plugins/QSprite.js",
+    "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QSprite.js",
     "requires": " QPlus",
     "tags": " character, sprite, animation",
     "about": "\n## About\r\n\r\nThis plugin lets you use sprites that are set up with Quasi Sprite Animator\r\n\r\nhttps://github.com/quxios/SpriteAnimator\r\n\r\n",
