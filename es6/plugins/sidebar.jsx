@@ -1,6 +1,7 @@
 import Tags from './tags'
 
-const _distFromTop = 160;
+const { Link } = ReactRouter;
+const _distFromTop = 150;
 
 export default class Sidebar extends React.Component {
   constructor(props) {
@@ -29,6 +30,7 @@ export default class Sidebar extends React.Component {
     }
     return (
       <div className='sidebar' style={style}>
+        { this.props.pluginName ? <Link to='/plugins' className='header'>Back to Plugins</Link> : null }
         <Tags tag={this.props.tag} tags={this.props.tags} setTag={this.props.setTag}/>
       </div>
     )

@@ -183,6 +183,16 @@ a {
         text-shadow: none;
       }
     }
+    a.header {
+      display: block;
+      text-align: center;
+      font-size: 1.5em;
+      color: @light;
+      &:hover, &:active {
+        color: @light-link;
+        text-decoration: underline;
+      }
+    }
   }
   .block {
     padding: 0 5px;

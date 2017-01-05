@@ -5,7 +5,8 @@ export default class PluginManager {
     'QAudio',
     'QInput',
     'QInputRemap',
-    'QNameInput'
+    'QNameInput',
+    'QSpeed'
   ]
   static pluginsPath = '/data/plugins.json';
   static tagsPath = '/data/tags.json';

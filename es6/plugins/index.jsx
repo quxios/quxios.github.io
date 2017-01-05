@@ -65,7 +65,12 @@ export default class PluginsPage extends React.Component {
               plugin
             })}
           </div>
-          <Sidebar tag={this.state.tag} tags={this.state.tags} setTag={::this.setTag} />
+          <Sidebar
+            pluginName={pluginName}
+            tag={this.state.tag}
+            tags={this.state.tags}
+            setTag={::this.setTag}
+          />
           <Footer />
         </div>
       </div>

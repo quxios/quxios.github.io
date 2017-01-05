@@ -164,6 +164,17 @@ a:active {
 .plugins .sidebar .tag.selected {
   text-shadow: none;
 }
+.plugins .sidebar a.header {
+  display: block;
+  text-align: center;
+  font-size: 1.5em;
+  color: #FFFFFF;
+}
+.plugins .sidebar a.header:hover,
+.plugins .sidebar a.header:active {
+  color: #2196F3;
+  text-decoration: underline;
+}
 .plugins .block {
   padding: 0 5px;
 }

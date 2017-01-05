@@ -9,7 +9,7 @@ export default class PluginTags extends React.Component {
       <div className='block'>
         {this.props.tags.map((tag, i) => {
           const { name, val } = tag;
-          const size = ((Math.floor(val / 2) + 0.5) * 0.20) + 0.8;
+          const size = ((Math.floor((val - 1) / 2) + 0.5) * 0.20) + 0.8;
           const style = { fontSize: `${size}em` };
           let className = 'tag';
           className += this.props.tag === name ? ' selected' : '';
