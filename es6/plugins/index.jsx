@@ -16,6 +16,11 @@ export default class PluginsPage extends React.Component {
     PluginManager.load('plugins', ::this.setPlugins);
     PluginManager.load('tags', ::this.setTags);
   }
+  componentWillReceiveProps(nextProps) {
+    if (/\/plugins\/(.*)/i.test(nextProps.location.pathname)) {
+      window.scrollTo(0, 0);
+    }
+  }
   setPlugins(plugins) {
     this.setState({ plugins });
   }
