@@ -2,16 +2,30 @@ const { Link } = ReactRouter;
 
 export default class PluginBlock extends React.Component {
   makeRequires() {
-    let { requires } = this.props.plugin || {};
+    let {
+      requires,
+      download
+    } = this.props.plugin || {};
     if (requires) {
       requires = requires.trim();
       return (
         <span className='sub'>
-          | Requires: <Link to={`/plugins/${requires}`}>{requires}</Link>
+          | Requires: <Link to={`/plugins/${requires}`}>
+            {requires}
+          </Link> | <a href={download}>
+            Download
+          </a>
+        </span>
+      )
+    } else {
+      return (
+        <span className='sub'>
+          | <a href={download}>
+            Download
+          </a>
         </span>
       )
     }
-    return null;
   }
   makeBody() {
     const {
@@ -19,18 +33,19 @@ export default class PluginBlock extends React.Component {
       about,
       help
     } = this.props.plugin || {};
-    let body;
+    let body = '';
     if (video) {
-      // embed video to top of body
+      var code = /\?v=(.*)/.exec(video);
+      if (code) {
+        body += `<center><iframe width="560" height="315" src="https://www.youtube.com/embed/${code[1]}" frameborder="0" allowfullscreen></iframe></center>`
+      }
     }
     if (this.props.max) {
-      body = `${about}\n${help}`
+      body += `${about}\n${help}`
     } else {
-      body = `${about}`;
+      body += `${about}`;
     }
-    return marked(body, {
-      sanitize: true
-    });
+    return marked(body);
   }
   makeTags() {
     const { tags } = this.props.plugin || {};
