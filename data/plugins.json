@@ -1,7 +1,7 @@
 [
   {
     "name": "QPlus",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QPlus.js",
     "requires": "",
     "video": "",
@@ -17,7 +17,7 @@
     "video": "",
     "tags": " updater",
     "about": "\n## About\r\rA Plugin to check if your QPlugins are up to date. Only works during local\rplaytesting. Please remove / delete this plugin before deploying.\r",
-    "help": "\n## How to use\r\rPush F9 while in title screen to enter the QUpdate Scene. You will need\rto be play testing locally and have internet access.\r\n\n## Links\r\rRPGMakerWebs\r\r  http://forums.rpgmakerweb.com/index.php?/topic/73023-qplugins/\r\rTerms of use\r\r  https://github.com/quxios/QMV-Master-Demo/blob/master/readme.md\r\r"
+    "help": "\n## How to use\r\rPush F9 while in title screen to enter the QUpdate Scene. You will need\rto be play testing locally and have internet access.\r\n\n## Links\r\rRPGMakerWebs:\r\r  http://forums.rpgmakerweb.com/index.php?/topic/73023-qplugins/\r\rTerms of use:\r\r  https://github.com/quxios/QMV-Master-Demo/blob/master/readme.md\r\r"
   },
   {
     "name": "QSprite",
@@ -41,7 +41,7 @@
   },
   {
     "name": "QCamera",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QCamera.js",
     "requires": " QPlus",
     "video": " https://www.youtube.com/watch?v=MbdXrReYwFw",
