@@ -58,7 +58,7 @@ export default class PluginsPage extends React.Component {
     return (
       <div>
         <div className='qBg' />
-        <div className='plugins container'>
+        <div className='page container'>
           <div className='title'>
             { pluginName || title }
           </div>

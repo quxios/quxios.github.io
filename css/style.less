@@ -72,7 +72,7 @@ a {
     }
   }
   &.footer {
-    width: 100%;
+    width: 100% !important;
     text-align: center;
     background-color: @dark;
     color: @light;
@@ -80,38 +80,7 @@ a {
   }
 }
 
-.home {
-  .block {
-    width: 430px;
-    opacity: 0.9;
-    -webkit-transition: opacity 250ms ease-in;
-    transition: opacity 250ms ease-in;
-    &.plugins, &.projects {
-      padding: 0;
-      overflow: hidden;
-      height: 200px;
-      opacity: 0.8;
-      &:hover {
-        opacity: 1;
-      }
-      cursor: pointer;
-      .unavailable {
-        -webkit-transition: opacity 250ms ease-in;
-        transition: opacity 250ms ease-in;
-        width: 430px;
-        height: 30px;
-        line-height: 30px;
-        text-align: center;
-        background-color: @dark;
-        color: @light;
-        position: absolute;
-        top: 100px;
-      }
-    }
-  }
-}
-
-.plugins {
+.page {
   top: 50px;
   .title {
     width: 100%;
@@ -210,6 +179,46 @@ a {
       line-height: 30px;
       border-top: 1px solid @dark;
       margin-top: 5px;
+    }
+  }
+}
+
+.home {
+  .block {
+    width: 430px;
+    opacity: 0.9;
+    -webkit-transition: opacity 250ms ease-in;
+    transition: opacity 250ms ease-in;
+    &.showcase {
+      padding: 0;
+      overflow: hidden;
+      height: 200px;
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+      }
+      cursor: pointer;
+    }
+  }
+}
+
+.docs {
+  .sidebar {
+    .block {
+      background-color: @light;
+      color: @dark;
+    }
+  }
+}
+
+.projects {
+  .block {
+    width: 100%;
+    &.showcase {
+      padding: 0;
+      overflow: hidden;
+      height: 200px;
+      cursor: pointer;
     }
   }
 }
