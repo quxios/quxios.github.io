@@ -21,7 +21,7 @@
   },
   {
     "name": "QSprite",
-    "version": "2.0.2",
+    "version": "2.0.3",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QSprite.js",
     "requires": " QPlus",
     "video": "",
@@ -51,7 +51,7 @@
   },
   {
     "name": "QCamera",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QCamera.js",
     "requires": " QPlus",
     "video": " https://www.youtube.com/watch?v=MbdXrReYwFw",
