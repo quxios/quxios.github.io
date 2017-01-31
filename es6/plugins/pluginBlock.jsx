@@ -36,6 +36,9 @@ export default class PluginBlock extends React.Component {
     let body = '';
     if (video) {
       var code = /\?v=(.*)/.exec(video);
+      if (!code) {
+        code = /youtu\.be\/(.*)/.exec(video);
+      }
       if (code) {
         body += `<center><iframe width="560" height="315" src="https://www.youtube.com/embed/${code[1]}" frameborder="0" allowfullscreen></iframe></center>`
       }
