@@ -31,7 +31,7 @@
   },
   {
     "name": "QMap",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QMap.js",
     "requires": " QPlus",
     "video": " https://www.youtube.com/watch?v=x7vcK96aW28",
@@ -66,8 +66,8 @@
     "requires": "",
     "video": " https://youtu.be/nfhSBlwcz8k",
     "tags": " touch",
-    "about": "\n## About\n\nThis plugin makes selectable windows feel more natural. Window choices will\nget selected / highlighted when the mouse is over them. And clicking on\nthem once will run that choice.\n",
-    "help": "\n## How to use\n\nJust install this plugin. No configuration needed.\n\n\n## Links\n\nRPGMakerWebs:\n\n  http://forums.rpgmakerweb.com/index.php?threads/qplugins.73023/\n\nTerms of use:\n\n  https://github.com/quxios/QMV-Master-Demo/blob/master/readme.md\n\n"
+    "about": "\n## About\n\nThis plugin extands the mouse features of MV to make it feel more natural.\nYou are able to change the image used for the cursor. Cursor will change\nto pointing cursor when hovering over a selectable item. You can make\nthe cursor hide when it's inactive for X frames. Window choices will\nget selected / highlighted when the mouse is over them. And clicking on\nthem once will run that choice.\n",
+    "help": "\n## How to use\n\nJust install this plugin and configure the plugin parameters.\n\n\n## Links\n\nRPGMakerWebs:\n\n  http://forums.rpgmakerweb.com/index.php?threads/qplugins.73023/\n\nTerms of use:\n\n  https://github.com/quxios/QMV-Master-Demo/blob/master/readme.md\n\n"
   },
   {
     "name": "QInput",
