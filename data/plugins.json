@@ -1,7 +1,7 @@
 [
   {
     "name": "QPlus",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QPlus.js",
     "requires": "",
     "video": "",
@@ -41,7 +41,7 @@
   },
   {
     "name": "QAudio",
-    "version": "2.0.3",
+    "version": "2.0.4",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QAudio.js",
     "requires": " QPlus",
     "video": "",
@@ -64,7 +64,7 @@
     "version": "1.0.0",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QTouch.js",
     "requires": "",
-    "video": " https://youtu.be/nfhSBlwcz8k",
+    "video": " https://youtu.be/2UrazG-XRxw",
     "tags": " touch",
     "about": "\n## About\n\nThis plugin extands the mouse features of MV to make it feel more natural.\nYou are able to change the image used for the cursor. Cursor will change\nto pointing cursor when hovering over a selectable item. You can make\nthe cursor hide when it's inactive for X frames. Window choices will\nget selected / highlighted when the mouse is over them. And clicking on\nthem once will run that choice.\n",
     "help": "\n## How to use\n\nJust install this plugin and configure the plugin parameters.\n\n\n## Links\n\nRPGMakerWebs:\n\n  http://forums.rpgmakerweb.com/index.php?threads/qplugins.73023/\n\nTerms of use:\n\n  https://github.com/quxios/QMV-Master-Demo/blob/master/readme.md\n\n"
