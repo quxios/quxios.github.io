@@ -20,7 +20,7 @@ ReactDOM.render(
       <Route path="/plugins/:pluginName" component={PluginPage}/>
     </Route>
     <Route path="/projects" component={ProjectsLayout}/>
-    {/*<Route path="/docs" component={DocsLayout} />*/}
+    <Route path="/docs/:docName(/:section)" component={DocsLayout} />
   </Router>,
   document.getElementById('site')
 );

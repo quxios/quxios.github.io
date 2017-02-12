@@ -205,8 +205,15 @@ a {
 .docs {
   .sidebar {
     .block {
+      display: block;
       background-color: @light;
       color: @dark;
+      padding: 5px;
+    }
+  }
+  .content {
+    .block {
+      padding: 5px;
     }
   }
 }
@@ -239,4 +246,8 @@ a {
     color: @dark !important;
     text-decoration: none !important;
   }
+}
+
+h1, h2, h3, h4 {
+  margin: 5px 0;
 }

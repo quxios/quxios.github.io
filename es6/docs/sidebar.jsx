@@ -26,10 +26,23 @@ export default class Sidebar extends React.Component {
     const style = {
       marginTop: this.state.top
     }
+    const style2 = {
+      display: 'block'
+    }
+    const doc = this.props.doc;
     return (
       <div className='sidebar' style={style}>
         <div className='block'>
-          list of sections / subsections
+          <h2>Sections</h2>
+          {this.props.sections.map((section, i) => {
+            const s1 = section.replace(/#/g, '').trim();
+            const s2 = section.replace(/#/g, '-').trim();
+            return (
+              <Link key={i} to={`/docs/${doc}/${s1}`} style={style2}>
+                {s2}
+              </Link>
+            );
+          })}
         </div>
       </div>
     )

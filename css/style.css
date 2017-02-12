@@ -179,8 +179,13 @@ a:active {
   opacity: 1;
 }
 .docs .sidebar .block {
+  display: block;
   background-color: #FFFFFF;
   color: #1F1F1F;
+  padding: 5px;
+}
+.docs .content .block {
+  padding: 5px;
 }
 .projects .block {
   width: 100%;
@@ -208,4 +213,10 @@ a:active {
   background-color: #FFFFFF;
   color: #1F1F1F !important;
   text-decoration: none !important;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 5px 0;
 }
