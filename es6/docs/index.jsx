@@ -15,7 +15,6 @@ export default class DocsPage extends React.Component {
   }
   componentWillMount() {
     DocsManager.load(this.props.params.docName, ::this.setDocs);
-
   }
   componentDidUpdate(prevProps, prevState) {
     if (this.props.params.section) {

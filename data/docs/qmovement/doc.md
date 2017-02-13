@@ -1,7 +1,4 @@
 # QMovement
-## Plugin Parameters
-TODO
-
 ## Colliders
 There are 3 types of colliders; Polygon, Box and Circle. Though you can only create
 box and circle colliders, unless you modify the code to accept polygons. This is

@@ -3,7 +3,7 @@ import Tags from './tags'
 const { Link } = ReactRouter;
 const _distFromTop = 150;
 
-export default class Sidebar extends React.Component {
+export default class SidebarTags extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -30,8 +30,11 @@ export default class Sidebar extends React.Component {
     }
     return (
       <div className='sidebar' style={style}>
-        { this.props.pluginName ? <Link to='/plugins' className='header'>Back to Plugins</Link> : null }
-        <Tags tag={this.props.tag} tags={this.props.tags} setTag={this.props.setTag}/>
+        <Tags
+          tag={this.props.tag}
+          tags={this.props.tags}
+          setTag={this.props.setTag}
+        />
       </div>
     )
   }

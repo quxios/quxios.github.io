@@ -1,7 +1,9 @@
 // out: style.css
 
 @dark: #1F1F1F;
+@dark-light: #3F3F3F;
 @light: #FFFFFF;
+@light-dark: #F2F2F2;
 @light-link: #2196F3;
 @yellow: #FFF176;
 @hightlight: @yellow;
@@ -62,7 +64,7 @@ a {
     0 1px 5px 0 fade(@dark, 12%);
   box-sizing: border-box;
   background-color: @light;
-  border-radius: 3px;
+  border-radius: 4px;
   margin: 10px;
   padding: 5px;
   a {
@@ -115,11 +117,26 @@ a {
     .block {
       width: 655px;
     }
+    .help {
+      padding: 0 10px;
+    }
     .tag {
       color: @light-link !important;
       &:hover, &.selected {
         background-color: @light-link;
         color: @light !important;
+      }
+    }
+    p {
+      padding-left: 10px;
+    }
+  }
+  .sidebarSections {
+    width: 225px;
+    .block {
+      padding: 5px 10px;
+      a {
+        padding-left: 10px;
       }
     }
   }
@@ -250,4 +267,16 @@ a {
 
 h1, h2, h3, h4 {
   margin: 5px 0;
+}
+
+code {
+  background-color: @light-dark;
+  padding: 1px 3px;
+  border-radius: 3px;
+}
+
+pre {
+  background-color: @light-dark;
+  padding: 4px;
+  border-radius: 4px;
 }

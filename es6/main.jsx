@@ -9,15 +9,13 @@ import PluginPage from './plugins/page'
 import ProjectsLayout from './projects'
 
 import DocsLayout from './docs'
-//import DocsList from './docs/list'
-//import DocsPage from './docs/page'
 
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={HomePage}/>
     <Route path="/plugins" component={PluginsLayout}>
       <IndexRoute component={PluginList}/>
-      <Route path="/plugins/:pluginName" component={PluginPage}/>
+      <Route path="/plugins/:pluginName(/:section)" component={PluginPage}/>
     </Route>
     <Route path="/projects" component={ProjectsLayout}/>
     <Route path="/docs/:docName(/:section)" component={DocsLayout} />

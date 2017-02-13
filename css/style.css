@@ -47,7 +47,7 @@ a:active {
   box-shadow: 0 2px 2px 0 rgba(31, 31, 31, 0.14), 0 3px 1px -2px rgba(31, 31, 31, 0.02), 0 1px 5px 0 rgba(31, 31, 31, 0.12);
   box-sizing: border-box;
   background-color: #FFFFFF;
-  border-radius: 3px;
+  border-radius: 4px;
   margin: 10px;
   padding: 5px;
 }
@@ -98,6 +98,9 @@ a:active {
 .page .content .block {
   width: 655px;
 }
+.page .content .help {
+  padding: 0 10px;
+}
 .page .content .tag {
   color: #2196F3 !important;
 }
@@ -105,6 +108,18 @@ a:active {
 .page .content .tag.selected {
   background-color: #2196F3;
   color: #FFFFFF !important;
+}
+.page .content p {
+  padding-left: 10px;
+}
+.page .sidebarSections {
+  width: 225px;
+}
+.page .sidebarSections .block {
+  padding: 5px 10px;
+}
+.page .sidebarSections .block a {
+  padding-left: 10px;
 }
 .page .sidebar {
   max-width: 225px;
@@ -219,4 +234,14 @@ h2,
 h3,
 h4 {
   margin: 5px 0;
+}
+code {
+  background-color: #F2F2F2;
+  padding: 1px 3px;
+  border-radius: 3px;
+}
+pre {
+  background-color: #F2F2F2;
+  padding: 4px;
+  border-radius: 4px;
 }

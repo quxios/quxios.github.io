@@ -1,6 +1,7 @@
 import PluginManager from './../pluginManager'
 
-import Sidebar from './sidebar'
+import SidebarSections from './sidebarSections'
+import SidebarTags from './sidebarTags'
 import Footer from './../components/footer'
 
 export default class PluginsPage extends React.Component {
@@ -17,8 +18,27 @@ export default class PluginsPage extends React.Component {
     PluginManager.load('tags', ::this.setTags);
   }
   componentWillReceiveProps(nextProps) {
-    if (/\/plugins\/(.*)/i.test(nextProps.location.pathname)) {
+    const id = nextProps.params.section;
+    const plugin = nextProps.params.pluginName;
+    if (plugin) {
       window.scrollTo(0, 0);
+    }
+    if (id) {
+      this.scrollTo(id);
+    }
+  }
+  componentDidUpdate(prevProps, prevState) {
+    if (this.props.params.section) {
+      this.scrollTo(this.props.params.section);
+    }
+  }
+  scrollTo(id) {
+    id = id.toLowerCase();
+    id = id.replace(/[^a-zA-Z0-9]/g, ' ');
+    id = id.replace(/\s+/g, '-');
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView(true);
     }
   }
   setPlugins(plugins) {
@@ -70,12 +90,16 @@ export default class PluginsPage extends React.Component {
               plugin
             })}
           </div>
-          <Sidebar
-            pluginName={pluginName}
-            tag={this.state.tag}
-            tags={this.state.tags}
-            setTag={::this.setTag}
-          />
+          {
+            pluginName ? <SidebarSections
+              pluginName={pluginName}
+              plugin={plugin}
+            /> : <SidebarTags
+              tag={this.state.tag}
+              tags={this.state.tags}
+              setTag={::this.setTag}
+            />
+          }
           <Footer />
         </div>
       </div>
