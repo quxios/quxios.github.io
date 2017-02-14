@@ -33,6 +33,27 @@
     ]
   },
   {
+    "name": "QMovement",
+    "version": "0.1.0",
+    "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QMovement.js",
+    "requires": " QPlus",
+    "video": "",
+    "tags": "",
+    "about": "\n## About\r\rThis plugin completely rewrites the collision system to use colliders. Using\rcolliders enabled more accurate collision checking with dealing with pixel\rmovement. This plugin also lets you change how many pixels the characters\rmove per step, letting you set up a 24x24 movement or a 1x1 (pixel movement)\r\r--DEVELOPMENT VERSION\r",
+    "help": "\n## How to use\r\rTODO\r\n\n## Colliders\r\rThere are 3 types of colliders; Polygon, Box and Circle. Though you can only\rcreate box and circle colliders, unless you modify the code to accept\rpolygons. This is intentional since polygon would be \"harder\" to setup.\r\r![Colliders Image](https://quxios.github.io/imgs/qmovement/colliders.png)\r\r- Boxes takes in width, height, offset x and offset y\r- Circles similar to boxes, takes in width, height, offset x and offset y\r\r### Setting up colliders\r\rColliders are setup inside the Players notebox or as a comment inside an\rEvents page. Events colliders depends it's page, so you may need to make the\rcollider on all pages.\r\rThere are two ways to setup colliders. using `<collider:-,-,-,->` and using\r`<colliders>-</colliders>`. The first method sets the 'Default' collider for\rthat character. The second one you create the colliders for every collider\rtype.\r\r### Collider Types\r\rThere are 3 collider types. Default, Collision and Interaction.\r- Default: This is the collider to use if collider type that was called was\rnot found\r- Collision: This collider is used for collision checking\r- Interaction: This collider is used for checking interaction.\r\n\n## Collider Terms\r\r![Colliders Terms Image](https://quxios.github.io/imgs/qmovement/colliderInfo.png)\r\r### Collider Notetag\r\r~~~\r<collider: shape, width, height, ox, oy>\r~~~\rThis notetag sets all collider types to these values.\r- Shape: Set to box or circle\r- Width: The width of the collider\r- Height: The height of the collider\r- OX: The x offset value of the collider\r- OY: The y offset value of the collider\r\r### Colliders Notetag\r\r~~~\r<colliders>\rtype: shape, width, height, ox, oy\r</colliders>\r~~~\rThis notetag sets all collider types to these values.\r- Type: The type of collider, set to default, collision or interaction\r- Shape: Set to box or circle\r- Width: The width of the collider\r- Height: The height of the collider\r- OX: The x offset value of the collider\r- OY: The y offset value of the collider\r\rTo add another type, just add `type: shape, width, height, ox, oy` on\ranother line.\r\rExample:\r~~~\r<colliders>\rdefault: box, 48, 48\rcollision: circle, 24, 24, 12, 12\rinteraction: box: 32, 32, 8, 8\r</colliders>\r~~~\r\n\n## Move Routes\r\rTODO\r\n\n## Links\r\rRPGMakerWebs:\r\r  http://forums.rpgmakerweb.com/index.php?threads/qplugins.73023/\r\rTerms of use:\r\r  https://github.com/quxios/QMV-Master-Demo/blob/master/readme.md\r\r",
+    "sections": [
+      "How to use",
+      "Colliders",
+      "# Setting up colliders",
+      "# Collider Types",
+      "Collider Terms",
+      "# Collider Notetag",
+      "# Colliders Notetag",
+      "Move Routes",
+      "Links"
+    ]
+  },
+  {
     "name": "QSprite",
     "version": "2.0.3",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QSprite.js",
