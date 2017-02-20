@@ -1,7 +1,7 @@
 [
   {
     "name": "QPlus",
-    "version": "1.0.5",
+    "version": "1.1.1",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QPlus.js",
     "requires": "",
     "video": "",
@@ -20,7 +20,7 @@
   },
   {
     "name": "QUpdate",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QUpdate.js",
     "requires": "",
     "video": "",
@@ -55,7 +55,7 @@
   },
   {
     "name": "QSprite",
-    "version": "2.0.3",
+    "version": "2.0.4",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QSprite.js",
     "requires": " QPlus",
     "video": "",
@@ -149,7 +149,7 @@
   },
   {
     "name": "QInput",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QInput.js",
     "requires": "",
     "video": "",
@@ -200,7 +200,7 @@
   },
   {
     "name": "QSpeed",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QSpeed.js",
     "requires": " QPlus",
     "video": "",
