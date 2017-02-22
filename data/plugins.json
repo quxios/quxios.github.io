@@ -1,7 +1,7 @@
 [
   {
     "name": "QPlus",
-    "version": "1.1.1",
+    "version": "1.1.3",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QPlus.js",
     "requires": "",
     "video": "",
@@ -34,13 +34,13 @@
   },
   {
     "name": "QMovement",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QMovement.js",
     "requires": " QPlus",
     "video": "",
-    "tags": "",
-    "about": "\n## About\r\rThis plugin completely rewrites the collision system to use colliders. Using\rcolliders enabled more accurate collision checking with dealing with pixel\rmovement. This plugin also lets you change how many pixels the characters\rmove per step, letting you set up a 24x24 movement or a 1x1 (pixel movement)\r\r--DEVELOPMENT VERSION\r",
-    "help": "\n## How to use\r\rTODO\r\n\n## Colliders\r\rThere are 3 types of colliders; Polygon, Box and Circle. Though you can only\rcreate box and circle colliders, unless you modify the code to accept\rpolygons. This is intentional since polygon would be \"harder\" to setup.\r\r![Colliders Image](https://quxios.github.io/imgs/qmovement/colliders.png)\r\r- Boxes takes in width, height, offset x and offset y\r- Circles similar to boxes, takes in width, height, offset x and offset y\r\r### Setting up colliders\r\rColliders are setup inside the Players notebox or as a comment inside an\rEvents page. Events colliders depends it's page, so you may need to make the\rcollider on all pages.\r\rThere are two ways to setup colliders. using `<collider:-,-,-,->` and using\r`<colliders>-</colliders>`. The first method sets the 'Default' collider for\rthat character. The second one you create the colliders for every collider\rtype.\r\r### Collider Types\r\rThere are 3 collider types. Default, Collision and Interaction.\r- Default: This is the collider to use if collider type that was called was\rnot found\r- Collision: This collider is used for collision checking\r- Interaction: This collider is used for checking interaction.\r\n\n## Collider Terms\r\r![Colliders Terms Image](https://quxios.github.io/imgs/qmovement/colliderInfo.png)\r\r### Collider Notetag\r\r~~~\r<collider: shape, width, height, ox, oy>\r~~~\rThis notetag sets all collider types to these values.\r- Shape: Set to box or circle\r- Width: The width of the collider\r- Height: The height of the collider\r- OX: The x offset value of the collider\r- OY: The y offset value of the collider\r\r### Colliders Notetag\r\r~~~\r<colliders>\rtype: shape, width, height, ox, oy\r</colliders>\r~~~\rThis notetag sets all collider types to these values.\r- Type: The type of collider, set to default, collision or interaction\r- Shape: Set to box or circle\r- Width: The width of the collider\r- Height: The height of the collider\r- OX: The x offset value of the collider\r- OY: The y offset value of the collider\r\rTo add another type, just add `type: shape, width, height, ox, oy` on\ranother line.\r\rExample:\r~~~\r<colliders>\rdefault: box, 48, 48\rcollision: circle, 24, 24, 12, 12\rinteraction: box: 32, 32, 8, 8\r</colliders>\r~~~\r\n\n## Move Routes\r\rTODO\r\n\n## Links\r\rRPGMakerWebs:\r\r  http://forums.rpgmakerweb.com/index.php?threads/qplugins.73023/\r\rTerms of use:\r\r  https://github.com/quxios/QMV-Master-Demo/blob/master/readme.md\r\r",
+    "tags": " movement, pixel",
+    "about": "\n## About\r\rThis plugin completely rewrites the collision system to use colliders. Using\rcolliders enabled more accurate collision checking with dealing with pixel\rmovement. This plugin also lets you change how many pixels the characters\rmove per step, letting you set up a 24x24 movement or a 1x1 (pixel movement)\r\rNote there are a few mv features disabled/broken; mouse movement, followers,\rand vehicles.\r\r--DEVELOPMENT VERSION\r",
+    "help": "\n## How to use\r\rTODO\r\n\n## Colliders\r\rThere are 3 types of colliders; Polygon, Box and Circle. Though you can only\rcreate box and circle colliders, unless you modify the code to accept\rpolygons. This is intentional since polygon would be \"harder\" to setup.\r\r![Colliders Image](https://quxios.github.io/imgs/qmovement/colliders.png)\r\r- Boxes takes in width, height, offset x and offset y\r- Circles similar to boxes, takes in width, height, offset x and offset y\r\r### Setting up colliders\r\rColliders are setup inside the Players notebox or as a comment inside an\rEvents page. Events colliders depends it's page, so you may need to make the\rcollider on all pages.\r\rThere are two ways to setup colliders. using `<collider:-,-,-,->` and using\r`<colliders>-</colliders>`. The first method sets the 'Default' collider for\rthat character. The second one you create the colliders for every collider\rtype.\r\r### Collider Types\r\rThere are 3 collider types. Default, Collision and Interaction.\r- Default: This is the collider to use if collider type that was called was\rnot found\r- Collision: This collider is used for collision checking\r- Interaction: This collider is used for checking interaction.\r\n\n## Collider Terms\r\r![Colliders Terms Image](https://quxios.github.io/imgs/qmovement/colliderInfo.png)\r\r### Collider Notetag\r\r~~~\r<collider: shape, width, height, ox, oy>\r~~~\rThis notetag sets all collider types to these values.\r- Shape: Set to box or circle\r- Width: The width of the collider\r- Height: The height of the collider\r- OX: The x offset value of the collider\r- OY: The y offset value of the collider\r\r### Colliders Notetag\r\r~~~\r<colliders>\rtype: shape, width, height, ox, oy\r</colliders>\r~~~\rThis notetag sets all collider types to these values.\r- Type: The type of collider, set to default, collision or interaction\r- Shape: Set to box or circle\r- Width: The width of the collider\r- Height: The height of the collider\r- OX: The x offset value of the collider\r- OY: The y offset value of the collider\r\rTo add another type, just add `type: shape, width, height, ox, oy` on\ranother line.\r\rExample:\r~~~\r<colliders>\rdefault: box, 48, 48\rcollision: circle, 24, 24, 12, 12\rinteraction: box: 32, 32, 8, 8\r</colliders>\r~~~\r\n\n## Move Routes\r\rBy default, event move commands (moveup, movedown, ect) will convert to a\rqmove that moves the character based off your tilesize. So if your tilesize\ris 48 and your gridsize is 1. Then a moveup command will move the character\rup 48 pixels not 1. But if you want to move the character by a fixed amount\rof pixels, then you will use the QMove commands.\r\r### QMove\r\r![QMove Script Call](https://quxios.github.io/imgs/qmovement/arc.png)\rTo do a QMove, add a script in the move route in the format:\r~~~\r qmove(DIR, AMOUNT, MULTIPLER)\r~~~\r- DIR: Set to a number representing the direction to move,\r 2: left, 4: right, 8: up 2: down,\r 1: lower left, 3: lower right, 7: upper left, 9: upper right,\r 5: current direction, 0: reverse direction\r- AMOUNT: The amount to move in that direction, in pixels\r- MULTIPLIER: multiplies against amount to make larger values easier [OPTIONAL]\r\rExample:\r~~~\r qmove(4, 24)\r~~~\rWill move that character 24 pixels to the left.\r\r### Arc\r\rArcing is used to make a character orbit around a position. Note that collisions\rare ignored when arcing, but interactions still work. To add a arc add a script\rin the move route in the format:\r~~~\r arc(PIVOTX, PIVOTY, RADIAN, CCWISE?, FRAMES)\r~~~\r- PIVOTX: The x position to orbit around, in pixels\r- PIVOTY: The y position to orbit around, in pixels\r- RADIAN: The degrees to move, in radians\r- CCWISE?: set to true or false; if true it will arc countclock wise\r- FRAMES: The amount of frames to complete the arc\r\rExample:\r~~~\r arc(480,480,Math.PI*2,false,60)\r~~~\r\n\n## Links\r\rRPGMakerWebs:\r\r  http://forums.rpgmakerweb.com/index.php?threads/qplugins.73023/\r\rTerms of use:\r\r  https://github.com/quxios/QMV-Master-Demo/blob/master/readme.md\r\r",
     "sections": [
       "How to use",
       "Colliders",
@@ -50,12 +50,31 @@
       "# Collider Notetag",
       "# Colliders Notetag",
       "Move Routes",
+      "# QMove",
+      "# Arc",
+      "Links"
+    ]
+  },
+  {
+    "name": "QPathfind",
+    "version": "1.0.0",
+    "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QPathfind.js",
+    "requires": " QPlus",
+    "video": "",
+    "tags": " pathfind, chase, character, map",
+    "about": "\n## About\r\rThis plugin will calculate a path for a character to take to reach a target\rposition. You can also use this plugin to make a character chase a target.\r",
+    "help": "\n## How to use\r\r### Pathfind\r\rTo start a pathfind, you need to use a plugin command:\r~~~\r qPathfind [CHARAID] [list of options]\r~~~\rCHARAID - The character identifier.\r\r - For player: 0, p, or player\r - For events: EVENTID, eEVENTID or eventEVENTID (replace EVENTID with a number)\r\rPossible options:\r - xX     - where X is the x position in grid terms\r - yY     - where Y is the y position in grid terms\r - pxX    - where X is the x position in pixel terms (QMovement only)\r - pyY    - where Y is the y position in pixel terms (QMovement only)\r - smartX - where X is 1 or 2.\r  When 1, pathfind will recalculate when its path is blocked\r  When 2, pathfind will also recalucate at a set interval\r - wait   - the event that called this will wait until the pathfind is complete\r\r\r### Chase\r\rTo start a chase, use the plugin command:\r~~~\r qPathfind [CHARAID] chase [TARGETCHARAID]\r~~~\rCHARAID - The character identifier.\r\r - For player: 0, p, or player\r - For events: EVENTID, eEVENTID or eventEVENTID (replace EVENTID with a number)\r\rTARGETCHARAID - The CharaID of who you want the CHARAID to chase\r\r### Examples\r\rMake the player pathfind to 5, 1. With no smart\r~~~\r qPathfind 0 x5 y1\r qPathfind p x5 y1\r qPathfind player x5 y1\r~~~\r(Note: All 3 are the same, just using a different character id method)\r\rMake the player pathfind to 2, 4. With smart 1\r~~~\r qPathfind 0 x2 y4 smart1\r qPathfind p x2 y4 smart1\r qPathfind player x2 y4 smart1\r~~~\r\rMake the event 1 pathfind to 2, 4. With a wait\r~~~\r qPathfind 1 x2 y4 wait\r qPathfind e1 x2 y4 wait\r qPathfind event1 x2 y4 wait\r~~~\r\rMake the event 1 chase player\r~~~\r qPathfind 1 chase 0\r qPathfind e1 chase p\r qPathfind event1 chase player1\r~~~\r\n\n## Links\r\rRPGMakerWebs:\r\r  http://forums.rpgmakerweb.com/index.php?threads/qplugins.73023/\r\rTerms of use:\r\r  https://github.com/quxios/QMV-Master-Demo/blob/master/readme.md\r\r",
+    "sections": [
+      "How to use",
+      "# Pathfind",
+      "# Chase",
+      "# Examples",
       "Links"
     ]
   },
   {
     "name": "QSprite",
-    "version": "2.0.4",
+    "version": "2.0.5",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QSprite.js",
     "requires": " QPlus",
     "video": "",
@@ -80,7 +99,7 @@
   },
   {
     "name": "QMap",
-    "version": "1.1.2",
+    "version": "1.2.0",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QMap.js",
     "requires": " QPlus",
     "video": " https://www.youtube.com/watch?v=x7vcK96aW28",
@@ -99,13 +118,13 @@
   },
   {
     "name": "QAudio",
-    "version": "2.0.4",
+    "version": "2.0.5",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QAudio.js",
     "requires": " QPlus",
     "video": "",
     "tags": " audio, character, proximity",
     "about": "\n## About\r\rThis plugin allows you to play an audio (bgm, bgs, me or se) at a fixed\rposition. The volume and panning will be dynamically updated based off of\rthe players distance from that audios location.\r\r",
-    "help": "\n## Plugin Commands\r\r### Playing / Looping\r\r~~~\r  qAudio start [AUDIONAME] [list of options]\r~~~\rAUDIONAME - The name of the audio you want to play. If file has spaces in it\rwrap the name with \"\". Ex. If audio name was: Some File, then use \"Some File\"\r\rPossible options:\r\r - loop    - this audio will loop\r - noPan   - this audio will not update its pan\r - idX     - where X the ID for the audio (used for stopping)\r - type    - bgm, bgs, me, or se (Default: bgm)\r - maxV    - where V is the max volume for this audio, between 0-100\r - xX      - where X is the x position for the audio\r - xY      - where Y is the y position for the audio\r - radiusR - where R is the max radius for the audio\r - bindToCHARAID - where CHARAID is the character to bind to\r\rCHARAID - The character identifier.\r\r - For player: 0, p, or player\r - For events: EVENTID, eEVENTID or eventEVENTID\r (replace EVENTID with a number)\r\r(Note: If no x, y or bindTo are set, it will play at players position)\r\r### Examples\r\r~~~\r  qAudio start Battle1\r~~~\rWill play bgm Battle1 at the players location. Recommended not to do it this\rway, best to set options.\r\r~~~\r  qAudio start City bgs max80 radius10 x5 y5\r~~~\rWill play bgs City at position (5, 5) with a radius of 10 and max volume of\r80\r\r~~~\r  qAudio start City bgs radius5 bindTo1 loop\r  qAudio start City bgs radius5 bindToE1 loop\r  qAudio start City bgs radius5 bindToEvent1 loop\r~~~\r(Note: All 3 are the same, just using a different character id method)\r\rWill play bgs City at event 1s position and move with that event. It also has\ra radius of 5 and it will keep looping\r\r### Stoping a QAudio\r\r~~~\r  qAudio stop ID\r~~~\rID - the ID you set for the audio\r\r\rTo stop all qAudios\r~~~\r  qAudio clear\r~~~\r\r### Examples\r\rFirst make a qAudio with an Id like:\r~~~\r  qAudio start Battle1 idAb1\r~~~\rThen when you want to clear it:\r~~~\r  qAudio clear Ab1\r~~~\r\n\n## Links\r\rRPGMakerWebs:\r\r  http://forums.rpgmakerweb.com/index.php?threads/qplugins.73023/\r\rTerms of use:\r\r  https://github.com/quxios/QMV-Master-Demo/blob/master/readme.md\r\r",
+    "help": "\n## Plugin Commands\r\r### Playing / Looping\r\r~~~\r  qAudio start [AUDIONAME] [list of options]\r~~~\rAUDIONAME - The name of the audio you want to play. If file has spaces in it\rwrap the name with \"\". Ex. If audio name was: Some File, then use \"Some File\"\r\rPossible options:\r\r - loop    - this audio will loop\r - noPan   - this audio will not update its pan\r - idX     - where X the ID for the audio (used for stopping)\r - type    - bgm, bgs, me, or se (Default: bgm)\r - maxV    - where V is the max volume for this audio, between 0-100\r - xX      - where X is the x position for the audio\r - yY      - where Y is the y position for the audio\r - radiusR - where R is the max radius for the audio\r - bindToCHARAID - where CHARAID is the character to bind to\r\rCHARAID - The character identifier.\r\r - For player: 0, p, or player\r - For events: EVENTID, eEVENTID or eventEVENTID\r (replace EVENTID with a number)\r\r(Note: If no x, y or bindTo are set, it will play at players position)\r\r### Examples\r\r~~~\r  qAudio start Battle1\r~~~\rWill play bgm Battle1 at the players location. Recommended not to do it this\rway, best to set options.\r\r~~~\r  qAudio start City bgs max80 radius10 x5 y5\r~~~\rWill play bgs City at position (5, 5) with a radius of 10 and max volume of\r80\r\r~~~\r  qAudio start City bgs radius5 bindTo1 loop\r  qAudio start City bgs radius5 bindToE1 loop\r  qAudio start City bgs radius5 bindToEvent1 loop\r~~~\r(Note: All 3 are the same, just using a different character id method)\r\rWill play bgs City at event 1s position and move with that event. It also has\ra radius of 5 and it will keep looping\r\r### Stoping a QAudio\r\r~~~\r  qAudio stop ID\r~~~\rID - the ID you set for the audio\r\r\rTo stop all qAudios\r~~~\r  qAudio clear\r~~~\r\r### Examples\r\rFirst make a qAudio with an Id like:\r~~~\r  qAudio start Battle1 idAb1\r~~~\rThen when you want to clear it:\r~~~\r  qAudio clear Ab1\r~~~\r\n\n## Links\r\rRPGMakerWebs:\r\r  http://forums.rpgmakerweb.com/index.php?threads/qplugins.73023/\r\rTerms of use:\r\r  https://github.com/quxios/QMV-Master-Demo/blob/master/readme.md\r\r",
     "sections": [
       "Plugin Commands",
       "# Playing / Looping",
@@ -117,7 +136,7 @@
   },
   {
     "name": "QCamera",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QCamera.js",
     "requires": " QPlus",
     "video": " https://www.youtube.com/watch?v=MbdXrReYwFw",
