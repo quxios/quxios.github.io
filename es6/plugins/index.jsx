@@ -1,3 +1,5 @@
+import React from 'react'
+
 import PluginManager from './../pluginManager'
 
 import SidebarSections from './sidebarSections'

@@ -1,4 +1,5 @@
-const { Link } = ReactRouter;
+import React from 'react'
+import { Link } from 'react-router'
 
 export default class PluginBlock extends React.Component {
   makeRequires() {

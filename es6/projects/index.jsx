@@ -1,3 +1,5 @@
+import React from 'react'
+
 //import Sidebar from './sidebar'
 import Footer from './../components/footer'
 

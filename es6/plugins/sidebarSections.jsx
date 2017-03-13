@@ -1,4 +1,6 @@
-const { Link } = ReactRouter;
+import React from 'react'
+import { Link } from 'react-router'
+
 const _distFromTop = 150;
 
 export default class SidebarSections extends React.Component {

@@ -1,4 +1,5 @@
-const { Link } = ReactRouter;
+import React from 'react'
+import { Link } from 'react-router'
 
 export default class PluginTags extends React.Component {
   onClick(tag) {

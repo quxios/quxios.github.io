@@ -1,6 +1,7 @@
+import React from 'react'
+import { Link } from 'react-router'
 import Tags from './tags'
 
-const { Link } = ReactRouter;
 const _distFromTop = 150;
 
 export default class SidebarTags extends React.Component {

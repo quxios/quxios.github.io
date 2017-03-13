@@ -1,3 +1,5 @@
+import React from 'react'
+
 import PluginBlock from './pluginBlock'
 
 export default class PluginPage extends React.Component {

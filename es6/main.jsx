@@ -1,4 +1,6 @@
-const { Router, Route, IndexRoute, hashHistory } = ReactRouter;
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { Router, Route, IndexRoute, hashHistory } from 'react-router'
 
 import HomePage from './home'
 
@@ -8,7 +10,7 @@ import PluginPage from './plugins/page'
 
 import ProjectsLayout from './projects'
 
-import DocsLayout from './docs'
+//import DocsLayout from './docs'
 
 ReactDOM.render(
   <Router history={hashHistory}>
@@ -18,7 +20,6 @@ ReactDOM.render(
       <Route path="/plugins/:pluginName(/:section)" component={PluginPage}/>
     </Route>
     <Route path="/projects" component={ProjectsLayout}/>
-    <Route path="/docs/:docName(/:section)" component={DocsLayout} />
   </Router>,
   document.getElementById('site')
 );
