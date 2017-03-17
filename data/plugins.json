@@ -2,6 +2,7 @@
   {
     "name": "QPlus",
     "version": "1.1.4",
+    "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QPlus.js",
     "requires": "",
     "video": "",
@@ -21,6 +22,7 @@
   {
     "name": "QUpdate",
     "version": "1.1.1",
+    "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QUpdate.js",
     "requires": "",
     "video": "",
@@ -35,6 +37,7 @@
   {
     "name": "QMovement",
     "version": "1.1.2",
+    "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QMovement.js",
     "requires": " QPlus",
     "video": "",
@@ -61,6 +64,7 @@
   {
     "name": "QPathfind",
     "version": "1.1.1",
+    "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QPathfind.js",
     "requires": " QPlus",
     "video": "",
@@ -78,8 +82,48 @@
     ]
   },
   {
+    "name": "QSight",
+    "version": "1.0.0",
+    "development": true,
+    "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QSight.js",
+    "requires": " QPlus",
+    "video": "",
+    "tags": " character, sight, los",
+    "about": "\n## About\r\rThis plugin lets you add real time line of sight to characters. A line of\rsight is similar to a sensor plugin, except characters can't see behind\robjects that block their view.\r\rThis plugin has built in compatibilty for QMovement. When using QMovement\rthe line of sight will be more accurate since it'll use a shadow casting\ralgorithm. When not using QMovement it'll use a simple ray casting.\r",
+    "help": "\n## How to use\r\r### Sight Notetag / Comment\r\rTo give an event sight, add a note or comment in the following format:\r~~~\r <sight:SHAPE,RANGE,SWITCH,TARGET>\r~~~\r- SHAPE  - box, circle or poly\r- RANGE  - How far the character can see, in grid spaces\r- SWITCH - Which switch to toggle. Set to a number or A, B, C, D for self switch\r- TARGET(Optional) - Set to the CHARAID of who to look for. Default: 0\r\rCHARAID - The character identifier.\r - For player: 0, p, or player\r - For events: EVENTID, eEVENTID, or eventEVENTID (replace EVENTID with a number)\r\r* Note: Notes are applied to all the pages in the event, comments are page based.\r\r### Sight examples\r\rHere's an example of a poly sight with a range of 6 and toggles self switch A\r~~~\r <sight:poly,6,A>\r~~~\r\rHere's an example of a circle sight with a range of 4 and toggles switch 1\r~~~\r <sight:circle,4,1>\r~~~\r\r* Note: I left out TARGET because it defaults to player\r\r### See through events/tiles\r\rTo make an event see through add the following note or comment:\r~~~\r <invisible>\r~~~\r* Note: Notes are applied to all the pages in the event, comments are page based.\r\rFor events;\rSet the tile's terrain id to the no shadow terrain id set in the plugin\rparameters.\rWhen using QMovement and QM+RegionColliders, create a RegionCollider and\radd the following in the note:\r~~~\r <noShadow>\r~~~\r\n\n## Plugin Commands\r\r### Check sight\r\rTODO\r~~~\r qSight CHARAID check SHAPE RANGE SWITCH TARGETID\r~~~\r\r### Toggle charcter invisible\r\rTODO\r~~~\r qSight CHARAID visible BOOL\r~~~\r\n\n## Links\r\rRPGMakerWebs:\r\r  http://forums.rpgmakerweb.com/index.php?threads/qplugins.73023/\r\rTerms of use:\r\r  https://github.com/quxios/QMV-Master-Demo/blob/master/readme.md\r\rLike my plugins? Support me on Patreon!\r\r https://www.patreon.com/quxios\r\r",
+    "sections": [
+      "How to use",
+      "# Sight Notetag / Comment",
+      "# Sight examples",
+      "# See through events/tiles",
+      "Plugin Commands",
+      "# Check sight",
+      "# Toggle charcter invisible",
+      "Links"
+    ]
+  },
+  {
+    "name": "QImport",
+    "version": "1.0.0",
+    "development": true,
+    "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QImport.js",
+    "requires": " QPlus",
+    "video": "",
+    "tags": "",
+    "about": "\n## About\r\rTODO\r- Add more features\r- Create better help\r",
+    "help": "\n## How to use\r\rTODO create better help\r\r### Notetags for database items\r\r~~~\r <import: type, from, from2>\r~~~\r - type: set to text or note\r - from: if type is text, set this to the path of the text file\r         if type is note, set to the database to read;\r         actor, class, skill, item, weapon, armor, enemy, or state\r - from2: if type is text ignore this\r          if type is note, set this to the id from that database\r\rexample:\r~~~\r <import:text,text/file.txt>\r~~~\rWill import the text from the file located in text/file.txt\r~~~\r <import:note,actor,2>\r~~~\rWill import the notes from actor 2\r\r### Notetags for events\r\r~~~\r <importing>\r~~~\rMarks that event as needs importing. Required if an <import> tags are used\rin that events pages.\r\r~~~\r <import: type, from, from2>\r~~~\r - type: set to text, note or event\r - from: if type is text, set this to the path of the text file\r         if type is note, set to the database to read;\r         actor, class, skill, item, weapon, armor, enemy, or state\r         if type is event, set to the mapId the event is located\r - from2: if type is text ignore this\r          if type is note, set this to the id from that database\r          if type is event, set to the event id\r\rexample:\r~~~\r <import:event,1,2>\r~~~\rWill replace the event with that note with the event 2 from map 1\r\r### Importing in event pages\r\rTo use <import> inside an event page, you need to use the <imnporting>\rnotetag first.\r\rInside a \"Show Text\", \"Comment\" or \"Script\"\r~~~\r <import:path>\r~~~\r - path: Set this to the path of the text file to import into\r\n\n## Links\r\rRPGMakerWebs:\r http://forums.rpgmakerweb.com/index.php?threads/qplugins.73023/\r\rTerms of use:\r https://github.com/quxios/QMV-Master-Demo/blob/master/readme.md\r\rLike my plugins? Support me on Patreon!\r https://www.patreon.com/quxios\r\r",
+    "sections": [
+      "How to use",
+      "# Notetags for database items",
+      "# Notetags for events",
+      "# Importing in event pages",
+      "Links"
+    ]
+  },
+  {
     "name": "QSprite",
     "version": "2.1.0",
+    "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QSprite.js",
     "requires": " QPlus",
     "video": "",
@@ -105,6 +149,7 @@
   {
     "name": "QMap",
     "version": "1.2.0",
+    "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QMap.js",
     "requires": " QPlus",
     "video": " https://www.youtube.com/watch?v=x7vcK96aW28",
@@ -124,6 +169,7 @@
   {
     "name": "QAudio",
     "version": "2.2.0",
+    "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QAudio.js",
     "requires": " QPlus",
     "video": "",
@@ -142,6 +188,7 @@
   {
     "name": "QCamera",
     "version": "1.1.0",
+    "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QCamera.js",
     "requires": " QPlus",
     "video": " https://www.youtube.com/watch?v=MbdXrReYwFw",
@@ -160,6 +207,7 @@
   {
     "name": "QTouch",
     "version": "1.0.0",
+    "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QTouch.js",
     "requires": "",
     "video": " https://youtu.be/2UrazG-XRxw",
@@ -174,6 +222,7 @@
   {
     "name": "QInput",
     "version": "2.1.1",
+    "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QInput.js",
     "requires": "",
     "video": "",
@@ -198,6 +247,7 @@
   {
     "name": "QInputRemap",
     "version": "2.0.0",
+    "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QInputRemap.js",
     "requires": " QInput",
     "video": "",
@@ -212,6 +262,7 @@
   {
     "name": "QNameInput",
     "version": "2.0.1",
+    "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QNameInput.js",
     "requires": " QInput",
     "video": "",
@@ -226,6 +277,7 @@
   {
     "name": "QSpeed",
     "version": "1.2.1",
+    "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QSpeed.js",
     "requires": " QPlus",
     "video": "",
@@ -245,8 +297,25 @@
     ]
   },
   {
+    "name": "QYScale",
+    "version": "1.0.0",
+    "development": true,
+    "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QYScale.js",
+    "requires": " QPlus",
+    "video": " TODO",
+    "tags": " character, sprite, scale",
+    "about": "\n## About\r\rThis plugin will zoom in/out character sprites based on their y position\ron the map.\r",
+    "help": "\n## How to use\r\r### Map Notetag\r\rTo make a map have a YScale, you need to give it a note tag in the format:\r~~~\r  <scale:MIN,MAX>\r~~~\r - Min: The zoom value at the top of the map (0 Y position)\r - Max: The zoom value at the bottom of the map\r\n\n## Links\r\rRPGMakerWebs:\r\r  http://forums.rpgmakerweb.com/index.php?threads/qplugins.73023/\r\rTerms of use:\r\r  https://github.com/quxios/QMV-Master-Demo/blob/master/readme.md\r\rLike my plugins? Support me on Patreon!\r\r https://www.patreon.com/quxios\r\r",
+    "sections": [
+      "How to use",
+      "# Map Notetag",
+      "Links"
+    ]
+  },
+  {
     "name": "QM+CollisionMap",
     "version": "1.0.0",
+    "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QM+CollisionMap.js",
     "requires": " QMovement",
     "video": "",
@@ -256,6 +325,23 @@
     "sections": [
       "How to use",
       "# Note tag",
+      "Links"
+    ]
+  },
+  {
+    "name": "QM+RegionColliders",
+    "version": "1.0.0",
+    "development": true,
+    "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QM+RegionColliders.js",
+    "requires": " QMovement",
+    "video": "",
+    "tags": " QM-Addon, collision",
+    "about": "\n## About\r\rThis is an addon to QMovement plugin. This addon adds a feature that lets\ryou add colliders to regions. In QuasiMovement this was known as\rRegionBoxes.\r\rRegion Colliders take priority over tiles. So if there's a region over a\rtile, it will use the region collider instead of that tiles collider. With\rthis you can make certain impassable tiles passable by adding a passable\rregion collider ontop of it.\r",
+    "help": "\n## How to use\r\rCreate a json file called `RegionColliders.json` inside the data folder.\rOnce that file is made you'll need to set up the file\r\r### Setting up\r\rJson template:\r~~~\r{\r  \"REGIONID\": [COLLIDER1, COLLIDER2, ..., COLLIDERX],\r  \"REGIONID2\": [COLLIDER1, COLLIDER2, ..., COLLIDERX]\r}\r~~~\r* Note that at the end of the 3rd line there's no comma!\r\rCOLLIDERX are objects in this format:\r~~~\r {\"type\": type, \"width\": W, \"height\", H, \"ox\": ox, \"oy\": oy, \"note\": string}\r~~~\r- Set type to the type of collider (\"box\" or \"circle\", default is \"box\")\r- Set W to the width of the collider\r- Set H to the height of the collider\r- Set ox to the x offset of the collider\r- Set oy to the y offset of the collider\r- Set note to a string (wrapped in \"\")\r\r### Examples\r\rHere's an example of having a collider on region 1 that has only 1 collider\rthat is a 48x48 box\r~~~\r{\r  \"1\": [{\"width\": 48, \"height\": 48}]\r}\r~~~\r* Note that I left out some of the stuff in the COLLIDER obj. This is because\rwe didn't need to use ox/oy since we're leaving it at 0. And the default type\ris box, which is what we want.\r\rHere's an example of having colliders on region 1 and 2 with one of them having\r2 colliders.\r~~~\r{\r  \"1\": [{\"width\": 0, \"height\": 0}],\r  \"2\": [{\"width\": 48, \"height\": 4, \"type\": \"box\"}, {\"width\": 32, \"height\": 32, ox: 8, oy: 8, \"type\": \"circle\"}]\r}\r~~~\r* Note if the width and/or height are set to 0, that region will be marked as\rpassable.\r\rWhen play testing and if you feel like it's not work, push F8. If the json\rfile isn't configured correct you will have an error in the console.\r\rIf you need help, feel free to ask in the RMW thread.\r\n\n## Links\r\rRPGMakerWebs:\r\r http://forums.rpgmakerweb.com/index.php?threads/qplugins.73023/\r\rTerms of use:\r\r https://github.com/quxios/QMV-Master-Demo/blob/master/readme.md\r\rLike my plugins? Support me on Patreon!\r\r https://www.patreon.com/quxios\r\r",
+    "sections": [
+      "How to use",
+      "# Setting up",
+      "# Examples",
       "Links"
     ]
   }
