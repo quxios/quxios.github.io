@@ -18,8 +18,6 @@ var customOpts = {
 };
 var opts = assign({}, watchify.args, customOpts);
 var b = watchify(browserify(opts));
-
-// add transformations here
 b.transform('babelify');
 
 gulp.task('default', bundle);
@@ -28,8 +26,12 @@ b.on('log', gutil.log);
 
 function bundle() {
   return b.bundle()
-    // log errors if they happen
     .on('error', gutil.log.bind(gutil, 'Browserify Error'))
     .pipe(source('bundle.js'))
     .pipe(gulp.dest('./js'));
 }
+
+gulp.task('build', function() {
+  process.env.NODE_ENV = 'production';
+  bundle();
+})

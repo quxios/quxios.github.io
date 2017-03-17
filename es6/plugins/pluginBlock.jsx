@@ -2,31 +2,33 @@ import React from 'react'
 import { Link } from 'react-router'
 
 export default class PluginBlock extends React.Component {
-  makeRequires() {
+  makeSubheader() {
     let {
       requires,
-      download
+      download,
+      development
     } = this.props.plugin || {};
+    var subheader = [];
     if (requires) {
       requires = requires.trim();
-      return (
-        <span className='sub'>
-          | Requires: <Link to={`/plugins/${requires}`}>
-            {requires}
-          </Link> | <a href={download}>
-            Download
-          </a>
-        </span>
-      )
-    } else {
-      return (
-        <span className='sub'>
-          | <a href={download}>
-            Download
-          </a>
-        </span>
-      )
+      subheader.push(<span key='1'>
+        | Requires: <Link to={`/plugins/${requires}`}>
+          {requires}
+        </Link>
+      </span>)
+      subheader.push(' ');
     }
+    if (!development) {
+      subheader.push(<span key='2'>
+        | <a href={download}>
+          Download
+        </a>
+      </span>)
+    }
+
+    return (<span className='sub'>
+      {subheader}
+    </span>)
   }
   makeBody() {
     const {
@@ -75,23 +77,19 @@ export default class PluginBlock extends React.Component {
       name,
       version
     } = this.props.plugin || {};
-    const requires = this.makeRequires();
-    const body = this.makeBody();
-    const tags = this.makeTags();
     return (
       <div className='block'>
         <div className='header'>
           <Link to={`/plugins/${name}`}>
             {name}
           </Link> | <span className='sub'>
-            Version: {version} {this.makeRequires()}
+            Version: {version} {this.makeSubheader()}
           </span>
-
         </div>
-        <div className='help' dangerouslySetInnerHTML={{ __html: body}}>
+        <div className='help' dangerouslySetInnerHTML={{ __html: this.makeBody()}}>
         </div>
         <div className='footer'>
-          Tags: {tags}
+          Tags: {this.makeTags()}
         </div>
       </div>
     )

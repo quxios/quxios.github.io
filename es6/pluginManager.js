@@ -12,13 +12,12 @@ export default class PluginManager {
       return;
     }
     let xhr = new XMLHttpRequest();
-    xhr.overrideMimeType("application/json");
+    xhr.overrideMimeType('application/json');
     xhr.open('GET', file, true);
     xhr.onreadystatechange = () => {
       if (xhr.readyState == 4 && xhr.status == '200') {
         if (callback) {
-          let obj = JSON.parse(xhr.responseText);
-          callback(obj);
+          callback(JSON.parse(xhr.responseText));
         }
       }
     }
