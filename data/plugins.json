@@ -302,7 +302,7 @@
     "development": true,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QYScale.js",
     "requires": " QPlus",
-    "video": " TODO",
+    "video": " https://youtu.be/3zAB1WYA1kc",
     "tags": " character, sprite, scale",
     "about": "\n## About\r\rThis plugin will zoom in/out character sprites based on their y position\ron the map.\r",
     "help": "\n## How to use\r\r### Map Notetag\r\rTo make a map have a YScale, you need to give it a note tag in the format:\r~~~\r  <scale:MIN,MAX>\r~~~\r - Min: The zoom value at the top of the map (0 Y position)\r - Max: The zoom value at the bottom of the map\r\n\n## Links\r\rRPGMakerWebs:\r\r  http://forums.rpgmakerweb.com/index.php?threads/qplugins.73023/\r\rTerms of use:\r\r  https://github.com/quxios/QMV-Master-Demo/blob/master/readme.md\r\rLike my plugins? Support me on Patreon!\r\r https://www.patreon.com/quxios\r\r",
