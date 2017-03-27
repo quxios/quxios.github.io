@@ -28,7 +28,7 @@ a:active {
   min-height: 500px;
 }
 .container {
-  width: 900px;
+  width: 950px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,7 +78,7 @@ a:active {
   text-shadow: -1px -1px 2px #1F1F1F, 1px -1px 2px #1F1F1F, -1px 1px 2px #1F1F1F, 1px 1px 2px #1F1F1F;
 }
 .page .content {
-  width: 675px;
+  width: 725px;
 }
 .page .content .list {
   display: -webkit-box;
@@ -96,7 +96,7 @@ a:active {
   align-content: flex-start;
 }
 .page .content .block {
-  width: 655px;
+  width: 705px;
 }
 .page .content .help {
   padding: 0 10px;
@@ -163,13 +163,11 @@ a:active {
   padding: 0 5px;
 }
 .page .block .header {
-  height: 45px;
-  line-height: 45px;
   font-size: 1.7em;
   font-weight: bold;
 }
 .page .block .header .sub {
-  font-size: 0.8em;
+  font-size: 0.75em;
 }
 .page .block .footer {
   height: 30px;
@@ -244,4 +242,5 @@ pre {
   background-color: #F2F2F2;
   padding: 4px;
   border-radius: 4px;
+  overflow: auto;
 }
