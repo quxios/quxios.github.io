@@ -12,20 +12,23 @@ export default class PluginBlock extends React.Component {
     if (requires) {
       requires = requires.trim();
       subheader.push(<span key='1'>
-        | Requires: <Link to={`/plugins/${requires}`}>
+        Requires: <Link to={`/plugins/${requires}`}>
           {requires}
         </Link>
       </span>)
-      subheader.push(' ');
+      subheader.push(' | ');
     }
     if (!development) {
       subheader.push(<span key='2'>
-        | <a href={download}>
-          Download
+        Download: <a href={download}>
+          Github
         </a>
       </span>)
+    } else {
+      subheader.push(<span key='3'>
+        Download: Not available yet
+      </span>)
     }
-
     return (<span className='sub'>
       {subheader}
     </span>)
@@ -83,8 +86,10 @@ export default class PluginBlock extends React.Component {
           <Link to={`/plugins/${name}`}>
             {name}
           </Link> | <span className='sub'>
-            Version: {version} {this.makeSubheader()}
+            Version: {version}
           </span>
+          <br/>
+          {this.makeSubheader()}
         </div>
         <div className='help' dangerouslySetInnerHTML={{ __html: this.makeBody()}}>
         </div>
