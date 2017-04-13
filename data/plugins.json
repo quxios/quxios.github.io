@@ -37,7 +37,7 @@
   },
   {
     "name": "QMovement",
-    "version": "1.1.8",
+    "version": "1.1.9",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QMovement.js",
     "requires": " QPlus",
@@ -71,7 +71,7 @@
   },
   {
     "name": "QPathfind",
-    "version": "1.4.0",
+    "version": "1.4.1",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QPathfind.js",
     "requires": " QPlus",
@@ -158,7 +158,7 @@
   },
   {
     "name": "QMap",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QMap.js",
     "requires": " QPlus",
