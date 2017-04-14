@@ -46,7 +46,7 @@ export default class PluginBlock extends React.Component {
         code = /youtu\.be\/(.*)/.exec(video);
       }
       if (code) {
-        body += `<center><iframe width="560" height="315" src="https://www.youtube.com/embed/${code[1]}" frameborder="0" allowfullscreen></iframe></center>`
+        body += `<center><iframe width="560" height="315" src="https://www.youtube.com/embed/${code[1]}" frameborder="0" allowfullscreen></iframe></center>`;
       }
     }
     if (this.props.max) {
@@ -54,7 +54,22 @@ export default class PluginBlock extends React.Component {
     } else {
       body += `${about}`;
     }
+    body = this.transformVideos(body);
     return marked(body);
+  }
+  transformVideos(string) {
+    let newString = string;
+    let regex = /https:\/\/www\.youtube\.com\/watch\?v=(.*)/ig;
+    while (true) {
+      let match = regex.exec(string);
+      if (match) {
+        let vid = `<center><iframe width="560" height="315" src="https://www.youtube.com/embed/${match[1]}" frameborder="0" allowfullscreen></iframe></center>`;
+        newString = newString.replace(match[0], vid);
+      } else {
+        break;
+      }
+    }
+    return newString;
   }
   makeTags() {
     const { tags } = this.props.plugin || {};
