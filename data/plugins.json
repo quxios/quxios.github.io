@@ -1,7 +1,7 @@
 [
   {
     "name": "QPlus",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QPlus.js",
     "requires": "",
@@ -37,7 +37,7 @@
   },
   {
     "name": "QMovement",
-    "version": "1.1.9",
+    "version": "1.2.1",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QMovement.js",
     "requires": " QPlus",
@@ -92,8 +92,8 @@
   },
   {
     "name": "QSight",
-    "version": "1.0.0",
-    "development": true,
+    "version": "1.1.0",
+    "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QSight.js",
     "requires": " QPlus",
     "video": "",
@@ -115,7 +115,7 @@
   },
   {
     "name": "QImport",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QImport.js",
     "requires": " QPlus",
@@ -159,7 +159,7 @@
   },
   {
     "name": "QMap",
-    "version": "1.2.3",
+    "version": "1.2.4",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QMap.js",
     "requires": " QPlus",
@@ -224,7 +224,7 @@
     "video": " https://youtu.be/2UrazG-XRxw",
     "tags": " touch",
     "about": "\n## About\n\nThis plugin extands the mouse features of MV to make it feel more natural.\nYou are able to change the image used for the cursor. Cursor will change\nto pointing cursor when hovering over a selectable item. You can make\nthe cursor hide when it's inactive for X frames. Window choices will\nget selected / highlighted when the mouse is over them. And clicking on\nthem once will run that choice.\n",
-    "help": "\n## How to use\n\nJust install this plugin and configure the plugin parameters.\n\n\n## Links\n\nRPGMakerWebs:\n http://forums.rpgmakerweb.com/index.php?threads/qplugins.73023/\n\nTerms of use:\n https://github.com/quxios/QMV-Master-Demo/blob/master/readme.md\n\nLike my plugins? Support me on Patreon!\n https://www.patreon.com/quxios\n\n",
+    "help": "\n## How to use\n\nJust install this plugin and configure the plugin parameters.\n\n\n## Links\n\nRPGMakerWebs:\n\n http://forums.rpgmakerweb.com/index.php?threads/qplugins.73023/\n\nTerms of use:\n\n https://github.com/quxios/QMV-Master-Demo/blob/master/readme.md\n\nLike my plugins? Support me on Patreon!\n\n https://www.patreon.com/quxios\n\n",
     "sections": [
       "How to use",
       "Links"
@@ -239,7 +239,7 @@
     "video": "",
     "tags": " input, keyboard",
     "about": "\n## About\r\rThis plugin enables full keyboard support as well as letting you set the\rdefault keyboard keys for mv inputs.\r",
-    "help": "\n## Remap Default Keys\r\rThis allows you to change what keys input calls are related to.\rYou can set them to multiple keys by seperating each key with a comma.\rYou must use a QKey (Available keys listed below)\rKeys are case sensative!!! Means #C is not the same as #c !!IMPORTANT!!\r\r\r ### Example of changing to wasd format\r\rSet the parameter for left to: `#a`\r\rSet the parameter for right to: `#d`\r\rSet the parameter for up to: `#w`\r\rSet the parameter for down to: `#s`\r\rSet the parameter for pagedown to: (page down uses w, so we'll change to e)\r  `#pagedown, #e`\r\rOptional: Use f key instead of z in enter input\r  `#enter, #space, #f`\r\rFor FPS, Streched, FullScreen, Restart, Console you can only put 1 key!\rDo not use the # idetifier.\r\rIf you want to disable one of those, set it to 0E, if you put in an\rincorrect key, it will use default MV key\r\n\n## QKeys List\r\r###  Modifier keys\r\r  #backspace    #tab      #enter      #shift      #ctrl\r  #alt          #esc      #space      #pageup     #pagedown\r  #left         #up       #right      #down       #escape\r\r### Numbers (Above letters\r\r  #0   #1   #2   #3   #4   #5   #6   #7   #8   #9\r\r### Numpad\r\r  #num0    #num1      #num2     #num3      #num4\r  #num5    #num6      #num7     #num8      #num9\r\r### Letters\r\r  #a #b #c ... #z\r\r(All letters between a-z US keyboard, just add a # infront)\r\r### F Keys\r\r  #f1  #f2  #f3  #f4  #f5  #f6  #f7  #f8  #f9  #f10  #f11  #f12\r\r### Special Characters\r\r  #semicolon     #equal      #comma         #minus        #period\r  #slash         #grave      #openbracket   #backslash    #closedbracket\r  #singlequote\r\n\n## Using QKeys\r\rIf you haven't noticed by now, Qkeys have a # identifier. So if you want\rto run a trigger check for left key you will run:\r~~~\r Input.isTriggered(\"#left\");\r~~~\rIf you didn't use the # and put\r~~~\r Input.isTriggered(\"left\");\r~~~\rThis will check for the keys you set for parameter left, so by default this\rwill let numberpad 4 to trigger this as well.\r\rI also added an extra input check\r~~~\r Input.anyTriggered(keylist);\r~~~\rKeylist is a string with keys seperated by commas.\rYou can also set it to a-z, a-z0-9 or sym.\rIf keylist is left empty it will return true when any key is pressed\r\n\n## Gamepad Keys\r\rGamepad keys begin with $ and are in all caps. Here's the list of gamepad keys:\r\r- Buttons: $A, $B, $X, $Y, $SELECT, $START\r- Triggers: $L1, $L2, $L3, $R1, $R2, $R3\r- DPad: $UP, $DOWN, $LEFT, $RIGHT\r\n\n## Advanced Users: Using Window_TextInput\r\rThis new window will allow for a keyboard input.\rIf you want to see how it is used please look at the code or look at\rQNameInput.js as they both use Window_TextInput\r\rThere are also 2 new functions in game input which might be useful:\r~~~\rInput.preferKeyboard()\r~~~\rWill return true if the last input was sent with the keyboard.\r\r~~~\rInput.preferGamepad()\r~~~\rWill return true if the last input was sent with the gamepad.\r\n\n## Links\r\rRPGMakerWebs:\r http://forums.rpgmakerweb.com/index.php?threads/qplugins.73023/\r\rTerms of use:\r https://github.com/quxios/QMV-Master-Demo/blob/master/readme.md\r\rLike my plugins? Support me on Patreon!\r https://www.patreon.com/quxios\r\r",
+    "help": "\n## Remap Default Keys\r\rThis allows you to change what keys input calls are related to.\rYou can set them to multiple keys by seperating each key with a comma.\rYou must use a QKey (Available keys listed below)\rKeys are case sensative!!! Means #C is not the same as #c !!IMPORTANT!!\r\r\r ### Example of changing to wasd format\r\rSet the parameter for left to: `#a`\r\rSet the parameter for right to: `#d`\r\rSet the parameter for up to: `#w`\r\rSet the parameter for down to: `#s`\r\rSet the parameter for pagedown to: (page down uses w, so we'll change to e)\r  `#pagedown, #e`\r\rOptional: Use f key instead of z in enter input\r  `#enter, #space, #f`\r\rFor FPS, Streched, FullScreen, Restart, Console you can only put 1 key!\rDo not use the # idetifier.\r\rIf you want to disable one of those, set it to 0E, if you put in an\rincorrect key, it will use default MV key\r\n\n## QKeys List\r\r###  Modifier keys\r\r  #backspace    #tab      #enter      #shift      #ctrl\r  #alt          #esc      #space      #pageup     #pagedown\r  #left         #up       #right      #down       #escape\r\r### Numbers (Above letters\r\r  #0   #1   #2   #3   #4   #5   #6   #7   #8   #9\r\r### Numpad\r\r  #num0    #num1      #num2     #num3      #num4\r  #num5    #num6      #num7     #num8      #num9\r\r### Letters\r\r  #a #b #c ... #z\r\r(All letters between a-z US keyboard, just add a # infront)\r\r### F Keys\r\r  #f1  #f2  #f3  #f4  #f5  #f6  #f7  #f8  #f9  #f10  #f11  #f12\r\r### Special Characters\r\r  #semicolon     #equal      #comma         #minus        #period\r  #slash         #grave      #openbracket   #backslash    #closedbracket\r  #singlequote\r\n\n## Gamepad Keys\r\rGamepad keys begin with $ and are in all caps. Here's the list of gamepad keys:\r\r- Buttons: $A, $B, $X, $Y, $SELECT, $START\r- Triggers: $L1, $L2, $L3, $R1, $R2, $R3\r- DPad: $UP, $DOWN, $LEFT, $RIGHT\r\n\n## Using QKeys\r\rIf you haven't noticed by now, Qkeys have a # identifier. So if you want\rto run a trigger check for left key you will run:\r~~~\r Input.isTriggered(\"#left\");\r~~~\rIf you didn't use the # and put\r~~~\r Input.isTriggered(\"left\");\r~~~\rThis will check for the keys you set for parameter left, so by default this\rwill let numberpad 4 to trigger this as well.\r\rI also added an extra input check\r~~~\r Input.anyTriggered(keylist);\r~~~\rKeylist is a string with keys seperated by commas.\rYou can also set it to a-z, a-z0-9 or sym.\rIf keylist is left empty it will return true when any key is pressed\r\n\n## Advanced Users: Using Window_TextInput\r\rThis new window will allow for a keyboard input.\rIf you want to see how it is used please look at the code or look at\rQNameInput.js as they both use Window_TextInput\r\rThere are also 2 new functions in game input which might be useful:\r~~~\rInput.preferKeyboard()\r~~~\rWill return true if the last input was sent with the keyboard.\r\r~~~\rInput.preferGamepad()\r~~~\rWill return true if the last input was sent with the gamepad.\r\n\n## Links\r\rRPGMakerWebs:\r\r http://forums.rpgmakerweb.com/index.php?threads/qplugins.73023/\r\rTerms of use:\r\r https://github.com/quxios/QMV-Master-Demo/blob/master/readme.md\r\rLike my plugins? Support me on Patreon!\r\r https://www.patreon.com/quxios\r\r",
     "sections": [
       "Remap Default Keys",
       "QKeys List",
@@ -249,15 +249,15 @@
       "# Letters",
       "# F Keys",
       "# Special Characters",
-      "Using QKeys",
       "Gamepad Keys",
+      "Using QKeys",
       "Advanced Users: Using Window_TextInput",
       "Links"
     ]
   },
   {
     "name": "QInputRemap",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QInputRemap.js",
     "requires": " QInput",
@@ -334,7 +334,7 @@
     "video": "",
     "tags": " QM-Addon, collision",
     "about": "\n## About\r\rThis is an addon to QMovement plugin. This addon adds a feature that lets\ryou use images as a collision map.\r",
-    "help": "\n## How to use\r\rInstall this plugin somewhere below QMovement. Make your collision map,\rWhite and transparent are passable areas, other colors will be impassable.\r\r### Note tag\r\rTo add a collision map to a map, open the map properties and add a notetag\rwith the following format:\r~~~\r <cm:FILENAME>\r~~~\rWhere FILENAME is the name of the image you want to use thats located in the\rfolder you set in the plugin parameters.\r\n\n## Links\r\rRPGMakerWebs:\r http://forums.rpgmakerweb.com/index.php?threads/qplugins.73023/\r\rTerms of use:\n https://github.com/quxios/QMV-Master-Demo/blob/master/readme.md\r\rLike my plugins? Support me on Patreon!\n https://www.patreon.com/quxios\r\r",
+    "help": "\n## How to use\r\rInstall this plugin somewhere below QMovement. Make your collision map,\rWhite and transparent are passable areas, other colors will be impassable.\r\r### Note tag\r\rTo add a collision map to a map, open the map properties and add a notetag\rwith the following format:\r~~~\r <cm:FILENAME>\r~~~\rWhere FILENAME is the name of the image you want to use thats located in the\rfolder you set in the plugin parameters.\r\n\n## Links\r\rRPGMakerWebs:\r\r http://forums.rpgmakerweb.com/index.php?threads/qplugins.73023/\r\rTerms of use:\n\n https://github.com/quxios/QMV-Master-Demo/blob/master/readme.md\r\rLike my plugins? Support me on Patreon!\n\n https://www.patreon.com/quxios\r\r",
     "sections": [
       "How to use",
       "# Note tag",
