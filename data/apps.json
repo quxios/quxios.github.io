@@ -1,3 +1,6 @@
 {
-  "QMapEditor": "1.2.1"
+  "QMapEditor": {
+    "latest": "2.0.0",
+    "source": "http://quxios.github.io/data/releases/test.txt"
+  }
 }
