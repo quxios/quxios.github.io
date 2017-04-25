@@ -15,7 +15,6 @@ body {
   padding: 0;
   background-color: @dark;
 }
-
 a {
   text-decoration: none;
   color: @hightlight;
@@ -25,7 +24,6 @@ a {
     color: @hightlight-hover;
   }
 }
-
 .qBg {
   position: fixed;
   top: 100px;
@@ -39,7 +37,6 @@ a {
   min-width: 500px;
   min-height: 500px;
 }
-
 .container {
   width: 950px;
   display: -webkit-box;
@@ -56,7 +53,6 @@ a {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-
 .block {
   box-shadow:
     0 2px 2px 0 fade(@dark, 14%),
@@ -81,7 +77,6 @@ a {
     font-size: 1.2em;
   }
 }
-
 .page {
   top: 50px;
   .title {
@@ -197,7 +192,6 @@ a {
     }
   }
 }
-
 .home {
   .block {
     width: 430px;
@@ -216,7 +210,6 @@ a {
     }
   }
 }
-
 .docs {
   .sidebar {
     .block {
@@ -232,7 +225,6 @@ a {
     }
   }
 }
-
 .projects {
   .block {
     width: 100%;
@@ -244,7 +236,6 @@ a {
     }
   }
 }
-
 .tag {
   margin: 2px;
   padding: 2px;
@@ -262,20 +253,25 @@ a {
     text-decoration: none !important;
   }
 }
-
 h1, h2, h3, h4 {
   margin: 5px 0;
 }
-
 code {
   background-color: @light-dark;
   padding: 1px 3px;
   border-radius: 3px;
 }
-
 pre {
   background-color: @light-dark;
   padding: 4px;
   border-radius: 4px;
   overflow: auto;
+  code {
+    padding: 0;
+  }
+}
+ul {
+  ul {
+    padding-left: 1em;
+  }
 }
