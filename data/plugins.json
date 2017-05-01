@@ -37,7 +37,7 @@
   },
   {
     "name": "QMovement",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QMovement.js",
     "requires": " QPlus",
@@ -72,7 +72,7 @@
   },
   {
     "name": "QPathfind",
-    "version": "1.4.2",
+    "version": "1.4.3",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QPathfind.js",
     "requires": " QPlus",
@@ -133,7 +133,7 @@
   },
   {
     "name": "QSprite",
-    "version": "2.1.2",
+    "version": "2.1.3",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QSprite.js",
     "requires": " QPlus",
@@ -166,7 +166,7 @@
     "video": " https://www.youtube.com/watch?v=x7vcK96aW28",
     "tags": " sprite, map, parallax",
     "about": "\n## About\r\rSimilar to a parallax plugin. This plugin creates maps you created using\rQMap Editor.\r",
-    "help": "\n## How to use\r\rCreate a map using the [QMap Editor](https://github.com/quxios/QMapEditor).\rAnd that's it, no setup required.\r\n\n## QMap Editor Notes\r\rThese are notes you can include in your map objects:\r\r### Collider\r\rLets you add a collider to your map object for additional features.\rThere's two different methods for setting up a collider.\r\rFirst:\r~~~\r <collider:SHAPE,WIDTH,HEIGHT,OX,OY>\r~~~\r- SHAPE: box or circle (only box works unless QMovement is installed)\r- WIDTH: The width of the collider, in pixels\r- HEIGHT: The height of the collider, in pixels\r- OX: The X Offset of the collider, in pixels\r- OY: The Y Offset of the collider, in pixels\r\rThis will set the default collider to these settings.\r\rSecond:\r~~~\r <colliders>\r TYPE: SHAPE,WIDTH,HEIGHT,OX,OY\r TYPE: SHAPE,WIDTH,HEIGHT,OX,OY\r TYPE: SHAPE,WIDTH,HEIGHT,OX,OY\r </colliders>\r~~~\rYou can include as many different colliders as you want, as long as TYPE\ris different on each line.\r\r- TYPE: When this collider will be used. Set to default when you want that\r collider to be used when ever the type isn't found. Set to collision, for\r that collider to be used as a collision. Set to other values if needed\r for example, if a certain type is needed for a plugin feature.\r- SHAPE: Box or circle (only box works unless QMovement is installed)\r- WIDTH: The width of the collider, in pixels\r- HEIGHT: The height of the collider, in pixels\r- OX: The X Offset of the collider, in pixels\r- OY: The Y Offset of the collider, in pixels\r\r### OnPlayer\r\rExperimental feature, might be changed / renamed\r\rAt the moment, this note will change this map objects alpha to 0.5 when\rthe player is behind it. This feature requires a default or interaction\rcollider.\r~~~\r <onPlayer>\r~~~\rJust add that note to the map object to have this feature, then include\ra collider.\r\r### Breath\r\rAdds a breathing effect to the map object. A breathing effect is where the\rthe sprites scale is increased and decreased in a sin wave.\r~~~\r <breath:OFFSET,DURATION,INITIALTIME?>\r~~~\r- OFFSET: How much to scale. 1 is 100%, 0.5 is 50%. So 0.5 means its\r scale will go between 0.5 and 1.5;\r- DURATION: How long it takes for 1 cycle, in frames. 60 frames = 1 second\r- INITIALTIME: (Optional, Default: 0) Which frame should it start at. Ex;\r if DURATION was 60 and this is set at 30, it'll start in the middle of the\r cycle.\r\r### Tint\r\rChange the tint of the map object. Similar to the Tint Screen event command.\r~~~\r <tint:RED,GREEN,BLUE,GRAY>\r~~~\r- RED: Red value of tint, set between -255 to 255. Default: 0\r- GREEN: Red value of tint, set between -255 to 255. Default: 0\r- BLUE: Red value of tint, set between -255 to 255. Default: 0\r- GRAY: Red value of tint, set between -255 to 255. Default: 0\r\n\n## Links\r\rRPGMakerWebs:\r\r http://forums.rpgmakerweb.com/index.php?threads/qplugins.73023/\r\rTerms of use:\r\r https://github.com/quxios/QMV-Master-Demo/blob/master/readme.md\r\rLike my plugins? Support me on Patreon!\r\r https://www.patreon.com/quxios\r\r",
+    "help": "\n## How to use\r\rCreate a map using the [QMap Editor](https://github.com/quxios/QMapEditor).\rAnd that's it, no setup required.\r\n\n## QMap Editor Notes\r\rThese are notes you can include in your map objects:\r\r### Collider\r\rLets you add a collider to your map object for additional features.\rThere's two different methods for setting up a collider.\r\rFirst:\r~~~\r <collider:SHAPE,WIDTH,HEIGHT,OX,OY>\r~~~\r- SHAPE: box or circle (only box works unless QMovement is installed)\r- WIDTH: The width of the collider, in pixels\r- HEIGHT: The height of the collider, in pixels\r- OX: The X Offset of the collider, in pixels\r- OY: The Y Offset of the collider, in pixels\r\rThis will set the default collider to these settings.\r\rSecond:\r~~~\r <colliders>\r TYPE: SHAPE,WIDTH,HEIGHT,OX,OY\r TYPE: SHAPE,WIDTH,HEIGHT,OX,OY\r TYPE: SHAPE,WIDTH,HEIGHT,OX,OY\r </colliders>\r~~~\rYou can include as many different colliders as you want, as long as TYPE\ris different on each line.\r\r- TYPE: When this collider will be used. Set to default when you want that\r collider to be used when ever the type isn't found. Set to collision, for\r that collider to be used as a collision. Set to other values if needed\r for example, if a certain type is needed for a plugin feature.\r- SHAPE: Box or circle (only box works unless QMovement is installed)\r- WIDTH: The width of the collider, in pixels\r- HEIGHT: The height of the collider, in pixels\r- OX: The X Offset of the collider, in pixels\r- OY: The Y Offset of the collider, in pixels\r\r### OnPlayer\r\rExperimental feature, might be changed / renamed\r\rAt the moment, this note will change this map objects alpha to 0.5 when\rthe player is behind it. This feature requires a default or interaction\rcollider.\r~~~\r <onPlayer>\r~~~\rJust add that note to the map object to have this feature, then include\ra collider.\r\r### Breath\r\rAdds a breathing effect to the map object. A breathing effect is where the\rthe sprites scale is increased and decreased in a sin wave.\r~~~\r <breath:OFFSET,DURATION,INITIALTIME?>\r~~~\r- OFFSET: How much to scale. 1 is 100%, 0.5 is 50%. So 0.5 means its\r scale will go between 0.5 and 1.5;\r- DURATION: How long it takes for 1 cycle, in frames. 60 frames = 1 second\r- INITIALTIME: (Optional, Default: 0) Which frame should it start at. Ex;\r if DURATION was 60 and this is set at 30, it'll start in the middle of the\r cycle.\r\r### Tint\r\rChange the tint of the map object. Similar to the Tint Screen event command.\r~~~\r <tint:RED,GREEN,BLUE,GRAY>\r~~~\r- RED: Red value of tint, set between -255 to 255. Default: 0\r- GREEN: Red value of tint, set between -255 to 255. Default: 0\r- BLUE: Red value of tint, set between -255 to 255. Default: 0\r- GRAY: Red value of tint, set between -255 to 255. Default: 0\r\n\n## Videos\r\rExample of a map made with QMap\rhttps://www.youtube.com/watch?v=n6aF6mnHEAk\r\rExample of the full QMap process, from the editor to mv\rhttps://www.youtube.com/watch?v=XMWluxVErKo\rIf you have a video you'd like to have listed here, feel free to send me a\rlink in the RPGMakerWebs thread! (link below)\r\n\n## Links\r\rRPGMakerWebs:\r\r http://forums.rpgmakerweb.com/index.php?threads/qplugins.73023/\r\rTerms of use:\r\r https://github.com/quxios/QMV-Master-Demo/blob/master/readme.md\r\rLike my plugins? Support me on Patreon!\r\r https://www.patreon.com/quxios\r\r",
     "sections": [
       "How to use",
       "QMap Editor Notes",
@@ -174,6 +174,7 @@
       "# OnPlayer",
       "# Breath",
       "# Tint",
+      "Videos",
       "Links"
     ]
   },
@@ -311,7 +312,7 @@
   },
   {
     "name": "QYScale",
-    "version": "1.0.2",
+    "version": "1.1.0",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QYScale.js",
     "requires": " QPlus",
