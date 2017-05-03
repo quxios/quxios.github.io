@@ -159,7 +159,7 @@
   },
   {
     "name": "QMap",
-    "version": "1.3.1",
+    "version": "1.3.2",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QMap.js",
     "requires": " QPlus",
