@@ -37,7 +37,7 @@
   },
   {
     "name": "QMovement",
-    "version": "1.2.3",
+    "version": "1.2.4",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QMovement.js",
     "requires": " QPlus",
