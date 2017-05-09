@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router'
 
+const VIDEO_REGEX = /https:\/\/(?:www\.youtube\.com\/watch\?v=|youtu\.be\/)(.*)/ig
+
 export default class PluginBlock extends React.Component {
   makeSubheader() {
     let {
@@ -41,12 +43,8 @@ export default class PluginBlock extends React.Component {
     } = this.props.plugin || {};
     let body = '';
     if (video) {
-      var code = /\?v=(.*)/.exec(video);
-      if (!code) {
-        code = /youtu\.be\/(.*)/.exec(video);
-      }
-      if (code) {
-        body += `<center><iframe width="560" height="315" src="https://www.youtube.com/embed/${code[1]}" frameborder="0" allowfullscreen></iframe></center>`;
+      if (VIDEO_REGEX.test(video)) {
+        body += `${video}\n`;
       }
     }
     if (this.props.max) {
@@ -59,9 +57,9 @@ export default class PluginBlock extends React.Component {
   }
   transformVideos(string) {
     let newString = string;
-    let regex = /https:\/\/www\.youtube\.com\/watch\?v=(.*)/ig;
+    VIDEO_REGEX.lastIndex = 0;
     while (true) {
-      let match = regex.exec(string);
+      let match = VIDEO_REGEX.exec(string);
       if (match) {
         let vid = `<center><iframe width="560" height="315" src="https://www.youtube.com/embed/${match[1]}" frameborder="0" allowfullscreen></iframe></center>`;
         newString = newString.replace(match[0], vid);
