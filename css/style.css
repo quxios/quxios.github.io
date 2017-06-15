@@ -250,3 +250,6 @@ pre code {
 ul ul {
   padding-left: 1em;
 }
+img {
+  max-width: 100%;
+}
