@@ -1,7 +1,7 @@
 [
   {
     "name": "QPlus",
-    "version": "1.4.0",
+    "version": "1.4.1",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QPlus.js",
     "requires": "",
@@ -37,7 +37,7 @@
   },
   {
     "name": "QMovement",
-    "version": "1.4.0",
+    "version": "1.4.1",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QMovement.js",
     "requires": " QPlus",
@@ -125,7 +125,7 @@
   },
   {
     "name": "QSight",
-    "version": "1.1.7",
+    "version": "1.1.8",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QSight.js",
     "requires": " QPlus",
@@ -214,7 +214,7 @@
   },
   {
     "name": "QAudio",
-    "version": "2.3.1",
+    "version": "2.3.2",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QAudio.js",
     "requires": " QPlus",
@@ -268,7 +268,7 @@
   },
   {
     "name": "QInput",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QInput.js",
     "requires": "",
@@ -293,7 +293,7 @@
   },
   {
     "name": "QInputRemap",
-    "version": "2.1.1",
+    "version": "2.1.2",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QInputRemap.js",
     "requires": " QInput",
@@ -324,7 +324,7 @@
   },
   {
     "name": "QPopup",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QPopup.js",
     "requires": " QPlus",
