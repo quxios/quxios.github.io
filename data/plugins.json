@@ -37,7 +37,7 @@
   },
   {
     "name": "QMovement",
-    "version": "1.4.2",
+    "version": "1.4.3",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QMovement.js",
     "requires": " QPlus",
@@ -79,7 +79,7 @@
   },
   {
     "name": "QABS",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QABS.js",
     "requires": " QMovement",
@@ -457,7 +457,7 @@
   },
   {
     "name": "QABS+Skillbar",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QABS+Skillbar.js",
     "requires": " QABS",
