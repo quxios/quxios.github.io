@@ -1,7 +1,7 @@
 [
   {
     "name": "QPlus",
-    "version": "1.4.3",
+    "version": "1.4.4",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QPlus.js",
     "requires": "",
