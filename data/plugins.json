@@ -79,7 +79,7 @@
   },
   {
     "name": "QABS",
-    "version": "1.2.3",
+    "version": "1.2.4",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QABS.js",
     "requires": " QMovement",
@@ -127,7 +127,7 @@
   },
   {
     "name": "QSight",
-    "version": "1.1.9",
+    "version": "1.1.10",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QSight.js",
     "requires": " QPlus",
