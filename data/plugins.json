@@ -217,6 +217,25 @@
     ]
   },
   {
+    "name": "QPicture",
+    "version": "1.1.0",
+    "development": false,
+    "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QPicture.js",
+    "requires": " QPlus",
+    "video": "",
+    "tags": "",
+    "about": "\n## About\r\rAdds additional features to Pictures. You can easily apply mouse events (\ronClick, onRightClick, onMouseEnter, onMouseExit, onMouseOver, onMouseOut)\rto pictures and have a common event run or change a value of a switch. You\rcan also apply easing effects to a pictures movement, scaling or opacity\rchange.\r",
+    "help": "\n## Plugin commands\r\r### Mouse Events\r\r~~~\r qPicture [PICID] [MOUSEEVENT] [HANDLER] [ARG1]\r~~~\rPICID - The ID (Picture Number) of the picture to apply this to\rMOUSEEVENT - The mouse event to add to this picture, can be:\r - onClick: Runs when the picture is left clicked\r - onRightClick: Runs when the picture is right clicked\r - onMouseEnter: Runs when the mouse enters the picture\r - onMouseExit: Runs when the mouse moves off the picture\r - onMouseOver: Runs when the mouse is over the picture (for performance reasons\r may be best to use onMouseEnter instead)\r - onMouseOut: Runs when the mouse isn't over the picture (for performance reasons\r may be best to use onMouseExit instead)\rHANDLER - What to do when the mouse event runs, can be:\r - switchX: Where X is the switch ID, changes a switchs value to what is set\r on ARG1\r - ceX: Where X is the common event ID, runs a common event\r - clear: Removes the handler that assigned to this picture\rARG1 - Only used when handler is `switchX`, set this to:\r - true: Makes the switch true whenever this mouse event runs\r - false: Makes the switch false whenever this mouse event runs\r - toggle: Toggles the switch value whenever this mouse event runs\r\r\r### Click Through Alpha\r\rSome of your pictures may have alpha (transparent) areas and you don't want\rthose areas to be able to trigger mouse events. So you can disable the alpha\rareas per picture. Note that enabling this can impact performance!\r~~~\r qPicture [PICID] alpha [TRUE or FALSE]\r~~~\rPICID - The ID (Picture Number) of the picture to apply this to\rTRUE or FALSE - Set to true to click through alpha, set to false to\r go back to default behavior.\r\r### Ease\r\r~~~\r qPicture [PICID] ease [TYPE] [MODE]\r~~~\rPICID - The ID (Picture Number) of the picture to apply this to\rTYPE - What to apply this easing to, can be:\r - move\r - scale\r - opacity\rMODE - The easing mode (Default: linear)\r - linear\r - easeIn\r - easeOut\r - easeInOut\r\n\n## Examples\r\r~~~\r qPicture 1 onClick ce1\r~~~\rRuns common event 1 whenever you click on picture 1\r\r~~~\r qPicture 1 alpha true\r~~~\rWill ignore the transparent areas in picture 1\r\r~~~\r qPicture 2 onMouseEnter switch1 true\r qPicture 2 onMouseExit switch1 false\r~~~\rSets switch 1 to true when the mouse is over the picture, and sets the switch\rto false when it isn't.\rNote: You can also use `onMouseOver` and `onMouseOut` here but `Enter` and `Exit`\rperform better as they only run once when the mouse first enters or exits while\r`Over` and `Out` run continuously.\r\r~~~\r qPicture 1 ease move easeInOut\r~~~\rPicture 1 will `easeInOut` whenever you move it now\r\n\n## Links\r\rRPGMakerWebs:\r\r http://forums.rpgmakerweb.com/index.php?threads/qplugins.73023/\r\rTerms of use:\r\r https://github.com/quxios/QMV-Master-Demo/blob/master/readme.md\r\rLike my plugins? Support me on Patreon!\r\r https://www.patreon.com/quxios\r\r",
+    "sections": [
+      "Plugin commands",
+      "# Mouse Events",
+      "# Click Through Alpha",
+      "# Ease",
+      "Examples",
+      "Links"
+    ]
+  },
+  {
     "name": "QAudio",
     "version": "2.3.3",
     "development": false,
@@ -257,7 +276,7 @@
   },
   {
     "name": "QTouch",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QTouch.js",
     "requires": "",
