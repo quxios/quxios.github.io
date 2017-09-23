@@ -79,7 +79,7 @@
   },
   {
     "name": "QABS",
-    "version": "1.4.0",
+    "version": "1.4.1",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QABS.js",
     "requires": " QMovement",
