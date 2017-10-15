@@ -1,7 +1,7 @@
 [
   {
     "name": "QPlus",
-    "version": "1.4.4",
+    "version": "1.4.5",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QPlus.js",
     "requires": "",
@@ -218,7 +218,7 @@
   },
   {
     "name": "QPicture",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QPicture.js",
     "requires": " QPlus",
@@ -238,7 +238,7 @@
   {
     "name": "QEventSave",
     "version": "1.0.0",
-    "development": true,
+    "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QEventSave.js",
     "requires": " QPlus",
     "video": "",
@@ -463,7 +463,7 @@
   {
     "name": "QM+ColliderMap",
     "version": "1.0.0",
-    "development": true,
+    "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QM+ColliderMap.js",
     "requires": " QMovement",
     "video": "",
