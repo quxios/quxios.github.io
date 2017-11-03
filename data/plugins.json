@@ -79,7 +79,7 @@
   },
   {
     "name": "QABS",
-    "version": "1.4.1",
+    "version": "1.4.2",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QABS.js",
     "requires": " QMovement",
@@ -109,7 +109,7 @@
   },
   {
     "name": "QPathfind",
-    "version": "1.4.6",
+    "version": "1.4.7",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QPathfind.js",
     "requires": " QPlus",
