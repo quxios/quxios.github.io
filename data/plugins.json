@@ -1,18 +1,22 @@
 [
   {
     "name": "QPlus",
-    "version": "1.4.5",
+    "version": "1.5.0",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QPlus.js",
     "requires": "",
     "video": "",
     "tags": " core, character",
     "about": "\n## About\r\rThis plugin is the core for most of the QPlugins. It also adds a few new\rfunctionality to RPG Maker MV to improve it.\r\r",
-    "help": "\n## Notetags / Comments\r\r### Event retain direction\r\rAdding the following to the notes or in a comment will make that event retain\rits direction when changing pages.\r~~~\r <retainDir>\r~~~\rThis will be ignored if the next page has direction fix enabled\r\r\r### No tilemap\r\rYou can disable the tile map by adding this note to a map\r~~~\r <noTilemap>\r~~~\rThis will replace the tilemap with a simple light weight sprite container.\rUsing this may increase performance. So if you have a map that doesn't use\rany tiles and is all parallax, then you should considering using this.\r\r*Note, there's a chance this may break some plugins if they call functions in\rthe original tilemap class.*\r\r\n\n## Plugin Commands\r\r### Random wait between X Y\r\rThis plugin command will insert a random wait between x and y frames.\r~~~\r wait X Y\r~~~\rIf Y is left empty, it will make a random wait between 0 - X\r\r\r### Global Lock\r\rThis plugin command will 'lock' all characters or certain characters. By\rlocking I mean you can lock their movement, or movement and character\ranimation.\r~~~\r globalLock LEVEL [CHARACTERS] [options]\r~~~\r- LEVEL: The level of global lock\r - 0: clears the global lock\r - 1: locks the characters movement\r - 2: locks the characters movement and animation\r- [CHARACTERS] - optional, list of `Character Ids` to apply to or ignore.\rSeperated by a space.\r * CHARAID: The character identifier.\r  - For player: 0, p, or player\r  - For events: EVENTID, eEVENTID, eventEVENTID or this for the event that called this\r  (replace EVENTID with a number)\r\rPossible options:\r - only: Will only apply to the characters listed\r\r\r### Global lock Examples\r\r~~~\r globalLock 2\r~~~\rWill lock all characters movement and animations.\r\r~~~\r globalLock 1 0 1 4\r globalLock 1 p e1 e4\r globalLock 1 player event1 event4\r~~~\r(Note: All 3 are the same, just using a different character id method)\r\rWill Lock the movements for all characters except:\rPlayer, event 1 and event 4\r\r~~~\r globalLock 1 0 1 4 only\r globalLock 1 p e1 e4 only\r globalLock 1 player event1 event4 only\r~~~\rWill Lock the movements for only these characters:\rPlayer, event 1 and event 4\r\r\n\n## Links\r\rFormated Help:\r\r https://quxios.github.io/#/plugins/QPlus\r\rRPGMakerWebs:\r\r http://forums.rpgmakerweb.com/index.php?threads/qplugins.73023/\r\rTerms of use:\r\r https://github.com/quxios/QMV-Master-Demo/blob/master/readme.md\r\rLike my plugins? Support me on Patreon!\r\r https://www.patreon.com/quxios\r\r",
+    "help": "\n## Notetags / Comments\r\r### Event retain direction\r\rAdding the following to the notes or in a comment will make that event retain\rits direction when changing pages.\r~~~\r <retainDir>\r~~~\rThis will be ignored if the next page has direction fix enabled\r\r\r### No tilemap\r\rYou can disable the tile map by adding this note to a map\r~~~\r <noTilemap>\r~~~\rThis will replace the tilemap with a simple light weight sprite container.\rUsing this may increase performance. So if you have a map that doesn't use\rany tiles and is all parallax, then you should considering using this.\r\r*Note, there's a chance this may break some plugins if they call functions in\rthe original tilemap class.*\r\r\n\n## Format Plugin Commands\r\rThese formating options are only applied to QPlugins!\r\r### Spaces in arg\r\rEach arg is separated with a space. But sometimes you may need a space, for\rexample when passing a file name. To do this you just need to wrap it in quotes\rand it'll be passed as a single arg, ex:\r~~~\r qPlugin cmd arg1 \"arg2 with a space\" arg3\r~~~\r\r\r### Variables\r\rIf you want to use a value of a variable in a plugin command you can do so \rwith the following format:\r~~~\r{vID}\r~~~\r- ID: The id of the variable to use\r\rExample:\r~~~\r qPlugin cmd arg1 chara{v1}\r~~~\rWhen the plugin command runs the {v1} will get replaced with the value of\rvariable 1. If the value of variable 1 is 10, , then your plugin command will\rformat to: `qPlugin cmd arg1 chara10`\r\r### Switches\r\rIf you want to use a value of a switch in a plugin command you can do so\rwith the following format:\r~~~\r{sID}\r~~~\r- ID: The id of the switch to use\r\rExample:\r~~~\r qPlugin cmd arg1 {s1}\r~~~\rWhen the plugin command runs the {s1} will get replaced with the value of\rswitch 1. If the value of switch 1 is true, then your plugin command will\rformat to: `qPlugin cmd arg1 true`\r\r\n\n## Plugin Commands\r\r### Random wait between X Y\r\rThis plugin command will insert a random wait between x and y frames.\r~~~\r wait X Y\r~~~\rIf Y is left empty, it will make a random wait between 0 - X\r\r\r### Global Lock\r\rThis plugin command will 'lock' all characters or certain characters. By\rlocking I mean you can lock their movement, or movement and character\ranimation.\r~~~\r globalLock LEVEL [CHARACTERS] [options]\r~~~\r- LEVEL: The level of global lock\r * 0: clears the global lock\r * 1: locks the characters movement\r * 2: locks the characters movement and animation\r- [CHARACTERS] - optional, list of `Character Ids` to apply to or ignore. Seperated by a space.\r * CHARAID: The character identifier.\r  - For player: 0, p, or player\r  - For events: EVENTID, eEVENTID, eventEVENTID or this for the event that called this\r  (replace EVENTID with a number)\r\rPossible options:\r - only: Will only apply to the characters listed\r\r\r### Global lock Examples\r\r~~~\r globalLock 2\r~~~\rWill lock all characters movement and animations.\r\r~~~\r globalLock 1 0 1 4\r globalLock 1 p e1 e4\r globalLock 1 player event1 event4\r~~~\r(Note: All 3 are the same, just using a different character id method)\r\rWill Lock the movements for all characters except:\rPlayer, event 1 and event 4\r\r~~~\r globalLock 1 0 1 4 only\r globalLock 1 p e1 e4 only\r globalLock 1 player event1 event4 only\r~~~\rWill Lock the movements for only these characters:\rPlayer, event 1 and event 4\r\r\n\n## Links\r\rFormated Help:\r\r https://quxios.github.io/#/plugins/QPlus\r\rRPGMakerWebs:\r\r http://forums.rpgmakerweb.com/index.php?threads/qplugins.73023/\r\rTerms of use:\r\r https://github.com/quxios/QMV-Master-Demo/blob/master/readme.md\r\rLike my plugins? Support me on Patreon!\r\r https://www.patreon.com/quxios\r\r",
     "sections": [
       "Notetags / Comments",
       "# Event retain direction",
       "# No tilemap",
+      "Format Plugin Commands",
+      "# Spaces in arg",
+      "# Variables",
+      "# Switches",
       "Plugin Commands",
       "# Random wait between X Y",
       "# Global Lock",
@@ -37,7 +41,7 @@
   },
   {
     "name": "QMovement",
-    "version": "1.4.3",
+    "version": "1.4.4",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QMovement.js",
     "requires": " QPlus",
@@ -79,7 +83,7 @@
   },
   {
     "name": "QABS",
-    "version": "1.4.2",
+    "version": "1.4.3",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QABS.js",
     "requires": " QMovement",
@@ -109,7 +113,7 @@
   },
   {
     "name": "QPathfind",
-    "version": "1.4.7",
+    "version": "1.4.9",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QPathfind.js",
     "requires": " QPlus",
@@ -129,7 +133,7 @@
   },
   {
     "name": "QSight",
-    "version": "1.1.10",
+    "version": "1.1.12",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QSight.js",
     "requires": " QPlus",
@@ -170,7 +174,7 @@
   },
   {
     "name": "QSprite",
-    "version": "2.1.7",
+    "version": "2.1.8",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QSprite.js",
     "requires": " QPlus",
@@ -218,7 +222,7 @@
   },
   {
     "name": "QPicture",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QPicture.js",
     "requires": " QPlus",
@@ -237,7 +241,7 @@
   },
   {
     "name": "QEventSave",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QEventSave.js",
     "requires": " QPlus",
@@ -253,7 +257,7 @@
   },
   {
     "name": "QAudio",
-    "version": "2.3.3",
+    "version": "2.3.4",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QAudio.js",
     "requires": " QPlus",
@@ -273,7 +277,7 @@
   },
   {
     "name": "QCamera",
-    "version": "1.1.4",
+    "version": "1.1.5",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QCamera.js",
     "requires": " QPlus",
@@ -292,7 +296,7 @@
   },
   {
     "name": "QTouch",
-    "version": "1.1.2",
+    "version": "1.1.3",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QTouch.js",
     "requires": "",
@@ -364,7 +368,7 @@
   },
   {
     "name": "QPopup",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QPopup.js",
     "requires": " QPlus",
@@ -389,7 +393,7 @@
   },
   {
     "name": "QSpeed",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "development": false,
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QSpeed.js",
     "requires": " QPlus",
