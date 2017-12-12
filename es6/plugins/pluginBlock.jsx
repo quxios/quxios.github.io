@@ -1,45 +1,47 @@
 import React from 'react'
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 
 const VIDEO_REGEX = /https:\/\/(?:www\.youtube\.com\/watch\?v=|youtu\.be\/)(.*)/ig
 
-export default class PluginBlock extends React.Component {
+export default class PluginBlock extends React.PureComponent {
   makeSubheader() {
     let {
       requires,
       download,
       development
     } = this.props.plugin || {};
-    var subheader = [];
+    let subheader = [];
     if (requires) {
       requires = requires.trim();
-      subheader.push(<span key='1'>
+      subheader.push(<span key="1">
         Requires: <Link to={`/plugins/${requires}`}>
           {requires}
         </Link>
       </span>)
-      subheader.push(' | ');
+      subheader.push(" | ");
     }
     if (!development) {
-      subheader.push(<span key='2'>
+      subheader.push(<span key="2">
         Download: <a href={download}>
           Github
         </a>
       </span>)
     } else {
-      subheader.push(<span key='3'>
+      subheader.push(<span key="3">
         Download: Not available yet
       </span>)
     }
-    return (<span className='sub'>
-      {subheader}
-    </span>)
+    return (
+      <span className="sub">
+        {subheader}
+      </span>
+    )
   }
   makeBody() {
+    const help = this.props.help || '';
     const {
       video,
-      about,
-      help
+      about
     } = this.props.plugin || {};
     let body = '';
     if (video) {
@@ -48,7 +50,7 @@ export default class PluginBlock extends React.Component {
       }
     }
     if (this.props.max) {
-      body += `${about}\n${help}`
+      body += `${help}`
     } else {
       body += `${about}`;
     }
@@ -72,13 +74,12 @@ export default class PluginBlock extends React.Component {
   makeTags() {
     const { tags } = this.props.plugin || {};
     if (!tags) return null;
-    return tags.split(',').map((tag, i) => {
-      tag = tag.trim();
+    return tags.map((tag, i) => {
       return (
         <Link
-          to='/plugins'
-          key={i}
-          className='tag'
+          to="/plugins"
+          key={`tag${i}`}
+          className="tag"
           onClick={this.onTag.bind(this, tag)}>
           {tag}
         </Link>
@@ -94,19 +95,19 @@ export default class PluginBlock extends React.Component {
       version
     } = this.props.plugin || {};
     return (
-      <div className='block'>
-        <div className='header'>
+      <div className="block">
+        <div className="header">
           <Link to={`/plugins/${name}`}>
             {name}
-          </Link> | <span className='sub'>
+          </Link> | <span className="sub">
             Version: {version}
           </span>
-          <br/>
+          <br />
           {this.makeSubheader()}
         </div>
-        <div className='help' dangerouslySetInnerHTML={{ __html: this.makeBody()}}>
+        <div className="help" dangerouslySetInnerHTML={{ __html: this.makeBody() }}>
         </div>
-        <div className='footer'>
+        <div className="footer">
           Tags: {this.makeTags()}
         </div>
       </div>

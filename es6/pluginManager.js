@@ -1,3 +1,5 @@
+import Axios from 'axios'
+
 export default class PluginManager {
   static pluginsPath = '/data/plugins.json';
   static tagsPath = '/data/tags.json';
@@ -11,16 +13,11 @@ export default class PluginManager {
     } else {
       return;
     }
-    let xhr = new XMLHttpRequest();
-    xhr.overrideMimeType('application/json');
-    xhr.open('GET', file, true);
-    xhr.onreadystatechange = () => {
-      if (xhr.readyState == 4 && xhr.status == '200') {
+    Axios.get(file)
+      .then((res) => {
         if (callback) {
-          callback(JSON.parse(xhr.responseText));
+          callback(res.data);
         }
-      }
-    }
-    xhr.send(null);
+      })
   }
 }

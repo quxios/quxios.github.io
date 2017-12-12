@@ -1,41 +1,26 @@
 import React from 'react'
-import { Link } from 'react-router'
-import Tags from './tags'
+import Tag from './tag'
 
-const _distFromTop = 150;
-
-export default class SidebarTags extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      top: 0
-    }
-    this.onScroll = ::this.onScroll;
-  }
-  componentWillMount() {
-    window.addEventListener('scroll', this.onScroll);
-  }
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.onScroll);
-  }
-  onScroll() {
-    let top = 0;
-    if (window.scrollY > _distFromTop) {
-      top = window.scrollY - _distFromTop;
-    }
-    this.setState({ top });
-  }
+export default class SidebarTags extends React.PureComponent {
   render() {
-    const style = {
-      marginTop: this.state.top
-    }
+    const {
+      selectedTag, tags, setTag
+    } = this.props;
+    if (!tags) return null;
     return (
-      <div className='sidebar' style={style}>
-        <Tags
-          tag={this.props.tag}
-          tags={this.props.tags}
-          setTag={this.props.setTag}
-        />
+      <div className="block">
+        {
+          tags.map((tag, i) => {
+            return (
+              <Tag
+                key={`tag${i}`}
+                tag={tag}
+                selected={tag.name === selectedTag}
+                onClick={setTag}
+              />
+            )
+          })
+        }
       </div>
     )
   }
