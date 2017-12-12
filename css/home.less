@@ -1,0 +1,19 @@
+.home {
+  .container();
+  .block {
+    width: 430px;
+    opacity: 0.9;
+    -webkit-transition: opacity 250ms ease-in;
+    transition: opacity 250ms ease-in;
+    &.showcase {
+      padding: 0;
+      overflow: hidden;
+      height: 200px;
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+      }
+      cursor: pointer;
+    }
+  }
+}

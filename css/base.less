@@ -1,0 +1,39 @@
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: @dark;
+}
+a {
+  text-decoration: none;
+  color: @hightlight;
+  transition: color 150ms ease-in;
+  &:hover, &:active {
+    color: @hightlight-hover;
+  }
+}
+h1, h2, h3, h4 {
+  margin: 5px 0;
+}
+code {
+  background-color: @light-dark;
+  padding: 1px 3px;
+  border-radius: 3px;
+}
+pre {
+  background-color: @light-dark;
+  padding: 4px;
+  border-radius: 4px;
+  overflow: auto;
+  code {
+    padding: 0;
+  }
+}
+ul {
+  ul {
+    padding-left: 1em;
+  }
+}
+img {
+  max-width: 100%;
+}
