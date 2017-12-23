@@ -19,7 +19,7 @@
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QUpdate.js"
   },
   {
-    "version": "1.6.0",
+    "version": "1.6.1",
     "repo": "https://github.com/quxios/QMovement",
     "requires": "QPlus",
     "video": "TODO",
@@ -33,7 +33,7 @@
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QMovement.js"
   },
   {
-    "version": "1.6.1",
+    "version": "1.6.2",
     "repo": "https://github.com/quxios/QABS",
     "requires": "QMovement",
     "video": "TODO",
