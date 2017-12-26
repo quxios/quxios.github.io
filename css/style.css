@@ -40,7 +40,7 @@ img {
   max-width: 100%;
 }
 .page {
-  top: 50px;
+  margin-top: 50px;
 }
 .page .title {
   width: 100%;
@@ -86,7 +86,7 @@ img {
 .page .sidebar {
   position: relative;
   max-width: 225px;
-  max-height: calc(100vh - 10px);
+  max-height: calc(100vh - 40px);
   overflow: hidden;
 }
 .page .sidebar .block {
@@ -110,34 +110,23 @@ img {
 .page .sidebar .tag.selected {
   text-shadow: none;
 }
-.page .sidebar a.header {
-  display: block;
-  text-align: center;
-  font-size: 1.5em;
-  color: #FFFFFF;
-}
-.page .sidebar a.header:hover,
-.page .sidebar a.header:active {
-  color: #2196F3;
-  text-decoration: underline;
-}
 .page .block {
   padding: 0 5px;
 }
-.page .block .header {
+.page .block .blockHeader {
   font-size: 1.7em;
   font-weight: bold;
 }
-.page .block .header .sub {
+.page .block .blockHeader .sub {
   font-size: 0.75em;
 }
-.page .block .footer {
+.page .block .blockFooter {
   height: 30px;
   line-height: 30px;
   border-top: 1px solid #1F1F1F;
   margin-top: 5px;
 }
-.home {
+.pageHome {
   width: 950px;
   display: -ms-flexbox;
   display: flex;
@@ -145,28 +134,28 @@ img {
       flex-wrap: wrap;
   -ms-flex-pack: center;
       justify-content: center;
-  position: absolute;
-  top: 150px;
+  position: relative;
   left: 50%;
   transform: translateX(-50%);
+  margin-top: 150px;
 }
-.home .block {
+.pageHome .block {
   width: 430px;
   opacity: 0.9;
   transition: opacity 250ms ease-in;
 }
-.home .block.showcase {
+.pageHome .block.showcase {
   padding: 0;
   overflow: hidden;
   height: 200px;
   opacity: 0.8;
   cursor: pointer;
 }
-.home .block.showcase:hover {
+.pageHome .block.showcase:hover {
   opacity: 1;
 }
 .pagePlugin {
-  top: 50px;
+  margin-top: 50px;
   width: 950px;
   display: -ms-flexbox;
   display: flex;
@@ -174,10 +163,10 @@ img {
       flex-wrap: wrap;
   -ms-flex-pack: center;
       justify-content: center;
-  position: absolute;
-  top: 150px;
+  position: relative;
   left: 50%;
   transform: translateX(-50%);
+  margin-top: 150px;
 }
 .pagePlugin .title {
   width: 100%;
@@ -223,7 +212,7 @@ img {
 .pagePlugin .sidebar {
   position: relative;
   max-width: 225px;
-  max-height: calc(100vh - 10px);
+  max-height: calc(100vh - 40px);
   overflow: hidden;
 }
 .pagePlugin .sidebar .block {
@@ -247,28 +236,17 @@ img {
 .pagePlugin .sidebar .tag.selected {
   text-shadow: none;
 }
-.pagePlugin .sidebar a.header {
-  display: block;
-  text-align: center;
-  font-size: 1.5em;
-  color: #FFFFFF;
-}
-.pagePlugin .sidebar a.header:hover,
-.pagePlugin .sidebar a.header:active {
-  color: #2196F3;
-  text-decoration: underline;
-}
 .pagePlugin .block {
   padding: 0 5px;
 }
-.pagePlugin .block .header {
+.pagePlugin .block .blockHeader {
   font-size: 1.7em;
   font-weight: bold;
 }
-.pagePlugin .block .header .sub {
+.pagePlugin .block .blockHeader .sub {
   font-size: 0.75em;
 }
-.pagePlugin .block .footer {
+.pagePlugin .block .blockFooter {
   height: 30px;
   line-height: 30px;
   border-top: 1px solid #1F1F1F;
@@ -310,7 +288,7 @@ img {
   padding-left: 15px;
 }
 .pageTutorial {
-  top: 50px;
+  margin-top: 50px;
   width: 950px;
   display: -ms-flexbox;
   display: flex;
@@ -318,10 +296,10 @@ img {
       flex-wrap: wrap;
   -ms-flex-pack: center;
       justify-content: center;
-  position: absolute;
-  top: 150px;
+  position: relative;
   left: 50%;
   transform: translateX(-50%);
+  margin-top: 150px;
 }
 .pageTutorial .title {
   width: 100%;
@@ -367,7 +345,7 @@ img {
 .pageTutorial .sidebar {
   position: relative;
   max-width: 225px;
-  max-height: calc(100vh - 10px);
+  max-height: calc(100vh - 40px);
   overflow: hidden;
 }
 .pageTutorial .sidebar .block {
@@ -391,43 +369,91 @@ img {
 .pageTutorial .sidebar .tag.selected {
   text-shadow: none;
 }
-.pageTutorial .sidebar a.header {
-  display: block;
-  text-align: center;
-  font-size: 1.5em;
-  color: #FFFFFF;
-}
-.pageTutorial .sidebar a.header:hover,
-.pageTutorial .sidebar a.header:active {
-  color: #2196F3;
-  text-decoration: underline;
-}
 .pageTutorial .block {
   padding: 0 5px;
 }
-.pageTutorial .block .header {
+.pageTutorial .block .blockHeader {
   font-size: 1.7em;
   font-weight: bold;
 }
-.pageTutorial .block .header .sub {
+.pageTutorial .block .blockHeader .sub {
   font-size: 0.75em;
 }
-.pageTutorial .block .footer {
+.pageTutorial .block .blockFooter {
   height: 30px;
   line-height: 30px;
   border-top: 1px solid #1F1F1F;
   margin-top: 5px;
 }
-.qBg {
+#qBg {
   position: fixed;
-  top: 100px;
+  top: 50px;
   left: 50%;
-  bottom: 0;
   transform: translateX(-50%);
   background-image: url('/imgs/QYellow.png');
   background-repeat: no-repeat;
   min-width: 500px;
   min-height: 500px;
+}
+#header {
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  z-index: 1;
+  background-color: #1F1F1F;
+  color: #FFFFFF;
+  font-size: 1.2em;
+  height: 30px;
+  line-height: 30px;
+}
+#header .container {
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+}
+#header .container .homeTab {
+  cursor: pointer;
+  width: 120px;
+}
+#header .container .homeTab img {
+  margin-right: 5px;
+}
+#header .container a {
+  box-sizing: border-box;
+  border-bottom: 3px solid transparent;
+  padding: 0 5px;
+  cursor: pointer;
+  transition: all 100ms ease-in;
+  color: inherit;
+  height: 30px;
+  line-height: 30px;
+}
+#header .container a.active {
+  color: #FFF176;
+  border-bottom-color: #FFF176;
+}
+#header .container a:hover {
+  color: #FFFFFF;
+  border-bottom-color: #FFFFFF;
+}
+#footer .container {
+  box-shadow: 0 2px 2px 0 rgba(31, 31, 31, 0.14), 0 3px 1px -2px rgba(31, 31, 31, 0.02), 0 1px 5px 0 rgba(31, 31, 31, 0.12);
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  margin: 10px;
+  padding: 5px;
+  padding: 0 5px;
+  text-align: center;
+  background-color: #1F1F1F;
+  color: #FFFFFF;
+  font-size: 1.2em;
+}
+#footer .container a {
+  color: #2196F3;
+}
+#footer .container a:hover,
+#footer .container a:active {
+  text-decoration: underline;
 }
 .container {
   width: 950px;
@@ -437,8 +463,7 @@ img {
       flex-wrap: wrap;
   -ms-flex-pack: center;
       justify-content: center;
-  position: absolute;
-  top: 150px;
+  position: relative;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -456,13 +481,6 @@ img {
 .block a:hover,
 .block a:active {
   text-decoration: underline;
-}
-.block.footer {
-  width: 100% !important;
-  text-align: center;
-  background-color: #1F1F1F;
-  color: #FFFFFF;
-  font-size: 1.2em;
 }
 .tag {
   margin: 2px;
@@ -482,6 +500,22 @@ img {
 }
 .tag.selected:hover {
   background-color: rgba(255, 255, 255, 0.5);
+}
+.tab {
+  box-sizing: border-box;
+  border-bottom: 3px solid transparent;
+  padding: 0 5px;
+  cursor: pointer;
+  transition: all 100ms ease-in;
+  color: inherit;
+}
+.tab.active {
+  color: #FFF176;
+  border-bottom-color: #FFF176;
+}
+.tab:hover {
+  color: #FFFFFF;
+  border-bottom-color: #FFFFFF;
 }
 .coloredScrollbar::-webkit-scrollbar {
   width: 10px;

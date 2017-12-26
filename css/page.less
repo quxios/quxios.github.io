@@ -1,5 +1,5 @@
 .page {
-  top: 50px;
+  margin-top: 50px;
   .title {
     width: 100%;
     height: 100px;
@@ -42,7 +42,7 @@
   .sidebar {
     position: relative;
     max-width: 225px;
-    max-height: ~"calc(100vh - 10px)";
+    max-height: ~"calc(100vh - 40px)";
     overflow: hidden;
     .block {
       box-shadow: none;
@@ -64,27 +64,17 @@
         text-shadow: none;
       }
     }
-    a.header {
-      display: block;
-      text-align: center;
-      font-size: 1.5em;
-      color: @light;
-      &:hover, &:active {
-        color: @light-link;
-        text-decoration: underline;
-      }
-    }
   }
   .block {
     padding: 0 5px;
-    .header {
+    .blockHeader {
       font-size: 1.7em;
       font-weight: bold;
       .sub {
         font-size: 0.75em;
       }
     }
-    .footer {
+    .blockFooter {
       height: 30px;
       line-height: 30px;
       border-top: 1px solid @dark;
