@@ -96,7 +96,7 @@ export default class PluginBlock extends React.PureComponent {
     } = this.props.plugin || {};
     return (
       <div className="block">
-        <div className="header">
+        <div className="blockHeader">
           <Link to={`/plugins/${name}`}>
             {name}
           </Link> | <span className="sub">
@@ -107,7 +107,7 @@ export default class PluginBlock extends React.PureComponent {
         </div>
         <div className="help" dangerouslySetInnerHTML={{ __html: this.makeBody() }}>
         </div>
-        <div className="footer">
+        <div className="blockFooter">
           Tags: {this.makeTags()}
         </div>
       </div>
