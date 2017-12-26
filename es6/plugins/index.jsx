@@ -4,11 +4,11 @@ import { Switch, Route } from 'react-router-dom'
 
 import PluginManager from './../pluginManager'
 
+import BasePage from './../components/basePage'
 import Content from './content'
 import Sidebar from './sidebar'
-import Footer from './../components/footer'
 
-export default class PluginsPage extends React.Component {
+export default class PluginsPage extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -113,33 +113,30 @@ export default class PluginsPage extends React.Component {
     this.setState({ selectedTag: tag });
   }
   render() {
-    const title = 'RPG Maker MV Plugins';
     const pluginName = this.props.match.params.pluginName;
     const plugin = pluginName ? this.getPlugin(pluginName) : null;
+    const title = pluginName || 'RPG Maker MV Plugins';
+    const desc = plugin ? plugin.about : null;
     return (
-      <div>
-        <div className="qBg" />
-        <div className="pagePlugin">
-          <div className="title">
-            {pluginName || title}
-          </div>
-          <Content
-            plugins={this.state.plugins}
-            plugin={plugin}
-            pluginHelp={this.state.pluginHelp}
-            selectedTag={this.state.selectedTag}
-            setTag={this.setTag}
-          />
-          <Sidebar
-            pluginName={pluginName}
-            sections={this.state.pluginSections}
-            tags={this.state.tags}
-            selectedTag={this.state.selectedTag}
-            setTag={this.setTag}
-          />
-          <Footer />
+      <BasePage page="Plugin" title={title} desc={desc}>
+        <div className="title">
+          {pluginName || title}
         </div>
-      </div>
+        <Content
+          plugins={this.state.plugins}
+          plugin={plugin}
+          pluginHelp={this.state.pluginHelp}
+          selectedTag={this.state.selectedTag}
+          setTag={this.setTag}
+        />
+        <Sidebar
+          pluginName={pluginName}
+          sections={this.state.pluginSections}
+          tags={this.state.tags}
+          selectedTag={this.state.selectedTag}
+          setTag={this.setTag}
+        />
+      </BasePage>
     )
   }
 }
