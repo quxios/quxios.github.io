@@ -1,6 +1,6 @@
 [
   {
-    "version": "1.7.0",
+    "version": "1.7.1",
     "tags": [
       "core",
       "character"
@@ -43,7 +43,7 @@
       "Battle"
     ],
     "name": "QABS",
-    "about": "A collider based action battle system for QMovement. *Note* This is not\ryour simple rpg maker action battle system. Using this plugin you can\rcreate more advance like action games.\r\r**_Note that the help section is still in development and may be missing\rsome info! Sorry!_**\r\rFor a demo visit the steamwork shop:\r\rhttp://steamcommunity.com/sharedfiles/filedetails/?id=952886994\r\n\n",
+    "about": "A collider based action battle system for QMovement. *Note* This is not\ryour simple rpg maker action battle system. Using this plugin you can\rcreate more advance like action games.\r\rFor a demo visit the steamwork shop or Github repo\r- http://steamcommunity.com/sharedfiles/filedetails/?id=952886994\r- https://github.com/quxios/QMV-ABS-Demo\r\r**_Plugin files in the repo are always kept up to date_**\r\n\n",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QABS.js"
   },
   {
@@ -302,14 +302,14 @@
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QABS+Gauges.js"
   },
   {
-    "version": "2.0.0",
+    "version": "2.0.1",
     "requires": "QABS",
     "tags": [
       "QABS-Addon",
       "hud"
     ],
     "name": "QABS+Skillbar",
-    "about": "This is an addon to QABS plugin. This plugin adds a skill bar to QABS.\r\n\n",
+    "about": "This is an addon to QABS plugin. This plugin adds a mmo like skillbar to QABS.\r\r\n\n",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QABS+Skillbar.js"
   },
   {

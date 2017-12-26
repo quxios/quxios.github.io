@@ -1,8 +1,8 @@
 
 
-## AboutThis is an addon to QABS plugin. This plugin adds a skill bar to QABS.
+## AboutThis is an addon to QABS plugin. This plugin adds a mmo like skillbar to QABS.
 
-## How to useInstall this plugin somewhere below QABS.
+## How to useInstall this plugin somewhere below QABS.
 
 ## Toggling hudTo turn on the skillbar use the plugin command:~~~QABS skillbar show~~~To hide the skillbar, use:~~~QABS skillbar hide~~~
 
