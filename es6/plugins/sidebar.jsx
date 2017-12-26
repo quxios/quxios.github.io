@@ -3,9 +3,9 @@ import React from 'react'
 import SidebarSections from './sidebarSections'
 import SidebarTags from './sidebarTags'
 
-const _distFromTop = 250;
+const _distFromTop = 220;
 
-export default class Sidebar extends React.Component {
+export default class Sidebar extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -22,7 +22,6 @@ export default class Sidebar extends React.Component {
   onScroll = () => {
     let top = window.scrollY - _distFromTop;
     top = Math.max(top, 0);
-    console.log(top);
     this.setState({ top });
   }
   render() {
