@@ -4,25 +4,14 @@
 
 ## Remap Default KeysThis allows you to change what keys input calls are related to.You can set them to multiple keys by seperating each key with a comma.You must use a QKey (Available keys listed below)Keys are case sensative!!! Means #C is not the same as #c !!IMPORTANT!!
 
-### **Example of changing to wasd format**Set the parameter for left to: `#a`Set the parameter for right to: `#d`Set the parameter for up to: `#w`Set the parameter for down to: `#s`Set the parameter for pagedown to: (page down uses w, so we'll change to e) `#pagedown, #e`Optional: Use f key instead of z in enter input `#enter, #space, #f`For FPS, Streched, FullScreen, Restart, Console you can only put 1 key!Do not use the # idetifier.If you want to disable one of those, set it to 0E, if you put in anincorrect key, it will use default MV key
+### **Example of changing to wasd format**Set the parameter for left to: `#a`Set the parameter for right to: `#d`Set the parameter for up to: `#w`Set the parameter for down to: `#s`Set the parameter for pagedown to: (page down uses w, so we'll change to e)`#pagedown, #e`*Optional*: Use f key instead of z in enter input`#enter, #space, #f`For FPS, Streched, FullScreen, Restart, Console you can only put 1 key!Do not use the # idetifier.If you want to disable one of those, set it to 0E. If you put in anincorrect key, it will use default MV key
 
-## QKeys List
-### ** Modifier keys**  #backspace    #tab      #enter      #shift      #ctrl  #alt          #esc      #space      #pageup     #pagedown  #left         #up       #right      #down       #escape
+## QKeys ListAll QKeys start with # and are lowercase** Modifier keys**                                        - #space, #backspace, #tab, #enter, #pageup, #pagedown, #escape- #shift, #ctrl, #alt, #esc, #left, #up, #right, #down**Numbers (Above letters)**- #0, #1, #2, #3, #4, #5, #6, #7, #8, #9**Numpad**- #num0, #num1, #num2, #num3, #num4- #num5, #num6, #num7, #num8, #num9**Letters**- #a, #b, #c, ..., #z (All letters between a-z US keyboard, just add a # infront)**Function Keys**- #f1, #f2, #f3, #f4, #f5, #f6, #f7, #f8, #f9, #f10, #f11, #f12**Special Characters**- #semicolon, #equal, #comma, #minus, #period, #singlequote- #slash, #grave, #openbracket, #backslash, #closedbracket
 
-### **Numbers (Above letters**  #0   #1   #2   #3   #4   #5   #6   #7   #8   #9
+## Gamepad KeysGamepad keys begin with $ and are in all caps. **Buttons**: - $A, $B, $X, $Y, $SELECT, $START**Triggers**: - $L1, $L2, $L3, $R1, $R2, $R3**DPad**- $UP, $DOWN, $LEFT, $RIGHT**_Gamepad key names are in xbox config_**
 
-### **Numpad**  #num0    #num1      #num2     #num3      #num4  #num5    #num6      #num7     #num8      #num9
+## Using QKeysIf you haven't noticed by now, Qkeys have a # identifier. So if you wantto run a trigger check for left key you will run:~~~ Input.isTriggered("#left");~~~If you didn't use the # and put~~~ Input.isTriggered("left");~~~This will check for the keys you set for parameter left, so by default thiswill let numberpad 4 to trigger this as well.I also added an extra input check~~~ Input.anyTriggered(keylist);~~~- Keylist is a string with keys seperated by commas.- You can also set it to a-z, a-z0-9 or sym.- If keylist is left empty it will return true when any key is pressed
 
-### **Letters**  #a #b #c ... #z(All letters between a-z US keyboard, just add a # infront)
-
-### **F Keys**  #f1  #f2  #f3  #f4  #f5  #f6  #f7  #f8  #f9  #f10  #f11  #f12
-
-### **Special Characters**  #semicolon     #equal      #comma         #minus        #period  #slash         #grave      #openbracket   #backslash    #closedbracket  #singlequote
-
-## Gamepad KeysGamepad keys begin with $ and are in all caps. Here's the list of gamepad keys:- Buttons: $A, $B, $X, $Y, $SELECT, $START- Triggers: $L1, $L2, $L3, $R1, $R2, $R3- DPad: $UP, $DOWN, $LEFT, $RIGHT
-
-## Using QKeysIf you haven't noticed by now, Qkeys have a # identifier. So if you wantto run a trigger check for left key you will run:~~~ Input.isTriggered("#left");~~~If you didn't use the # and put~~~ Input.isTriggered("left");~~~This will check for the keys you set for parameter left, so by default thiswill let numberpad 4 to trigger this as well.I also added an extra input check~~~ Input.anyTriggered(keylist);~~~Keylist is a string with keys seperated by commas.You can also set it to a-z, a-z0-9 or sym.If keylist is left empty it will return true when any key is pressed
-
-## Advanced Users: Using Window_TextInputThis new window will allow for a keyboard input.If you want to see how it is used please look at the code or look atQNameInput.js as they both use Window_TextInputThere are also 2 new functions in game input which might be useful:~~~Input.preferKeyboard()~~~Will return true if the last input was sent with the keyboard.~~~Input.preferGamepad()~~~Will return true if the last input was sent with the gamepad.
+## Advanced Users: Using Window_TextInputThis new window will allow for a keyboard input.If you want to see how it is used please look at the code or look atQNameInput.js as they both use Window_TextInputThere are also 2 new functions in game input which might be useful:~~~Input.preferKeyboard();~~~Will return true if the last input was sent with the keyboard.~~~Input.preferGamepad();~~~Will return true if the last input was sent with the gamepad.
 
 ## LinksFormated Help: https://quxios.github.io/#/plugins/QInputRPGMakerWebs: http://forums.rpgmakerweb.com/index.php?threads/qplugins.73023/Terms of use: https://github.com/quxios/QMV-Master-Demo/blob/master/readme.mdLike my plugins? Support me on Patreon! https://www.patreon.com/quxios

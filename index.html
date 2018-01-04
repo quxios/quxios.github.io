@@ -2,6 +2,15 @@
 <html>
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111949974-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-111949974-1');
+  </script>
   <title>Quxios</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="Quxios, RPG Maker, RMMV">
@@ -16,7 +25,25 @@
 
 <body>
   <div id="site"></div>
-  <script src="js/bundle.js"></script>
+  <script type="text/javascript">
+    (function(loc) {
+      var search = loc.search;
+      if (loc.hash && loc.hash[1] === '/') {
+        search = '?path=' + loc.hash.slice(2);
+      }
+      if (search) {
+        var path = /path=(.*?)(?:&|$)/.exec(search);
+        var hash = /hash=(.*?)(?:&|$)/.exec(search);
+        var newPath = '';
+        if (path) newPath += path[1];
+        if (hash) newPath += '#' + hash[1];
+        if (newPath) {
+          window.history.replaceState(null, null, '/' + newPath);
+        }
+      }
+    })(window.location);
+  </script>
+  <script <script src="/js/bundle.js"></script>
 </body>
 
 </html>

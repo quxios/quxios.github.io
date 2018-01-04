@@ -8,6 +8,8 @@ import BasePage from './../components/basePage'
 import Content from './content'
 import Sidebar from './sidebar'
 
+const _offsetFromTop = 30;
+
 export default class PluginsPage extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -44,17 +46,20 @@ export default class PluginsPage extends React.PureComponent {
     }
   }
   componentDidUpdate(prevProps, prevState) {
-    if (this.props.match.params.section) {
-      this.scrollTo(this.props.match.params.section);
+    if (this.state.pluginHelp && this.props.match.params.section) {
+      window.setTimeout(() => {
+        this.scrollTo(this.props.match.params.section)
+      }, 1);
     }
   }
   scrollTo(id) {
-    id = id.toLowerCase();
-    id = id.replace(/[^a-zA-Z0-9]/g, ' ');
-    id = id.replace(/\s+/g, '-');
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView(true);
+      var scrolledY = window.scrollY;
+      if (scrolledY) {
+        window.scroll(window.scrollX, scrolledY - _offsetFromTop);
+      }
     }
   }
   loadFullPlugin = (plugin) => {
@@ -65,7 +70,7 @@ export default class PluginsPage extends React.PureComponent {
     }, () => {
       Axios.get(`/data/help/${plugin}.md`)
         .then((res) => {
-          let regex = /^ *(#+.*)/gm;
+          let regex = /^ *(#{2,3} .*)/gm;
           let match = regex.exec(res.data);
           let sections = [];
           while (match) {

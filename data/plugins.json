@@ -33,6 +33,51 @@
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QMovement.js"
   },
   {
+    "version": "1.0.1",
+    "requires": "QMovement",
+    "video": true,
+    "tags": [
+      "QM-Addon",
+      "collision"
+    ],
+    "name": "QM+CollisionMap",
+    "about": "This is an addon to QMovement plugin. This addon adds a feature that lets\ryou use images as a collision map.\r\n\n",
+    "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QM+CollisionMap.js"
+  },
+  {
+    "version": "1.1.0",
+    "requires": "QMovement",
+    "tags": [
+      "QM-Addon",
+      "collision"
+    ],
+    "name": "QM+RegionColliders",
+    "about": "This is an addon to QMovement plugin. This addon adds a feature that lets\ryou add colliders to regions. In QuasiMovement this was known as\rRegionBoxes.\r\rRegion Colliders take priority over tiles. So if there's a region over a\rtile, it will use the region collider instead of that tiles collider. With\rthis you can make certain impassable tiles passable by adding a passable\rregion collider (width 0 and height 0) ontop of it.\r\n\n",
+    "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QM+RegionColliders.js"
+  },
+  {
+    "version": "1.0.0",
+    "requires": "QMovement",
+    "tags": [
+      "QM-Addon",
+      "collision"
+    ],
+    "name": "QM+ColliderMap",
+    "about": "This is an addon to QMovement plugin. This addon adds a feature that lets\ryou create a json file that contains a list of colliders for each map.\rThis is not to be confused with CollisionMap addon. CollisionMap lets you\ruse a picture for collisions, while ColliderMap lets you create colliders\rthat are placed on the map.\r\n\n",
+    "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QM+ColliderMap.js"
+  },
+  {
+    "version": "1.0.2",
+    "requires": "QMovement",
+    "tags": [
+      "QM-Addon",
+      "followers"
+    ],
+    "name": "QM+Followers",
+    "about": "This adds support for followers when using QMovement.\r\r*Note:* I won't be continuing working on this plugin. I personally dislike\rfollowers and rather not do anything with them. So if you have issues with this\rplugin you will need to try to fix it your self or find another plugin dev\rto fix it for you. Sorry!\r\n\n",
+    "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QM+Followers.js"
+  },
+  {
     "version": "1.6.2",
     "repo": "https://github.com/quxios/QABS",
     "requires": "QMovement",
@@ -45,6 +90,28 @@
     "name": "QABS",
     "about": "A collider based action battle system for QMovement. *Note* This is not\ryour simple rpg maker action battle system. Using this plugin you can\rcreate more advance like action games.\r\rFor a demo visit the steamwork shop or Github repo\r- http://steamcommunity.com/sharedfiles/filedetails/?id=952886994\r- https://github.com/quxios/QMV-ABS-Demo\r\r**_Plugin files in the repo are always kept up to date_**\r\n\n",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QABS.js"
+  },
+  {
+    "version": "1.0.1",
+    "requires": "QABS",
+    "tags": [
+      "QABS-Addon",
+      "gauges"
+    ],
+    "name": "QABS+Gauges",
+    "about": "This is an addon to QABS plugin. This plugin adds a hp gauges to enemies.\rThese gauges are only visible if that enemy is in combat.\r\n\n",
+    "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QABS+Gauges.js"
+  },
+  {
+    "version": "2.0.1",
+    "requires": "QABS",
+    "tags": [
+      "QABS-Addon",
+      "hud"
+    ],
+    "name": "QABS+Skillbar",
+    "about": "This is an addon to QABS plugin. This plugin adds a mmo like skillbar to QABS.\r\r\n\n",
+    "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QABS+Skillbar.js"
   },
   {
     "version": "1.1.0",
@@ -197,9 +264,9 @@
       "input",
       "options"
     ],
-    "name": "QInputRemap",
-    "about": "This plugin adds an input remapping window to the Scene_Options. This lets\rplayers change their keybinds ingame.\r\n\n",
-    "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QInputRemap.js"
+    "name": "QInput+Remap",
+    "about": "This plugin adds an input remapping window to the Scene_Options. This lets\rplayers change the games keyboard and gamepad inputs inside of the options\rmenu.\r\r\n\n",
+    "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QInput+Remap.js"
   },
   {
     "version": "2.0.3",
@@ -244,73 +311,6 @@
     "name": "QYScale",
     "about": "This plugin will zoom in/out character sprites based on their y position\ron the map.\r\n\n",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QYScale.js"
-  },
-  {
-    "version": "1.0.1",
-    "requires": "QMovement",
-    "video": true,
-    "tags": [
-      "QM-Addon",
-      "collision"
-    ],
-    "name": "QM+CollisionMap",
-    "about": "This is an addon to QMovement plugin. This addon adds a feature that lets\ryou use images as a collision map.\r\n\n",
-    "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QM+CollisionMap.js"
-  },
-  {
-    "version": "1.1.0",
-    "requires": "QMovement",
-    "tags": [
-      "QM-Addon",
-      "collision"
-    ],
-    "name": "QM+RegionColliders",
-    "about": "This is an addon to QMovement plugin. This addon adds a feature that lets\ryou add colliders to regions. In QuasiMovement this was known as\rRegionBoxes.\r\rRegion Colliders take priority over tiles. So if there's a region over a\rtile, it will use the region collider instead of that tiles collider. With\rthis you can make certain impassable tiles passable by adding a passable\rregion collider (width 0 and height 0) ontop of it.\r\n\n",
-    "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QM+RegionColliders.js"
-  },
-  {
-    "version": "1.0.0",
-    "requires": "QMovement",
-    "tags": [
-      "QM-Addon",
-      "collision"
-    ],
-    "name": "QM+ColliderMap",
-    "about": "This is an addon to QMovement plugin. This addon adds a feature that lets\ryou create a json file that contains a list of colliders for each map.\rThis is not to be confused with CollisionMap addon. CollisionMap lets you\ruse a picture for collisions, while ColliderMap lets you create colliders\rthat are placed on the map.\r\n\n",
-    "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QM+ColliderMap.js"
-  },
-  {
-    "version": "1.0.2",
-    "requires": "QMovement",
-    "tags": [
-      "QM-Addon",
-      "followers"
-    ],
-    "name": "QM+Followers",
-    "about": "This adds support for followers when using QMovement.\r\r*Note:* I won't be continuing working on this plugin. I personally dislike\rfollowers and rather not do anything with them. So if you have issues with this\rplugin you will need to try to fix it your self or find another plugin dev\rto fix it for you. Sorry!\r\n\n",
-    "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QM+Followers.js"
-  },
-  {
-    "version": "1.0.1",
-    "requires": "QABS",
-    "tags": [
-      "QABS-Addon",
-      "gauges"
-    ],
-    "name": "QABS+Gauges",
-    "about": "This is an addon to QABS plugin. This plugin adds a hp gauges to enemies.\rThese gauges are only visible if that enemy is in combat.\r\n\n",
-    "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QABS+Gauges.js"
-  },
-  {
-    "version": "2.0.1",
-    "requires": "QABS",
-    "tags": [
-      "QABS-Addon",
-      "hud"
-    ],
-    "name": "QABS+Skillbar",
-    "about": "This is an addon to QABS plugin. This plugin adds a mmo like skillbar to QABS.\r\r\n\n",
-    "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QABS+Skillbar.js"
   },
   {
     "version": "1.0.2",

@@ -11,6 +11,8 @@ import uglifyify from 'uglifyify'
 import babelify from 'babelify'
 import source from 'vinyl-source-stream'
 
+require('./tutorials/task.js');
+
 const customOpts = {
   entries: ['./es6/main.jsx'],
   extensions: ['.jsx'],

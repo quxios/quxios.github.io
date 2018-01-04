@@ -16,7 +16,7 @@ export default class SidebarSections extends React.PureComponent {
             sections.map((section, i) => {
               let h2 = /^###/.test(section);
               section = section.replace(/^#+/, '');
-              let s1 = section.toLowerCase();
+              let s1 = section.toLowerCase().trim();
               s1 = s1.replace(/[^a-z0-9]+/g, '-');
               const s2 = section.replace(/(#|\*)/g, '').trim();
               const cls = h2 ? 'sub' : 'main';
