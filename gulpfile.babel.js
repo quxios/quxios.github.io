@@ -13,6 +13,8 @@ import source from 'vinyl-source-stream'
 
 require('./tutorials/task.js');
 
+const URL = 'https://quxios.github.io/';
+
 const customOpts = {
   entries: ['./es6/main.jsx'],
   extensions: ['.jsx'],
@@ -72,4 +74,36 @@ gulp.task('production', () => {
   return bundler.bundle()
     .pipe(source('bundle.js'))
     .pipe(gulp.dest('./js'));
+})
+
+gulp.task('sitemap', () => {
+  let txt = '<?xml version="1.0" encoding="UTF-8"?>\n';
+  txt += '<urlset xmlns = "http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+  let urls = [];
+  urls.push({
+    loc: ''
+  })
+  urls.push({
+    loc: 'plugins'
+  })
+  require('./data/plugins.json').forEach((plugin) => {
+    urls.push({
+      loc: `plugins/${plugin.name}`
+    })
+  })
+  urls.push({
+    loc: 'tutorials'
+  })
+  require('./data/tutorials.json').forEach((tut) => {
+    urls.push({
+      loc: `tutorials/${tut.name}`
+    })
+  })
+  urls.forEach((url) => {
+    txt += '  <url>\n';
+    txt += `    <loc>${URL}${url.loc ? '?path=' : ''}${url.loc}</loc>\n`
+    txt += '  </url>\n';
+  })
+  txt += '</urlset>';
+  require('fs').writeFileSync('sitemap.xml', txt);
 })

@@ -6,7 +6,7 @@
   "scripts": {
     "server": "http-server -c-1",
     "start": "start gulp dev & npm run server",
-    "build": "gulp production & gulp tutorials"
+    "build": "gulp tutorials & gulp production & gulp sitemap"
   },
   "repository": {
     "type": "git",

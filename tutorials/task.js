@@ -18,10 +18,10 @@ gulp.task('tutorials', ['missingTutorials'], () => {
     const stat = fs.statSync(filePath);
     let match = /^#(.*)$([\s\S]*?)#/gm.exec(file);
     if (match) {
-      const name = match[1].trim();
-      const desc = (match[2] || '').trim();
       output.push({
-        name, desc,
+        name: path.basename(filePath, '.md'),
+        title: match[1].trim(),
+        desc: (match[2] || '').trim(),
         date: stat.mtime
       })
     }
