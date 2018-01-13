@@ -78,7 +78,7 @@
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QM+Followers.js"
   },
   "QABS": {
-    "version": "1.6.2",
+    "version": "1.6.3",
     "repo": "https://github.com/quxios/QABS",
     "requires": "QMovement",
     "video": "TODO",
