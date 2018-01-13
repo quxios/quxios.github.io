@@ -86,19 +86,23 @@ gulp.task('sitemap', () => {
   urls.push({
     loc: 'plugins'
   })
-  require('./data/plugins.json').forEach((plugin) => {
+  var plugins = require('./data/plugins.json');
+  for (const key in plugins) {
+    const plugin = plugins[key];
     urls.push({
       loc: `plugins/${plugin.name}`
     })
-  })
+  }
   urls.push({
     loc: 'tutorials'
   })
-  require('./data/tutorials.json').forEach((tut) => {
+  var tutorials = require('./data/tutorials.json');
+  for (const key in tutorials) {
+    const tutorial = tutorials[key];
     urls.push({
-      loc: `tutorials/${tut.name}`
+      loc: `tutorials/${tutorial.name}`
     })
-  })
+  }
   urls.forEach((url) => {
     txt += '  <url>\n';
     txt += `    <loc>${URL}${url.loc ? '?path=' : ''}${url.loc}</loc>\n`

@@ -1,106 +1,54 @@
 import Axios from 'axios'
 import React from 'react'
-import { Switch, Route } from 'react-router-dom'
 
-import PluginManager from './../pluginManager'
+import Utils from './../ultis'
 
 import BasePage from './../components/basePage'
-import Content from './content'
+import Content from './../components/content'
+import PluginBlock from './pluginBlock'
 import Sidebar from './sidebar'
 
-const _offsetFromTop = 30;
+const OFFSET_FROM_TOP = 30;
+const PLUGINS_PATH = '/data/plugins.json';
+const TAGS_PATH = '/data/tags.json';
 
 export default class PluginsPage extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      plugins: [],
-      pluginHelp: null,
-      pluginSections: [],
+      current: null,
+      plugins: {},
       selectedTag: '',
       tags: []
     }
   }
   componentWillMount() {
-    PluginManager.load('plugins', this.setPlugins);
-    PluginManager.load('tags', this.setTags);
+    Axios.get(PLUGINS_PATH)
+      .then((res) => {
+        this.setState({
+          plugins: res.data
+        })
+      })
+    Axios.get(TAGS_PATH)
+      .then((res) => {
+        this.makeTags(res.data);
+      })
     if (this.props.match.params.pluginName) {
-      this.loadFullPlugin(this.props.match.params.pluginName);
+      this.setCurrent(this.props.match.params.pluginName);
     }
   }
   componentWillReceiveProps(nextProps) {
     const id = nextProps.match.params.section;
     const plugin = nextProps.match.params.pluginName;
     if (plugin !== this.props.match.params.pluginName) {
-      this.loadFullPlugin(plugin);
       window.scrollTo(0, 0);
-    }
-    if (!plugin) {
-      this.setState({
-        pluginHelp: null,
-        pluginSections: null
-      })
+      this.setCurrent(plugin);
     }
     if (this.props.match.params.section !== id) {
-      this.scrollTo(id);
+      Utils.scrollTo(id, OFFSET_FROM_TOP);
     }
   }
-  componentDidUpdate(prevProps, prevState) {
-    if (this.state.pluginHelp && this.props.match.params.section) {
-      window.setTimeout(() => {
-        this.scrollTo(this.props.match.params.section)
-      }, 1);
-    }
-  }
-  scrollTo(id) {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView(true);
-      var scrolledY = window.scrollY;
-      if (scrolledY) {
-        window.scroll(window.scrollX, scrolledY - _offsetFromTop);
-      }
-    }
-  }
-  loadFullPlugin = (plugin) => {
-    if (!plugin) return;
-    this.setState({
-      pluginHelp: null,
-      pluginSections: null
-    }, () => {
-      Axios.get(`/data/help/${plugin}.md`)
-        .then((res) => {
-          let regex = /^ *(#{2,3} .*)/gm;
-          let match = regex.exec(res.data);
-          let sections = [];
-          while (match) {
-            sections.push(match[1]);
-            match = regex.exec(res.data);
-          }
-          this.setState({
-            pluginHelp: res.data,
-            pluginSections: sections
-          });
-        })
-        .catch((err) => {
-          window.location = "#/plugins";
-        })
-    })
-  }
-  setPlugins = (plugins) => {
-    this.setState({ plugins });
-  }
-  getPlugin(name) {
-    let plugin = null;
-    for (let i = 0; i < this.state.plugins.length; i++) {
-      if (this.state.plugins[i].name === name) {
-        plugin = this.state.plugins[i];
-        break;
-      }
-    }
-    return plugin;
-  }
-  setTags = (newTags) => {
+  makeTags = (newTags) => {
     const names = Object.keys(newTags);
     let tags = [];
     names.forEach((name) => {
@@ -111,6 +59,32 @@ export default class PluginsPage extends React.PureComponent {
     })
     this.setState({ tags });
   }
+  setCurrent(pluginName) {
+    if (!pluginName) {
+      return this.setState({
+        current: null
+      })
+    }
+    Axios.get(`/data/help/${pluginName}.md`)
+      .then((res) => {
+        let sections = Utils.getSections(res.data);
+        this.setState({
+          current: {
+            ...this.state.plugins[pluginName],
+            help: res.data,
+            sections
+          }
+        })
+        if (this.props.match.params.section) {
+          window.setTimeout(() => {
+            Utils.scrollTo(this.props.match.params.section, OFFSET_FROM_TOP)
+          }, 1);
+        }
+      })
+      .catch((err) => {
+        window.location = '/plugins'
+      })
+  }
   setTag = (tag) => {
     if (this.state.selectedTag === tag) {
       tag = '';
@@ -118,27 +92,28 @@ export default class PluginsPage extends React.PureComponent {
     this.setState({ selectedTag: tag });
   }
   render() {
-    const pluginName = this.props.match.params.pluginName;
-    const plugin = pluginName ? this.getPlugin(pluginName) : null;
-    const title = pluginName || 'RPG Maker MV Plugins';
-    const desc = plugin ? plugin.about : null;
+    const {
+      current, plugins,
+      selectedTag, tags
+    } = this.state;
+    const title = current ? current.name : 'RPG Maker MV Plugins';
     return (
-      <BasePage page="Plugin" title={title} desc={desc}>
+      <BasePage page="Plugin" title={title} >
         <div className="title">
-          {pluginName || title}
+          {title}
         </div>
         <Content
-          plugins={this.state.plugins}
-          plugin={plugin}
-          pluginHelp={this.state.pluginHelp}
-          selectedTag={this.state.selectedTag}
+          selectedItem={current}
+          items={plugins}
+          selectedTag={selectedTag}
           setTag={this.setTag}
+          urlBase="plugins"
+          Component={PluginBlock}
         />
         <Sidebar
-          pluginName={pluginName}
-          sections={this.state.pluginSections}
-          tags={this.state.tags}
-          selectedTag={this.state.selectedTag}
+          selectedPlugin={current}
+          tags={tags}
+          selectedTag={selectedTag}
           setTag={this.setTag}
         />
       </BasePage>

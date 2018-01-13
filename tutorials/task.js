@@ -12,18 +12,19 @@ const tutorialsPath = tutorials.map((p) => {
 })
 
 gulp.task('tutorials', ['missingTutorials'], () => {
-  let output = [];
+  let output = {};
   tutorialsPath.forEach((filePath) => {
     const file = fs.readFileSync(filePath, 'utf8');
     const stat = fs.statSync(filePath);
     let match = /^#(.*)$([\s\S]*?)#/gm.exec(file);
     if (match) {
-      output.push({
-        name: path.basename(filePath, '.md'),
+      const name = path.basename(filePath, '.md');
+      output[name] = {
+        name,
         title: match[1].trim(),
         desc: (match[2] || '').trim(),
         date: stat.mtime
-      })
+      }
     }
   })
   fs.writeFileSync('data/tutorials.json', JSON.stringify(output));

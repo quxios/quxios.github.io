@@ -6,21 +6,20 @@ import PluginPage from './pluginPage'
 export default class Content extends React.PureComponent {
   render() {
     const {
-      plugin, plugins, pluginHelp,
+      selectedPlugin, plugins,
       selectedTag, setTag
     } = this.props;
     return (
       <div className="content">
         {
-          !plugin ?
+          !selectedPlugin ?
             <PluginList
               selectedTag={selectedTag}
               setTag={setTag}
               plugins={plugins}
             /> :
             <PluginPage
-              plugin={plugin}
-              pluginHelp={pluginHelp}
+              plugin={selectedPlugin}
               setTag={setTag}
             />
         }

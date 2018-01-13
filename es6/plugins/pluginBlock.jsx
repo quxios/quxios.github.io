@@ -1,48 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import Marked from 'marked'
 const VIDEO_REGEX = /https:\/\/(?:www\.youtube\.com\/watch\?v=|youtu\.be\/)(.*)/ig
 
 export default class PluginBlock extends React.PureComponent {
-  makeSubheader() {
-    let {
-      requires,
-      download,
-      development
-    } = this.props.plugin || {};
-    let subheader = [];
-    if (requires) {
-      requires = requires.trim();
-      subheader.push(<span key="1">
-        Requires: <Link to={`/plugins/${requires}`}>
-          {requires}
-        </Link>
-      </span>)
-      subheader.push(" | ");
-    }
-    if (!development) {
-      subheader.push(<span key="2">
-        Download: <a href={download}>
-          Github
-        </a>
-      </span>)
-    } else {
-      subheader.push(<span key="3">
-        Download: Not available yet
-      </span>)
-    }
-    return (
-      <span className="sub">
-        {subheader}
-      </span>
-    )
-  }
   makeBody() {
-    const help = this.props.help || '';
     const {
       video,
-      about
-    } = this.props.plugin || {};
+      about,
+      help
+    } = this.props.item || {};
     let body = '';
     if (video) {
       if (VIDEO_REGEX.test(video)) {
@@ -50,12 +17,51 @@ export default class PluginBlock extends React.PureComponent {
       }
     }
     if (this.props.max) {
-      body += `${help}`
+      body += `${help}`;
     } else {
       body += `${about}`;
     }
     body = this.transformVideos(body);
-    return marked(body);
+    return Marked(body);
+  }
+  makeSubheader() {
+    let {
+      requires,
+      download,
+      development
+    } = this.props.item || {};
+    let subheader = [];
+    if (requires) {
+      requires = requires.trim();
+      subheader.push(
+        <span key="1">
+          Requires: <Link to={`/plugins/${requires}`}>
+            {requires}
+          </Link>
+        </span>
+      )
+      subheader.push(" | ");
+    }
+    if (!development) {
+      subheader.push(
+        <span key="2">
+          Download: <a href={download}>
+            Github
+          </a>
+        </span>
+      )
+    } else {
+      subheader.push(
+        <span key="3">
+          Download: Not available yet
+        </span>
+      )
+    }
+    return (
+      <span className="sub">
+        {subheader}
+      </span>
+    )
   }
   transformVideos(string) {
     let newString = string;
@@ -93,20 +99,28 @@ export default class PluginBlock extends React.PureComponent {
     const {
       name,
       version
-    } = this.props.plugin || {};
+    } = this.props.item || {};
+    let title = name;
+    if (!this.props.max) {
+      title = (
+        <Link to={`/plugins/${name}`}>
+          {name}
+        </Link>
+      )
+    }
     return (
       <div className="block">
         <div className="blockHeader">
-          <Link to={`/plugins/${name}`}>
-            {name}
-          </Link> | <span className="sub">
-            Version: {version}
-          </span>
-          <br />
+          <div>
+            {title} | <span className="sub">
+              Version: {version}
+            </span>
+          </div>
           {this.makeSubheader()}
         </div>
-        <div className="help" dangerouslySetInnerHTML={{ __html: this.makeBody() }}>
-        </div>
+        <div className="help"
+          dangerouslySetInnerHTML={{ __html: this.makeBody() }}
+        />
         <div className="blockFooter">
           Tags: {this.makeTags()}
         </div>

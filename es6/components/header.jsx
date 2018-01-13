@@ -4,17 +4,15 @@ import { Link, NavLink } from 'react-router-dom'
 export default class Header extends React.PureComponent {
   componentWillMount() {
     const {
-      page, title, desc
+      page, title
     } = this.props;
     document.title = title ? `${title} | Quxios` : 'Quxios';
-    document.querySelector('meta[name=description]').setAttribute('content', desc || '');
   }
   componentWillReceiveProps(nextProps) {
     const {
-      page, title, desc
+      page, title
     } = nextProps;
     document.title = title ? `${title} | Quxios` : 'Quxios';
-    document.querySelector('meta[name=description]').setAttribute('content', desc || '');
   }
   render() {
     return (

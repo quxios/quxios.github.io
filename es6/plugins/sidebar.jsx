@@ -3,7 +3,7 @@ import React from 'react'
 import SidebarSections from './sidebarSections'
 import SidebarTags from './sidebarTags'
 
-const _distFromTop = 220;
+const DIST_FROM_TOP = 220;
 
 export default class Sidebar extends React.PureComponent {
   constructor(props) {
@@ -20,13 +20,13 @@ export default class Sidebar extends React.PureComponent {
     window.removeEventListener('scroll', this.onScroll);
   }
   onScroll = () => {
-    let top = window.scrollY - _distFromTop;
+    let top = window.scrollY - DIST_FROM_TOP;
     top = Math.max(top, 0);
     this.setState({ top });
   }
   render() {
     const {
-      pluginName, sections,
+      selectedPlugin,
       selectedTag, tags, setTag
     } = this.props;
     const style = {
@@ -35,10 +35,10 @@ export default class Sidebar extends React.PureComponent {
     return (
       <div className="sidebar" style={style}>
         {
-          pluginName ?
+          selectedPlugin ?
             <SidebarSections
-              pluginName={pluginName}
-              sections={sections}
+              pluginName={selectedPlugin.name}
+              sections={selectedPlugin.sections}
             /> :
             <SidebarTags
               selectedTag={selectedTag}

@@ -1,5 +1,5 @@
-[
-  {
+{
+  "QPlus": {
     "version": "1.7.1",
     "tags": [
       "core",
@@ -9,7 +9,7 @@
     "about": "This plugin is the core for most of the QPlugins. It also adds a few new\rfunctionality to RPG Maker MV to improve it.\r\r\n\n",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QPlus.js"
   },
-  {
+  "QUpdate": {
     "version": "1.2.0",
     "tags": [
       "updater"
@@ -18,7 +18,7 @@
     "about": "A Plugin to check if your QPlugins are up to date. Only works during local\rplaytesting. Please remove / delete this plugin before deploying.\r\n\n",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QUpdate.js"
   },
-  {
+  "QMovement": {
     "version": "1.6.1",
     "repo": "https://github.com/quxios/QMovement",
     "requires": "QPlus",
@@ -32,7 +32,7 @@
     "about": "This plugin completely rewrites the collision system to use colliders. Using\rcolliders enabled more accurate collision checking with dealing with pixel\rmovement. This plugin also lets you change how many pixels the characters\rmove per step, letting you set up a 24x24 movement or a 1x1 (pixel movement)\r\rNote there are a few mv features disabled/broken; mouse movement, followers,\rand vehicles.\r\n\n",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QMovement.js"
   },
-  {
+  "QM+CollisionMap": {
     "version": "1.0.1",
     "requires": "QMovement",
     "video": true,
@@ -44,7 +44,7 @@
     "about": "This is an addon to QMovement plugin. This addon adds a feature that lets\ryou use images as a collision map.\r\n\n",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QM+CollisionMap.js"
   },
-  {
+  "QM+RegionColliders": {
     "version": "1.1.0",
     "requires": "QMovement",
     "tags": [
@@ -55,7 +55,7 @@
     "about": "This is an addon to QMovement plugin. This addon adds a feature that lets\ryou add colliders to regions. In QuasiMovement this was known as\rRegionBoxes.\r\rRegion Colliders take priority over tiles. So if there's a region over a\rtile, it will use the region collider instead of that tiles collider. With\rthis you can make certain impassable tiles passable by adding a passable\rregion collider (width 0 and height 0) ontop of it.\r\n\n",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QM+RegionColliders.js"
   },
-  {
+  "QM+ColliderMap": {
     "version": "1.0.0",
     "requires": "QMovement",
     "tags": [
@@ -66,7 +66,7 @@
     "about": "This is an addon to QMovement plugin. This addon adds a feature that lets\ryou create a json file that contains a list of colliders for each map.\rThis is not to be confused with CollisionMap addon. CollisionMap lets you\ruse a picture for collisions, while ColliderMap lets you create colliders\rthat are placed on the map.\r\n\n",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QM+ColliderMap.js"
   },
-  {
+  "QM+Followers": {
     "version": "1.0.2",
     "requires": "QMovement",
     "tags": [
@@ -77,7 +77,7 @@
     "about": "This adds support for followers when using QMovement.\r\r*Note:* I won't be continuing working on this plugin. I personally dislike\rfollowers and rather not do anything with them. So if you have issues with this\rplugin you will need to try to fix it your self or find another plugin dev\rto fix it for you. Sorry!\r\n\n",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QM+Followers.js"
   },
-  {
+  "QABS": {
     "version": "1.6.2",
     "repo": "https://github.com/quxios/QABS",
     "requires": "QMovement",
@@ -91,7 +91,7 @@
     "about": "A collider based action battle system for QMovement. *Note* This is not\ryour simple rpg maker action battle system. Using this plugin you can\rcreate more advance like action games.\r\rFor a demo visit the steamwork shop or Github repo\r- http://steamcommunity.com/sharedfiles/filedetails/?id=952886994\r- https://github.com/quxios/QMV-ABS-Demo\r\r**_Plugin files in the repo are always kept up to date_**\r\n\n",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QABS.js"
   },
-  {
+  "QABS+Gauges": {
     "version": "1.0.1",
     "requires": "QABS",
     "tags": [
@@ -102,7 +102,7 @@
     "about": "This is an addon to QABS plugin. This plugin adds a hp gauges to enemies.\rThese gauges are only visible if that enemy is in combat.\r\n\n",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QABS+Gauges.js"
   },
-  {
+  "QABS+Skillbar": {
     "version": "2.0.1",
     "requires": "QABS",
     "tags": [
@@ -113,7 +113,7 @@
     "about": "This is an addon to QABS plugin. This plugin adds a mmo like skillbar to QABS.\r\r\n\n",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QABS+Skillbar.js"
   },
-  {
+  "QParams": {
     "version": "1.1.0",
     "requires": "QPlus",
     "tags": [],
@@ -121,7 +121,7 @@
     "about": "This plugin adds a few new parameters and lets you create custom parameters.\r\n\n",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QParams.js"
   },
-  {
+  "QImport": {
     "version": "1.0.2",
     "requires": "QPlus",
     "tags": [
@@ -132,7 +132,7 @@
     "about": "This plugin is used to help ease development of configurations by letting\ryou import from different sources. If you have a note tag that is going to\rbe used in multiple game objects, you can configure just one of them and have\rthe rest import the notes from that \"master\" object. Then whenever you edit\rthe \"master\" all the ones that are importing from it will also get the change.\r\n\n",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QImport.js"
   },
-  {
+  "QEvent": {
     "version": "1.0.0",
     "requires": "QPlus",
     "tags": [],
@@ -140,7 +140,7 @@
     "about": "This plugin adds some extra functionality to common events to make them\rmore powerful for advanced users.\r\n\n",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QEvent.js"
   },
-  {
+  "QSprite": {
     "requires": "QPlus",
     "tags": [
       "character",
@@ -148,11 +148,11 @@
       "animation"
     ],
     "name": "QSprite",
-    "version": "2.1.8",
+    "version": "2.1.9",
     "about": "This plugin lets you use sprites that are set up with QSprite Editor\r\rhttps://github.com/quxios/QSpriteEditor\r\r\n\n",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QSprite.js"
   },
-  {
+  "QMap": {
     "version": "1.5.1",
     "requires": "QPlus",
     "video": "https://www.youtube.com/watch?v=x7vcK96aW28",
@@ -165,7 +165,7 @@
     "about": "Similar to a parallax plugin. This plugin creates maps you created using\rQMap Editor.\r\n\n",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QMap.js"
   },
-  {
+  "QPathfind": {
     "version": "1.4.11",
     "requires": "QPlus",
     "video": "TODO",
@@ -178,7 +178,7 @@
     "about": "This plugin will calculate a path for a character to take to reach a target\rposition. You can also use this plugin to make a character chase a target.\r\n\n",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QPathfind.js"
   },
-  {
+  "QSight": {
     "version": "1.1.13",
     "requires": "QPlus",
     "video": true,
@@ -191,7 +191,7 @@
     "about": "This plugin lets you add real time line of sight to characters. A line of\rsight is similar to a sensor plugin, except characters can't see behind\robjects that block their view.\r\rThis plugin has built-in compatibilty for QMovement. When using QMovement\rthe line of sight will be more accurate since it'll use a shadow casting\ralgorithm. When not using QMovement it'll use a simple ray casting.\r\n\n",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QSight.js"
   },
-  {
+  "QPicture": {
     "version": "1.1.3",
     "requires": "QPlus",
     "tags": [
@@ -203,7 +203,7 @@
     "about": "Adds additional features to Pictures. You can easily apply mouse events \n(onClick, onRightClick, onMouseEnter, onMouseExit, onMouseOver, onMouseOut)\nto pictures and have a common event run or change a value of a switch. You\ncan also apply easing effects to a pictures movement, scaling or opacity\nchange.\n\n\n",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QPicture.js"
   },
-  {
+  "QEventSave": {
     "version": "1.1.0",
     "requires": "QPlus",
     "tags": [
@@ -214,7 +214,7 @@
     "about": "This plugin allows you to save events position and move route when switching\rmaps.\r\n\n",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QEventSave.js"
   },
-  {
+  "QAudio": {
     "version": "2.3.4",
     "requires": "QPlus",
     "tags": [
@@ -226,7 +226,7 @@
     "about": "This plugin allows you to play an audio (bgm, bgs, me or se) at a fixed\rposition. The volume and panning will be dynamically updated based off of\rthe players distance from that audios location.\r\n\n",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QAudio.js"
   },
-  {
+  "QCamera": {
     "version": "1.1.5",
     "requires": "QPlus",
     "video": "https://www.youtube.com/watch?v=MbdXrReYwFw",
@@ -237,7 +237,7 @@
     "about": "Improved camera control for RPG Maker MV. Lets you scroll diagonally,\rtowards a character, set the time it takes to scroll in frames, change who\rthe camera is following and smooth scrolling which makes the camera 'lag'\rbehind the player or target.\r\n\n",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QCamera.js"
   },
-  {
+  "QTouch": {
     "version": "1.1.4",
     "video": "https://youtu.be/2UrazG-XRxw",
     "tags": [
@@ -247,7 +247,7 @@
     "about": "This plugin extands the mouse features of MV to make it feel more natural.\nYou are able to change the image used for the cursor. Cursor will change\nto pointing cursor when hovering over a selectable item. You can make\nthe cursor hide when it's inactive for X frames. Window choices will\nget selected / highlighted when the mouse is over them. And clicking on\nthem once will run that choice.\n\n\n",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QTouch.js"
   },
-  {
+  "QInput": {
     "version": "2.2.1",
     "tags": [
       "input",
@@ -257,7 +257,7 @@
     "about": "This plugin enables full keyboard support as well as letting you set the\rdefault keyboard keys for mv inputs.\r\n\n",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QInput.js"
   },
-  {
+  "QInput+Remap": {
     "version": "2.1.3",
     "requires": "QInput",
     "tags": [
@@ -268,7 +268,7 @@
     "about": "This plugin adds an input remapping window to the Scene_Options. This lets\rplayers change the games keyboard and gamepad inputs inside of the options\rmenu.\r\r\n\n",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QInput+Remap.js"
   },
-  {
+  "QNameInput": {
     "version": "2.0.3",
     "requires": "QInput",
     "tags": [
@@ -278,7 +278,7 @@
     "about": "Adds Keyboard support to the Name Input Scene.\r\n\n",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QNameInput.js"
   },
-  {
+  "QPopup": {
     "version": "1.1.2",
     "requires": "QPlus",
     "tags": [
@@ -289,7 +289,7 @@
     "about": "This plugin lets you play a random popups at a set interval over an event.\rIt also lets you create your own popups that you can place where you want.\r\n\n",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QPopup.js"
   },
-  {
+  "QSpeed": {
     "version": "1.2.3",
     "requires": "QPlus",
     "tags": [
@@ -299,7 +299,7 @@
     "about": "This plugin lets you set custom move speeds for your characters. It also\radds an acceleration / deceleration effect when that characters move speed\ris changing. This can be enabled / disabled.\r\n\n",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QSpeed.js"
   },
-  {
+  "QYScale": {
     "version": "1.1.1",
     "requires": "QPlus",
     "video": "https://youtu.be/3zAB1WYA1kc",
@@ -312,10 +312,10 @@
     "about": "This plugin will zoom in/out character sprites based on their y position\ron the map.\r\n\n",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QYScale.js"
   },
-  {
+  "QYanfly-patches": {
     "version": "1.0.2",
     "name": "QYanfly-patches",
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QYanfly-patches.js",
     "tags": []
   }
-]
+}
