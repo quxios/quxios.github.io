@@ -245,3 +245,11 @@ function MyNewClass() {
   };
 })();
 ~~~
+
+# Where to go from here!
+
+Now that you know how to create a plugin and set it up, the next step is to figure out how to make it do what you want to do! Most beginners will get stuck here and begin asking on forums for questions on how to do certain things. But that won't get you very far if you don't spend some time to research the MV Core files!
+
+To learn which MV classes do what I suggest looking through all the `rpg_***.js` files. The class names are pretty easy to understand. For example, if you want to make changes to a event the class you will want to edit is "Game\_Event". If you want to change some sprite then it'll most likely be one of the "Sprite\_***" classes. Though for ease I suggest you look through the split source which can be [found here](https://github.com/rpgtkoolmv/corescript), there's even a bit more additional MV info in that help!
+
+There's no need to learn each function in every class. But you should learn what classes are available and what they do. So if you want to make a plugin that plays some effect on an Event you would know you would need to add functions to `Game_Event` and `Sprite_Character`

@@ -19,7 +19,7 @@
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QUpdate.js"
   },
   "QMovement": {
-    "version": "1.6.1",
+    "version": "1.6.2",
     "repo": "https://github.com/quxios/QMovement",
     "requires": "QPlus",
     "video": "TODO",
@@ -78,7 +78,7 @@
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QM+Followers.js"
   },
   "QABS": {
-    "version": "1.6.3",
+    "version": "1.6.4",
     "repo": "https://github.com/quxios/QABS",
     "requires": "QMovement",
     "video": "TODO",
@@ -133,7 +133,7 @@
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QImport.js"
   },
   "QEvent": {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "requires": "QPlus",
     "tags": [],
     "name": "QEvent",
@@ -179,7 +179,7 @@
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QPathfind.js"
   },
   "QSight": {
-    "version": "1.1.13",
+    "version": "1.1.14",
     "requires": "QPlus",
     "video": true,
     "tags": [
