@@ -33,4 +33,4 @@
 
 ## ShowcaseThis section is for user created stuff. If you created a video, game, tutorial,or an addon for QABS feel free to send me a link and I'll showcase it here!
 
-## LinksFormated Help: https://quxios.github.io/#/plugins/QABSRPGMakerWebs: http://forums.rpgmakerweb.com/index.php?threads/qplugins.73023/Terms of use: https://github.com/quxios/QMV-Master-Demo/blob/master/readme.mdLike my plugins? Support me on Patreon! https://www.patreon.com/quxios
+## LinksFormated Help: https://quxios.github.io/plugins/QABSRPGMakerWebs: http://forums.rpgmakerweb.com/index.php?threads/qplugins.73023/Terms of use: https://github.com/quxios/QMV-Master-Demo/blob/master/readme.mdLike my plugins? Support me on Patreon! https://www.patreon.com/quxios
