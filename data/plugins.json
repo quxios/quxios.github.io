@@ -153,7 +153,7 @@
     "download": "https://github.com/quxios/QMV-Master-Demo/tree/master/js/plugins/QSprite.js"
   },
   "QMap": {
-    "version": "2.0.0",
+    "version": "2.0.1",
     "requires": "QPlus",
     "video": "https://www.youtube.com/watch?v=x7vcK96aW28",
     "tags": [
