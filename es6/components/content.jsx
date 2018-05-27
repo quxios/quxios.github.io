@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Comments from './comments'
+//import Comments from './comments'
 
 export default class Content extends React.PureComponent {
   renderPage() {
@@ -15,7 +15,7 @@ export default class Content extends React.PureComponent {
           item={selectedItem}
           setTag={setTag}
         />
-        <Comments url={`${urlBase}/${selectedItem.name}`} />
+
       </div>
     )
   }
